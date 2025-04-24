@@ -5,98 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>日銓貿易股份有限公司</title>
   <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: sans-serif; line-height: 1.6; background: url('images/homepage-bg.jpg') no-repeat center top / cover; }
-    
-    header {
-      background: rgba(255, 255, 255, 0.5);
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 5%;
-      z-index: 1000;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: url('images/bg-full.png') no-repeat center top / cover;
+      color: #333;
     }
-    .logo { font-weight: bold; font-size: 20px; color: #333; }
-    nav { display: flex; gap: 20px; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; background: rgba(255,255,255,0.9);
+      position: sticky; top: 0; z-index: 1000;
+    }
+    .logo { font-size: 24px; font-weight: bold; }
     nav a {
-      text-decoration: none; color: #333; font-weight: 500;
+      margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;
     }
 
-    .hero {
-      margin-top: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero img {
-      width: 100%;
-      display: block;
-    }
+    .hero { position: relative; overflow: hidden; }
+    .hero img { width: 100vw; height: auto; display: block; }
+
     .carousel-arrows {
       position: absolute;
-      top: 50%; transform: translateY(-50%);
-      background: rgba(0,0,0,0.5); color: white;
-      border: none; border-radius: 50%; width: 40px; height: 40px;
-      font-size: 24px; cursor: pointer; z-index: 10;
+      top: calc(50% - 55px);
+      width: 38px; height: 38px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 34px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+      border: none;
     }
-    .carousel-left { left: 10px; }
-    .carousel-right { right: 10px; }
+    .carousel-arrows:hover {
+      background: rgba(0,0,0,0.6);
+    }
+    .carousel-left { left: 0px; }
+    .carousel-right { right: 0px; }
 
     .section {
-      padding: 80px 5%;
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 3rem 1rem; max-width: 1200px; margin: auto; position: relative;
     }
-    .section h2 { font-size: 24px; margin-bottom: 16px; text-align: center; }
-    .section p { text-align: center; max-width: 800px; margin: 0 auto 40px; }
-    .section img.about-img {
-      float: left;
-      max-width: 40%;
-      margin-right: 30px;
-      border-radius: 12px;
+    .section h2 {
+      text-align: center; font-size: 26px; margin-bottom: 1rem;
+    }
+    .section h2 small {
+      display: block;
+      font-size: 14px;
+      color: #777;
+      margin-top: 4px;
     }
 
-    .carousel-section {
+    .about-box {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2rem;
       align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    .about-img {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+    .about-text {
+      flex: 1 1 300px;
+    }
+    .about-text h2 {
+      text-align: left;
+      font-size: 26px;
+    }
+    .about-text h2 span {
+      font-size: 14px;
+      color: #888;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .section-box {
+      background: rgba(255,255,255,0.8);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      position: relative;
     }
     .carousel-wrapper {
       display: flex;
-      gap: 16px;
       overflow: hidden;
-      max-width: 100%;
-      margin: 0 auto;
+      scroll-behavior: smooth;
+      align-items: center;
+    }
+    .carousel-page {
+      flex: 0 0 100%; display: flex;
+      justify-content: space-around; gap: 1rem;
+      padding: 1rem 0;
+      align-items: center;
     }
     .carousel-item {
-      min-width: 23%;
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
+      flex: 1; min-width: 20%; max-width: 220px;
+      text-align: center; background: #f8f8f8;
+      padding: 0.5rem; border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .carousel-item img {
-      width: 100%; height: auto; border-radius: 8px;
     }
 
     footer {
-      background: #002244;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
+      text-align: center; padding: 2rem 1rem;
+      background: #eee; font-size: 14px;
     }
 
     @media (max-width: 768px) {
-      .section img.about-img {
-        float: none;
-        max-width: 100%;
-        margin: 0 auto 20px;
-        display: block;
-      }
-      .carousel-item { min-width: 48%; }
+      .about-box { flex-direction: column; }
+      .carousel-page { flex-direction: column; align-items: center; }
+      .carousel-item { max-width: 90%; }
+      nav a { margin: 0 0.5rem; font-size: 14px; }
+      .carousel-left { left: 5px; }
+      .carousel-right { right: 5px; }
     }
   </style>
 </head>
@@ -113,120 +146,116 @@
 
   <div class="hero">
     <img src="images/hero-desktop-1.png" id="hero-img">
-    <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">❮</button>
-    <button class="carousel-arrows carousel-right" onclick="moveHero(1)">❯</button>
+    <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
+    <button class="carousel-arrows carousel-right" onclick="moveHero(1)">›</button>
   </div>
 
   <div class="section" id="about">
-    <h2>關於我們 About Us</h2>
-    <img src="images/about-us.png" alt="關於我們" class="about-img">
-    <p>日銓貿易股份有限公司專營進口果乾、堅果、罐頭與烘焙義大利麵原料，供應餐飲與製造通路，堅持品質，服務台灣超過三十年。</p>
-  </div>
-  <!-- 🔄 精選商品區塊（4個一頁換頁） -->
-<div class="section carousel-section" id="products">
-  <h2>精選商品 Featured</h2>
-  <div class="carousel-wrapper" id="featured-carousel" style="overflow: hidden; display: flex; transition: transform 0.5s;">
-    <div style="display: flex; width: 200%;">
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/featured-1.jpg"><p>商品 1</p></div>
-        <div class="carousel-item"><img src="images/featured-2.jpg"><p>商品 2</p></div>
-        <div class="carousel-item"><img src="images/featured-3.jpg"><p>商品 3</p></div>
-        <div class="carousel-item"><img src="images/featured-4.jpg"><p>商品 4</p></div>
+    <div class="about-box">
+      <div class="about-img">
+        <img src="images/about-us.png" alt="關於我們">
       </div>
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/featured-5.jpg"><p>商品 5</p></div>
-        <div class="carousel-item"><img src="images/featured-6.jpg"><p>商品 6</p></div>
-        <div class="carousel-item"><img src="images/featured-7.jpg"><p>商品 7</p></div>
-        <div class="carousel-item"><img src="images/featured-8.jpg"><p>商品 8</p></div>
+      <div class="about-text">
+        <h2>關於我們 <span>About Us</span></h2>
+        <p>日銓貿易股份有限公司專營進口果乾、堅果、罐頭與烘焙義大利麵原料，供應餐飲與製造通路，堅持品質，服務台灣超過三十年。</p>
       </div>
     </div>
   </div>
-  <button class="carousel-arrows carousel-left" onclick="switchPage('featured-carousel', -1)">❮</button>
-  <button class="carousel-arrows carousel-right" onclick="switchPage('featured-carousel', 1)">❯</button>
-</div>
 
-<!-- 義大利麵區塊（4個一頁換頁） -->
-<div class="section carousel-section">
-  <h2>義大利麵 Pasta</h2>
-  <div class="carousel-wrapper" id="pasta-carousel" style="overflow: hidden; display: flex; transition: transform 0.5s;">
-    <div style="display: flex; width: 200%;">
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/pasta-1.png"><p>Ankara直麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-2.png"><p>Ankara筆尖麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-3.png"><p>Ankara蝴蝶麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-4.png"><p>Ankara螺旋麵</p></div>
+  <div class="section" id="brands">
+    <div class="section-box">
+      <h2>品牌總覽 <small>Brand Overview（含國內經銷品牌）</small></h2>
+      <p style="margin: 1rem auto 2rem; text-align: center; max-width: 800px;">
+        除了代理國外品牌與創立自有品牌之外，我司亦經銷其它國內耳熟能詳的知名品牌商品如：綠巨人、仰南牌、三鳥牌、樂斯福、好時等合作品牌，致力為客戶做更多元的商品服務。
+      </p>
+      <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
+      <div class="carousel-wrapper">
+        <div class="carousel-page">
+          <div class="carousel-item"><img src="images/brand-1.png"><p>品牌1</p></div>
+          <div class="carousel-item"><img src="images/brand-2.png"><p>品牌2</p></div>
+          <div class="carousel-item"><img src="images/brand-3.png"><p>品牌3</p></div>
+          <div class="carousel-item"><img src="images/brand-4.png"><p>品牌4</p></div>
+        </div>
       </div>
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/pasta-5.png"><p>Ankara貝殼麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-6.png"><p>Ankara螺旋蔬菜麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-7.png"><p>Ankara卡通蔬菜麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-8.png"><p>Christine直麵</p></div>
-      </div>
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/pasta-9.png"><p>VIVOLA筆尖麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-10.png"><p>VIVOLA螺旋麵</p></div>
-        <div class="carousel-item"><img src="images/pasta-11.png"><p>VIVOLA通心麵</p></div>
-      </div>
+      <button class="carousel-arrows carousel-right" onclick="moveHero(1)">›</button>
     </div>
   </div>
-  <button class="carousel-arrows carousel-left" onclick="switchPage('pasta-carousel', -1)">❮</button>
-  <button class="carousel-arrows carousel-right" onclick="switchPage('pasta-carousel', 1)">❯</button>
-</div>
 
-<!-- 堅果果乾區塊（4個一頁換頁） -->
-<div class="section carousel-section">
-  <h2>堅果果乾 Nuts & Dried Fruits</h2>
-  <div class="carousel-wrapper" id="nuts-carousel" style="overflow: hidden; display: flex; transition: transform 0.5s;">
-    <div style="display: flex; width: 200%;">
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/nuts-1.jpg"><p>腰果</p></div>
-        <div class="carousel-item"><img src="images/nuts-2.jpg"><p>杏仁</p></div>
-        <div class="carousel-item"><img src="images/nuts-3.jpg"><p>無花果乾</p></div>
-        <div class="carousel-item"><img src="images/nuts-4.jpg"><p>葡萄乾</p></div>
+  <div class="section carousel-section" id="products">
+    <div class="section-box">
+      <h2>精選商品 Featured</h2>
+      <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
+      <div class="carousel-wrapper">
+        <div class="carousel-page">
+          <div class="carousel-item"><img src="images/featured-1.png"><p>商品 1</p></div>
+          <div class="carousel-item"><img src="images/featured-2.png"><p>商品 2</p></div>
+          <div class="carousel-item"><img src="images/featured-3.png"><p>商品 3</p></div>
+          <div class="carousel-item"><img src="images/featured-4.png"><p>商品 4</p></div>
+        </div>
       </div>
-      <div class="carousel-page" style="display: flex; width: 100%;">
-        <div class="carousel-item"><img src="images/nuts-5.jpg"><p>榛果</p></div>
-        <div class="carousel-item"><img src="images/nuts-6.jpg"><p>核桃</p></div>
-        <div class="carousel-item"><img src="images/nuts-7.jpg"><p>蔓越莓</p></div>
-        <div class="carousel-item"><img src="images/nuts-8.jpg"><p>綜合果乾</p></div>
-      </div>
+      <button class="carousel-arrows carousel-right" onclick="moveHero(1)">›</button>
     </div>
   </div>
-  <button class="carousel-arrows carousel-left" onclick="switchPage('nuts-carousel', -1)">❮</button>
-  <button class="carousel-arrows carousel-right" onclick="switchPage('nuts-carousel', 1)">❯</button>
-</div>
 
-<script>
-  const heroImages = [
-    "images/hero-desktop-1.png",
-    "images/hero-desktop-2.png",
-    "images/hero-desktop-3.png"
-  ];
-  let heroIndex = 0;
-  let heroTimer;
+  <div class="section carousel-section">
+    <div class="section-box">
+      <h2>義大利麵 Pasta</h2>
+      <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
+      <div class="carousel-wrapper">
+        <div class="carousel-page">
+          <div class="carousel-item"><img src="images/pasta-1.png"><p>Ankara直麵</p></div>
+          <div class="carousel-item"><img src="images/pasta-2.png"><p>Ankara筆尖麵</p></div>
+          <div class="carousel-item"><img src="images/pasta-3.png"><p>Ankara蝴蝶麵</p></div>
+          <div class="carousel-item"><img src="images/pasta-4.png"><p>Ankara螺旋麵</p></div>
+        </div>
+      </div>
+      <button class="carousel-arrows carousel-right" onclick="moveHero(1)">›</button>
+    </div>
+  </div>
 
-  function moveHero(dir) {
-    heroIndex = (heroIndex + dir + heroImages.length) % heroImages.length;
-    document.getElementById("hero-img").src = heroImages[heroIndex];
-    resetHeroTimer();
-  }
+  <div class="section carousel-section">
+    <div class="section-box">
+      <h2>堅果果乾 Nuts & Dried Fruits</h2>
+      <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
+      <div class="carousel-wrapper">
+        <div class="carousel-page">
+          <div class="carousel-item"><img src="images/nuts-1.png"><p>腰果</p></div>
+          <div class="carousel-item"><img src="images/nuts-2.png"><p>杏仁</p></div>
+          <div class="carousel-item"><img src="images/nuts-3.png"><p>無花果乾</p></div>
+          <div class="carousel-item"><img src="images/nuts-4.png"><p>葡萄乾</p></div>
+        </div>
+      </div>
+      <button class="carousel-arrows carousel-right" onclick="moveHero(1)">›</button>
+    </div>
+  </div>
 
-  function resetHeroTimer() {
-    clearTimeout(heroTimer);
-    heroTimer = setTimeout(() => moveHero(1), 10000);
-  }
-  window.addEventListener('load', () => { resetHeroTimer(); });
+  <footer>
+    &copy; 2025 日銓貿易股份有限公司 | 統一編號：80548156<br>
+    連絡電話：02 2610 6567｜am.8:30 - pm.5:30｜service@goodfood168.com.tw
+  </footer>
 
-  const pageIndices = {
-    'featured-carousel': 0,
-    'pasta-carousel': 0,
-    'nuts-carousel': 0
-  };
+  <script>
+    const heroImages = [
+      "images/hero-desktop-1.png",
+      "images/hero-desktop-2.png",
+      "images/hero-desktop-3.png"
+    ];
+    let heroIndex = 0;
+    let heroTimer;
+    function moveHero(dir) {
+      heroIndex = (heroIndex + dir + heroImages.length) % heroImages.length;
+      document.getElementById("hero-img").src = heroImages[heroIndex];
+      resetHeroTimer();
+    }
+    function resetHeroTimer() {
+      clearTimeout(heroTimer);
+      heroTimer = setTimeout(() => moveHero(1), 10000);
+    }
+    window.addEventListener('load', () => { resetHeroTimer(); });
+  </script>
+</body>
+</html>
 
-  function switchPage(id, direction) {
-    const wrapper = document.getElementById(id).firstElementChild;
-    const totalPages = wrapper.children.length;
-    pageIndices[id] = (pageIndices[id] + direction + totalPages) % totalPages;
-    wrapper.style.transform = `translateX(-${pageIndices[id] * 100}%)`;
-  }
-</script>
+
+
+
