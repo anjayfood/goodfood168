@@ -9,7 +9,7 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
-      background: url('images/bg-full.png') no-repeat center top / cover;
+      background: #fff;
       color: #333;
     }
     img { max-width: 100%; height: auto; display: block; }
@@ -24,17 +24,31 @@
       margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;
     }
 
-    .hero { position: relative; overflow: hidden; }
-    .hero img { width: 100vw; height: auto; display: block; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+    }
+    .hero img {
+      width: 100vw;
+      height: auto;
+      display: block;
+    }
+
+    .main-wrapper {
+      background: url('images/bg-full.png') no-repeat top center / cover;
+      padding-bottom: 3rem;
+    }
 
     .carousel-arrows {
       position: absolute;
-      top: calc(50% - 55px);
-      width: 38px; height: 38px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px; height: 36px;
       background: rgba(0,0,0,0.4);
       color: #fff;
       border-radius: 50%;
-      font-size: 34px;
+      font-size: 28px;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -43,12 +57,13 @@
       transition: all 0.3s ease;
       z-index: 10;
       border: none;
+      line-height: 1;
     }
     .carousel-arrows:hover {
       background: rgba(0,0,0,0.6);
     }
-    .carousel-left { left: 0px; }
-    .carousel-right { right: 0px; }
+    .carousel-left { left: 8px; }
+    .carousel-right { right: 8px; }
 
     .section {
       padding: 3rem 1rem; max-width: 1200px; margin: auto; position: relative;
@@ -104,6 +119,7 @@
       overflow: hidden;
       scroll-behavior: smooth;
       align-items: center;
+      position: relative;
     }
     .carousel-page {
       flex: 0 0 100%; display: flex;
