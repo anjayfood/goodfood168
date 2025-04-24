@@ -1,0 +1,42 @@
+/* style.css - 全站通用樣式 */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+h1 {
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
