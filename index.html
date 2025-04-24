@@ -110,7 +110,7 @@
       min-width: 20%;
       max-width: 220px;
       text-align: center;
-      background: #f8f8f8;
+      background: rgba(255,255,255,0.9);
       padding: 0.5rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -144,11 +144,23 @@
     }
     @media (max-width: 768px) {
       .about-box { flex-direction: column; }
-      .carousel-page { flex-direction: column; align-items: center; }
+      .carousel-page { 
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        justify-items: center;
+       }
       .carousel-item { max-width: 90%; }
       nav a { margin: 0 0.5rem; font-size: 14px; }
       .carousel-left { left: 5px; }
       .carousel-right { right: 5px; }
+      .about-img img{
+        max-width: 100%;
+        margin: auto;
+      }
+      .about-text{
+        padding-top: 1rem;
+      }
     }
   </style>
 </head>
