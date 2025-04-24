@@ -4,187 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>日銓貿易股份有限公司</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background: #fff;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 2rem; background: rgba(255,255,255,0.9);
-      position: sticky; top: 0; z-index: 1000;
-    }
-    .logo { font-size: 24px; font-weight: bold; }
-    nav a {
-      margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;
-    }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: #fff;
-      flex-shrink: 0;
-    }
-    .hero img {
-      width: 100vw;
-      height: auto;
-      display: block;
-    }
-    .main-wrapper {
-      background: url('images/bg-full.png') repeat-y top center / 100% auto;
-      padding-bottom: 3rem;
-      flex: 1;
-    }
-    @media (max-width: 768px) {
-    .main-wrapper {
-      background: url('images/bg-full-mobile.png') repeat-y top center / 100% auto;
-     }
-    }
-    .carousel-arrows {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 36px; height: 36px;
-      background: rgba(0,0,0,0.4);
-      color: #fff;
-      border-radius: 50%;
-      font-size: 28px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      z-index: 10;
-      border: none;
-      line-height: 1;
-    }
-    .carousel-arrows:hover {
-      background: rgba(0,0,0,0.6);
-    }
-    .carousel-left { left: 8px; }
-    .carousel-right { right: 8px; }
-    .section {
-      padding: 3rem 1rem; max-width: 1200px; margin: auto; position: relative;
-    }
-    .section h2 {
-      text-align: center; font-size: 26px; margin-bottom: 1rem;
-    }
-    .section h2 small {
-      display: block;
-      font-size: 14px;
-      color: #777;
-      margin-top: 4px;
-    }
-    .section-box {
-      background: rgba(255,255,255,0.8);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-      position: relative;
-    }
-    .carousel-wrapper {
-      overflow: hidden;
-      position: relative;
-    }
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-    }
-    .carousel-page {
-      display: flex;
-      justify-content: space-around;
-      gap: 1rem;
-      align-items: center;
-      min-width: 100%;
-    }
-    .carousel-item {
-      flex: 1;
-      min-width: 20%;
-      max-width: 220px;
-      text-align: center;
-      background: rgba(255,255,255,0.9);
-      padding: 0.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .about-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.85);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-    }
-    .about-img { flex: 1 1 300px; max-width: 400px; }
-    .about-text { flex: 1 1 300px; }
-    .about-text h2 { text-align: left; font-size: 26px; }
-    .about-text h2 span {
-      font-size: 14px;
-      color: #888;
-      display: block;
-      margin-top: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #fff;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    @media (max-width: 768px) {
-      .about-box { 
-        flex-direction: column;
-        align-items: center
-        padding: 1.5rem 1rem;
-        gap: 0.5rem;
-      }
-      .about-img img {
-        width: 100%;
-        max-width: none;
-        height: auto;
-        border-radius: 12px;
-      }
-      .about-text{
-        padding: 0;
-        text-align: center;
-      }
-      .about-text h2{
-        margin-bottom: 0.5rem;
-      }
-      .carousel-page { 
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 1rem;
-        justify-items: center;
-       }
-      .carousel-item { max-width: 90%; }
-      nav a { margin: 0 0.5rem; font-size: 14px; }
-      .carousel-left { left: 5px; }
-      .carousel-right { right: 5px; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">日銓貿易股份有限公司</div>
+    <a href="/goodfood168/" class="logo">日銓貿易股份有限公司</a>
     <nav>
-      <a href="#about">關於日銓</a>
-      <a href="#brands">品牌總覽</a>
-      <a href="#products">商品總覽</a>
-      <a href="#contact">聯絡我們</a>
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
     </nav>
   </header>
+
   <div class="hero">
     <img src="images/hero-desktop-1.png" id="hero-img">
     <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
@@ -192,6 +24,7 @@
   </div>
 
   <div class="main-wrapper">
+    <!-- 關於我們區塊 -->
     <div class="section" id="about">
       <div class="about-box">
         <div class="about-img">
@@ -203,6 +36,8 @@
         </div>
       </div>
     </div>
+
+    <!-- 品牌總覽區塊 -->
     <div class="section" id="brands">
       <div class="section-box">
         <h2>品牌總覽 <small>Brand Overview（含國內經銷品牌）</small></h2>
@@ -327,20 +162,13 @@
     &copy; 2025 日銓貿易股份有限公司 | 統一編號：80548156<br>
     連絡電話：02 2610 6567｜am.8:30 - pm.5:30｜Email：anjay.food@msa.hinet.net
   </footer>
+
   <script>
     const isMobile = window.innerWidth <= 768;
-
     const heroImages = isMobile
-      ? [
-          "images/hero-mobile-1.png",
-          "images/hero-mobile-2.png",
-          "images/hero-mobile-3.png"
-        ]
-      : [
-          "images/hero-desktop-1.png",
-          "images/hero-desktop-2.png",
-          "images/hero-desktop-3.png"
-        ];
+      ? ["images/hero-mobile-1.png", "images/hero-mobile-2.png", "images/hero-mobile-3.png"]
+      : ["images/hero-desktop-1.png", "images/hero-desktop-2.png", "images/hero-desktop-3.png"];
+
     let heroIndex = 0;
     let heroTimer;
     function moveHero(dir) {
@@ -377,7 +205,7 @@
     });
   </script>
 </body>
-</html>
+</htm
 
 
 

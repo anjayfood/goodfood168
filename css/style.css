@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* style.css - 全站通用樣式 */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -7,13 +8,45 @@ body {
   background: #fff;
   color: #333;
 }
+=======
+/* ✅ 全站通用字體與排版 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ✅ 圖片與段落 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+p {
+  margin: 0.5rem 0;
+}
+
+/* ✅ 頁首 header 與導覽列 nav */
+>>>>>>> d30edbf (補上圖片與 HTML 更新)
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+<<<<<<< HEAD
   background: rgba(255,255,255,0.95);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+=======
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+>>>>>>> d30edbf (補上圖片與 HTML 更新)
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -30,13 +63,124 @@ nav a {
   color: #333;
   font-weight: bold;
 }
+<<<<<<< HEAD
+=======
+
+/* ✅ 區塊 section */
+>>>>>>> d30edbf (補上圖片與 HTML 更新)
 .section {
   max-width: 1200px;
   margin: auto;
   padding: 3rem 1rem;
 }
+<<<<<<< HEAD
 h1 {
   font-size: 28px;
   margin-bottom: 1.5rem;
   text-align: center;
+=======
+.section h1, .section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+.section h2 small {
+  display: block;
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ✅ 卡片、商品樣式 */
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+.carousel-page {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  min-width: 100%;
+}
+.carousel-item {
+  flex: 1;
+  min-width: 20%;
+  max-width: 220px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 關於我們區塊 */
+.about-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+.about-img {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+.about-text {
+  flex: 1 1 300px;
+}
+.about-text h2 {
+  text-align: left;
+  font-size: 26px;
+}
+.about-text h2 span {
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ✅ 頁尾 footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f8f8f8;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+/* ✅ RWD 手機版 */
+@media (max-width: 768px) {
+  .about-box {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .carousel-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+  .carousel-item {
+    max-width: 90%;
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 14px;
+  }
+>>>>>>> d30edbf (補上圖片與 HTML 更新)
 }
