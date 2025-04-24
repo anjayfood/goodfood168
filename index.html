@@ -147,17 +147,22 @@
         flex-direction: column;
         align-items: center
         padding: 1.5rem 1rem;
+        gap: 0.5rem;
       }
       .about-img img {
-        width: 100;
-        max-width: 100;
+        width: 100%;
+        max-width: 500px;
         height: auto;
-        margin-bottom: 1rem;
+        margin: 0 auto;
+        display: block;
         border-radius: 12px;
       }
       .about-text{
-        padding: 0 1rem;
+        padding: 0;
         text-align: center;
+      }
+      .about-text h2{
+        margin-bottom: 0.5rem;
       }
       .carousel-page { 
         display: grid;
@@ -325,11 +330,19 @@
     連絡電話：02 2610 6567｜am.8:30 - pm.5:30｜Email：anjay.food@msa.hinet.net
   </footer>
   <script>
-    const heroImages = [
-      "images/hero-desktop-1.png",
-      "images/hero-desktop-2.png",
-      "images/hero-desktop-3.png"
-    ];
+    const isMobile = window.innerWidth <= 768;
+
+    const heroImages = isMobile
+      ? [
+          "images/hero-mobile-1.png",
+          "images/hero-mobile-2.png",
+          "images/hero-mobile-3.png"
+        ]
+      : [
+          "images/hero-desktop-1.png",
+          "images/hero-desktop-2.png",
+          "images/hero-desktop-3.png"
+        ];
     let heroIndex = 0;
     let heroTimer;
     function moveHero(dir) {
