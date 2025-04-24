@@ -4,67 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>商品總覽 - 日銓貿易股份有限公司</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(255,255,255,0.95);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 20px;
-      text-decoration: none;
-      color: #333;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 3rem 1rem;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-    .product-item {
-      background: #f9f9f9;
-      border-radius: 12px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .product-item img {
-      width: 100%;
-      height: auto;
-      max-height: 160px;
-      object-fit: contain;
-      margin-bottom: 0.5rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
 </head>
 <body>
   <header>
@@ -76,29 +17,21 @@
       <a href="/goodfood168/contact.html">聯絡我們</a>
     </nav>
   </header>
+
   <div class="section">
     <h1>商品總覽</h1>
+    <p class="description">我們提供多樣化食品商品，包括無添加果乾、原味堅果、各式經典義大利麵與進口罐頭，滿足各類餐飲與烘焙需求。</p>
     <div class="product-grid">
-      <div class="product-item">
-        <img src="images/featured-1.png" alt="商品1">
-        <p>義大利直麵</p>
-      </div>
-      <div class="product-item">
-        <img src="images/nuts-1.png" alt="商品2">
-        <p>腰果</p>
-      </div>
-      <div class="product-item">
-        <img src="images/nuts-2.png" alt="商品3">
-        <p>杏仁</p>
-      </div>
-      <div class="product-item">
-        <img src="images/pasta-4.png" alt="商品4">
-        <p>螺旋麵</p>
-      </div>
+      <div class="product-item"><img src="images/龍眼蜂蜜調味糖漿.png"><p>龍眼蜂蜜調味糖漿</p></div>
+      <div class="product-item"><img src="images/富達 鳳梨片.png"><p>富達 鳳梨片</p></div>
+      <div class="product-item"><img src="images/腰果粒.jpg"><p>腰果粒</p></div>
+      <div class="product-item"><img src="images/pasta-1.png"><p>Ankara直麵</p></div>
     </div>
-    <footer>
-      &copy; 2025 日銓貿易股份有限公司 | 統一編號：80548156<br>
-      連絡電話：02 2610 6567｜am.8:30 - pm.5:30｜Email：anjay.food@msa.hinet.net
-    </footer>
   </div>
+
+  <footer>
+    &copy; 2025 日銓貿易股份有限公司 | 統一編號：80548156<br>
+    連絡電話：02 2610 6567｜am.8:30 - pm.5:30｜Email：anjay.food@msa.hinet.net
+  </footer>
 </body>
+</html>
