@@ -13,8 +13,17 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-main {
+
+/* ✅ 主內容區塊高度撐開頁面 */
+.main-wrapper {
   flex: 1;
+  background: url('../images/bg-full.png') repeat-y top center / 100% auto;
+  padding-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .main-wrapper {
+    background: url('../images/bg-full-mobile.png') repeat-y top center / 100% auto;
+  }
 }
 
 /* ✅ 圖片與段落 */
@@ -50,18 +59,6 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-}
-
-/* ✅ 主內容區塊 */
-.main-wrapper {
-  background: url('../images/bg-full.png') repeat-y top center / 100% auto;
-  padding-bottom: 3rem;
-  flex: 1;
-}
-@media (max-width: 768px) {
-  .main-wrapper {
-    background: url('../images/bg-full-mobile.png') repeat-y top center / 100% auto;
-  }
 }
 
 /* ✅ 區塊 section */
@@ -110,6 +107,29 @@ nav a {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+.hero {
+  position: relative;
+}
+.carousel-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+}
+.carousel-left { left: 8px; }
+.carousel-right { right: 8px; }
 
 /* ✅ 關於我們區塊 */
 .about-box {
@@ -149,6 +169,7 @@ footer {
   font-size: 14px;
   color: #333;
   border-top: 1px solid #ddd;
+  margin-top: auto;
 }
 
 /* ✅ RWD 手機版 */
