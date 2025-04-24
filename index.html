@@ -1,64 +1,93 @@
 <!DOCTYPE html>
-<!-- ⚠️ 注意：這份程式碼已依據 GitHub Pages 架構做清理與優化，可直接部署 -->
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <title>日銓首頁</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="日銓貿易，專營堅果、果乾、烘焙與餐飲食材的進出口，提供優質原料與穩定供應，服務各大通路與餐飲品牌。">
-  <meta name="keywords" content="日銓貿易, 堅果, 果乾, 食品原料, 烘焙原物料, 進口食品, 餐飲供應">
-  <meta name="author" content="日銓貿易股份有限公司">
-  <link rel="canonical" href="https://www.goodfood168.com.tw/" />
   <style>
-    body, * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-    .section-title { text-align: center; font-size: 28px; font-weight: bold; margin: 20px 0 10px; }
-    .section-subtitle { text-align: center; font-size: 14px; color: #666; margin-bottom: 30px; }
-    .block-wrapper { padding: 40px 0; }
-    .container {
-      max-width: 1200px; margin: 0 auto 40px auto; padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.85); border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .carousel, .carousel-page {
-      display: flex; transition: transform 1s ease; width: 100%; flex-wrap: wrap;
-      justify-content: center; gap: 20px; padding: 20px 0;
-    }
-    .carousel-container {
-      position: relative; overflow: hidden; width: 100%;
-      max-width: 1200px; margin: 0 auto; padding-bottom: 20px;
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: sans-serif; background: #fff; line-height: 1.6; }
+    .hero { position: relative; overflow: hidden; }
+    .hero img { width: 100%; display: block; position: relative; z-index: 0; }
+    .hero::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 20px; background: white; z-index: 1; pointer-events: none; }
+    .hero-desktop { display: block; }
+    .hero-mobile { display: none; }
     .carousel-arrows {
       position: absolute; top: 50%; transform: translateY(-50%);
-      background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%;
-      width: 40px; height: 40px; font-size: 24px; cursor: pointer; z-index: 10;
+      background: rgba(0,0,0,0.5); color: white; border: none;
+      border-radius: 50%; width: 40px; height: 40px;
+      font-size: 24px; cursor: pointer; z-index: 10;
     }
     .carousel-left { left: 10px; }
     .carousel-right { right: 10px; }
-    .item {
-      display: flex; flex-direction: column; align-items: center;
-      background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 12px; width: 200px;
-    }
-    .item img { width: 140px; height: 140px; object-fit: contain; border-radius: 10px; margin-bottom: 8px; }
-    .item div { font-size: 14px; line-height: 1.4; max-height: 40px; overflow: hidden; }
-    .about-section { display: flex; gap: 30px; flex-wrap: wrap; align-items: center; }
-    .about-img { width: 100%; max-width: 500px; border-radius: 12px; }
-    .about-text { flex: 1; }
 
     @media (max-width: 768px) {
-      .container { max-width: 95%; padding: 16px 12px; margin-bottom: 20px; }
-      .section-title { font-size: 18px; }
-      .section-subtitle { font-size: 12px; margin-bottom: 20px; }
-      .carousel-page .item { width: calc(50% - 8px); }
-      .about-section { flex-direction: column; text-align: center; }
-      .about-img { max-width: 100%; margin-bottom: 20px; }
+      .hero-desktop { display: none !important; }
+      .hero-mobile { display: block !important; }
     }
   </style>
 </head>
 <body>
-  <div style="text-align:center; padding: 20px;">
-    <h1>網站重建中 - 日銓貿易首頁內容即將上線</h1>
-    <p>所有區塊內容與圖片皆已載入，若無顯示請重新整理或稍候。</p>
+  <div class="hero">
+    <!-- ✅ 主視覺桌機輪播 -->
+    <div class="hero-desktop">
+      <img src="images/hero-desktop-1.png" id="hero-img" />
+      <button onclick="moveHero(-1)" class="carousel-arrows carousel-left">❮</button>
+      <button onclick="moveHero(1)" class="carousel-arrows carousel-right">❯</button>
+    </div>
+
+    <!-- ✅ 主視覺手機輪播 -->
+    <div class="hero-mobile">
+      <img src="images/hero-mobile-1.png" id="hero-img-mobile" />
+      <button onclick="moveHeroMobile(-1)" class="carousel-arrows carousel-left">❮</button>
+      <button onclick="moveHeroMobile(1)" class="carousel-arrows carousel-right">❯</button>
+    </div>
   </div>
+
+  <script>
+    // ✅ 桌機輪播圖陣列
+    const heroImages = [
+      "images/hero-desktop-1.png",
+      "images/hero-desktop-2.png",
+      "images/hero-desktop-3.png"
+    ];
+    let heroIndex = 0;
+    let heroTimer;
+
+    function moveHero(dir) {
+      heroIndex = (heroIndex + dir + heroImages.length) % heroImages.length;
+      document.getElementById("hero-img").src = heroImages[heroIndex];
+      resetHeroTimer();
+    }
+
+    function resetHeroTimer() {
+      clearTimeout(heroTimer);
+      heroTimer = setTimeout(() => moveHero(1), 10000);
+    }
+
+    resetHeroTimer();
+
+    // ✅ 手機輪播圖陣列
+    const heroImagesMobile = [
+      "images/hero-mobile-1.png",
+      "images/hero-mobile-2.png",
+      "images/hero-mobile-3.png"
+    ];
+    let heroIndexMobile = 0;
+    let heroTimerMobile;
+
+    function moveHeroMobile(dir) {
+      heroIndexMobile = (heroIndexMobile + dir + heroImagesMobile.length) % heroImagesMobile.length;
+      document.getElementById("hero-img-mobile").src = heroImagesMobile[heroIndexMobile];
+      resetHeroTimerMobile();
+    }
+
+    function resetHeroTimerMobile() {
+      clearTimeout(heroTimerMobile);
+      heroTimerMobile = setTimeout(() => moveHeroMobile(1), 10000);
+    }
+
+    resetHeroTimerMobile();
+  </script>
 </body>
 </html>
