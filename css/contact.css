@@ -1,15 +1,15 @@
-/* ✅ 整體結構：讓 footer 貼底 */
+/* ✅ 整體結構 */
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
 }
 
 /* ✅ 主視覺區塊 */
 .hero {
-  margin-top: 0;
   position: relative;
   z-index: 0;
 }
@@ -19,21 +19,51 @@ html, body {
   display: block;
   object-fit: cover;
 }
-
-/* ✅ 主內容區塊：從這裡套用背景 */
-main {
-  flex: 1;
-  background-image: url('../images/bg-contact.png');
-  background-repeat: repeat-y;
-  background-position: top center;
-  background-size: 100% auto;
-  background-attachment: scroll;
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #eeeeee 100%);
+  z-index: 1;
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  main {
-    background-image: url('../images/bg-contact-mobile.png');
-  }
+/* ✅ 主內容區塊 */
+main {
+  flex: 1;
+  position: relative;
+  background-image: url('../images/bg-contact.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center top;
+  padding: 4rem 1rem 6rem;  /* ↑ 讓卡片不會貼著主視覺 */
+  z-index: 0;
+}
+
+/* ✅ main 底部漸層（避免和 footer 突兀） */
+main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to top, #f8f8f8 0%, transparent 100%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* ✅ 聯絡資訊卡片 */
@@ -43,10 +73,12 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   max-width: 900px;
-  margin: 3rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* ✅ 說明文字與聯絡資訊 */
@@ -83,5 +115,4 @@ footer {
   color: #333;
   border-top: 1px solid #ddd;
 }
-
 
