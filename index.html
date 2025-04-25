@@ -163,18 +163,27 @@
     const heroImages = isMobile
       ? ["images/hero-mobile-1.png", "images/hero-mobile-2.png", "images/hero-mobile-3.png"]
       : ["images/hero-desktop-1.png", "images/hero-desktop-2.png", "images/hero-desktop-3.png"];
-
+  
     let heroIndex = 0;
     let heroTimer;
+  
+    // ✅ 初始顯示第一張圖（避免一開始顯示錯誤尺寸）
+    window.addEventListener("DOMContentLoaded", () => {
+      const heroImg = document.getElementById("hero-img");
+      if (heroImg) heroImg.src = heroImages[0];
+    });
+  
     function moveHero(dir) {
       heroIndex = (heroIndex + dir + heroImages.length) % heroImages.length;
       document.getElementById("hero-img").src = heroImages[heroIndex];
       resetHeroTimer();
     }
+  
     function resetHeroTimer() {
       clearTimeout(heroTimer);
       heroTimer = setTimeout(() => moveHero(1), 10000);
     }
+  
     function setupCarousel(wrapperId) {
       const wrapper = document.getElementById(wrapperId);
       if (!wrapper) return;
@@ -191,6 +200,7 @@
       left?.addEventListener("click", () => move(-1));
       right?.addEventListener("click", () => move(1));
     }
+  
     window.addEventListener("load", () => {
       resetHeroTimer();
       setupCarousel("brands-carousel");
@@ -198,7 +208,7 @@
       setupCarousel("pasta-carousel");
       setupCarousel("nuts-carousel");
     });
-  </script>
+  </script>  
 </body>
 </html>
 
