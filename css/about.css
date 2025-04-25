@@ -1,62 +1,75 @@
+/* ✅ 全站基本設定 */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    color: #333;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .logo {
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    color: #333;
-  }
-  nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  .section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 3rem 1rem;
-  }
-  h1 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  p.description {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    color: #666;
-  }
-  .about-img {
-    width: 100%;
-    max-width: 800px;
-    margin: 2rem auto;
-    display: block;
-    border-radius: 12px;
-  }
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #f8f8f8;
-    font-size: 14px;
-    color: #333;
-    border-top: 1px solid #ddd;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* ✅ 頁首設定 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ✅ 區塊與標題 */
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ✅ 說明段落樣式 */
+p.description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #666;
+}
+
+/* ✅ 關於我們圖片樣式 */
+.about-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ✅ 頁尾 */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f8f8f8;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}

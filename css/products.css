@@ -1,48 +1,52 @@
-/* products.css - 商品總覽頁面專用樣式 */
-
+/* ✅ 商品區塊說明文字 */
 .description {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    color: #666;
-  }
-  
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  .product-item {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .product-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .product-item p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #f8f8f8;
-    font-size: 14px;
-    color: #333;
-    border-top: 1px solid #ddd;
-  }
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #666;
+}
+
+/* ✅ 商品卡片排列區塊 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ✅ 單一商品樣式 */
+.product-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ✅ 商品圖片 */
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* ✅ 商品名稱 */
+.product-item p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ✅ 頁尾樣式 */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f8f8f8;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}

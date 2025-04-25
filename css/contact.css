@@ -1,49 +1,52 @@
-/* contact.css - 聯絡我們頁面專用樣式 */
-
+/* ✅ 聯絡我們區塊主容器 */
 .contact-section {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    text-align: center;
-  }
-  
-  .contact-section h1 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-  }
-  
-  .contact-section p {
-    color: #666;
-    margin-bottom: 1.5rem;
-  }
-  
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    font-size: 16px;
-    color: #444;
-  }
-  
-  .contact-info span {
-    display: block;
-  }
-  
-  .map {
-    max-width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: auto;
-    margin-top: 2rem;
-    height: 300px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #f8f8f8;
-    font-size: 14px;
-    color: #333;
-    border-top: 1px solid #ddd;
-  }
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* ✅ 標題樣式 */
+.contact-section h1 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+/* ✅ 說明文字樣式 */
+.contact-section p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* ✅ 聯絡資訊排版 */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 16px;
+  color: #444;
+}
+
+.contact-info span {
+  display: block;
+}
+
+/* ✅ Google 地圖區塊 */
+.map {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 2rem auto 0;
+}
+
+/* ✅ 頁尾樣式 */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f8f8f8;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
