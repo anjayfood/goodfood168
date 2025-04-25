@@ -51,16 +51,22 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-/* 主視覺小尺寸 */
+/* 主視覺區塊，避開 header */
 .hero.small-hero {
+  margin-top: 80px; /* 推開 sticky header */
   height: 200px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
+
 .hero.small-hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
+
 
 /* 包住整體背景 */
 .main-wrapper {
