@@ -79,7 +79,12 @@ nav a {
   color: #777;
   margin-top: 4px;
 }
-
+.section-box { 
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px; 
+  padding: 2rem; box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
+  margin-bottom: 3rem; 
+}
 /* ✅ 卡片、商品樣式 */
 .carousel-wrapper {
   overflow: hidden;
