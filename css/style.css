@@ -180,30 +180,34 @@ footer {
 @media (max-width: 768px) {
   .about-box {
     flex-direction: column;
-    padding: 1rem 1rem;
-    gap: 0.5rem;
+    padding: 1rem;
+    gap: 1rem;
     text-align: center;
   }
+
   .about-img {
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
     margin: 0 auto;
   }
+
   .about-img img {
     width: 100%;
     height: auto;
     border-radius: 12px;
   }
+
   .about-text {
-    text-align: center;
     padding: 0 1rem;
+    text-align: center;
   }
+
   .about-text h2 {
     margin-bottom: 0.5rem;
-    font-size: 20px;
+    font-size: 22px;
   }
+
   .about-text h2 span {
     font-size: 12px;
     margin-top: 2px;
@@ -217,7 +221,7 @@ footer {
   }
 
   .carousel-item {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   nav a {
