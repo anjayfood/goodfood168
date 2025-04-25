@@ -1,52 +1,79 @@
-/* ✅ brands.css - 品牌總覽頁面專用樣式 */
+/* ✅ 基本結構設定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f8f6f2;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ 主視覺區塊 */
+.brand-hero {
+  margin-top: 60px; /* 避免被 header 擋住 */
+}
+
+.brand-hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ 主內容區塊 */
+main {
+  flex: 1;
+  padding: 4rem 1rem 3rem;
+  background-color: #faf9f7;
+  min-height: 80vh;
+}
 
 .section {
   max-width: 1200px;
-  margin: auto;
-  padding: 3rem 1rem;
+  margin: 0 auto;
 }
 
-h1 {
+.section h1 {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 1rem;
+  font-size: 32px;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
-.description {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  color: #666;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.brand-grid {
+/* ✅ 品牌牆排列樣式 */
+.brand-wall {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .brand-item {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 1rem;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .brand-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .brand-item img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  max-width: 140px;
+  margin: 0 auto 0.5rem;
+  display: block;
+  object-fit: contain;
 }
 
 .brand-item p {
@@ -55,7 +82,7 @@ h1 {
   color: #333;
 }
 
-/* ✅ 頁尾 footer */
+/* ✅ 頁尾樣式 */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -64,3 +91,17 @@ footer {
   color: #333;
   border-top: 1px solid #ddd;
 }
+
+/* ✅ RWD 響應式設定 */
+@media (max-width: 768px) {
+  .brand-wall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-wall {
+    grid-template-columns: 1fr;
+  }
+}
+
