@@ -3,6 +3,7 @@
   background: #f8f6f2;
   padding: 4rem 1rem;
   position: relative;
+  min-height: 1200px; /* ✅ 固定最小高度，看起來一致 */
 }
 
 /* ✅ 品牌卡片排列 */
