@@ -1,107 +1,114 @@
-/* ✅ 基本結構設定 */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #f8f6f2;
-  height: 100%;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      background: #f8f6f2;
+      height: 100%;
+      line-height: 1.6; /* ✅ 加這行 */
+    }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
 
-/* ✅ 主視覺區塊 */
-.brand-hero {
-  margin-top: 60px; /* 避免被 header 擋住 */
-}
+    main {
+      flex: 1;
+    }
 
-.brand-hero img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-}
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-/* ✅ 主內容區塊 */
-main {
-  flex: 1;
-  padding: 4rem 1rem 3rem;
-  background-color: #faf9f7;
-  min-height: 80vh;
-}
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
 
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    /* ✅ 主視覺文字設定 */
+    .hero {
+      position: relative;
+    }
 
-.section h1 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 2rem;
-  color: #333;
-}
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }    
 
-/* ✅ 品牌牆排列樣式 */
-.brand-wall {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
-}
+    .brand-wall-wrapper {
+      background: #f5f5f5; /* ✨ 淺灰色，比白色更柔順 */
+      padding: 4rem 1rem;
+    }    
 
-.brand-item {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .brand-wall {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      justify-items: center;
+    }
 
-.brand-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    .brand-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✅ 讓hover更順 */
+    }    
 
-.brand-item img {
-  width: 100%;
-  height: auto;
-  max-width: 140px;
-  margin: 0 auto 0.5rem;
-  display: block;
-  object-fit: contain;
-}
+    .brand-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-.brand-item p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-}
+    .brand-item img {
+      width: 100%;
+      height: auto;
+      max-width: 140px;
+      margin: 0 auto 0.5rem;
+      display: block;
+      object-fit: contain;
+    }
 
-/* ✅ 頁尾樣式 */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #f8f8f8;
-  font-size: 14px;
-  color: #333;
-  border-top: 1px solid #ddd;
-}
+    .brand-item p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
 
-/* ✅ RWD 響應式設定 */
-@media (max-width: 768px) {
-  .brand-wall {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #fff;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
 
-@media (max-width: 480px) {
-  .brand-wall {
-    grid-template-columns: 1fr;
-  }
-}
+    /* ✅ RWD 響應式設定 */
+    @media (max-width: 768px) {
+      .brand-wall {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
+    @media (max-width: 480px) {
+      .brand-wall {
+        grid-template-columns: 1fr;
+      }
+    }
