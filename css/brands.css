@@ -1,154 +1,103 @@
-/* ✅ 品牌牆背景 */
 .brand-wall-wrapper {
   background: #f8f6f2;
-  padding: 4rem 1rem;
-  position: relative;
-  min-height: 1200px; /* ✅ 固定最小高度，看起來一致 */
+  padding: 2rem 1rem 4rem 1rem; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ✅ 品牌卡片排列 */
 .brand-cards {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-/* ✅ 品牌卡片設計 */
 .brand-card {
-  display: flex;
-  align-items: center;
   background: #ffffff;
   border-radius: 16px;
   padding: 2rem;
-  gap: 2rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brand-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .brand-card-logo {
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: 12px;
-  width: 200px;
   height: 120px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .brand-card-logo img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 200px;
+  max-height: 100%;
   object-fit: contain;
 }
 
-.brand-card-text {
-  flex: 1;
-  min-width: 0;
-}
-
 .brand-card-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0 0 0.5rem;
   color: #222;
 }
 
-.brand-card-text .line {
-  width: 60px;
-  height: 2px;
-  background: #ccc;
-  margin-bottom: 1rem;
-}
-
 .brand-card-text p {
-  margin: 0;
+  font-size: 14px;
   color: #666;
-  font-size: 16px;
-  line-height: 1.6;
+  margin: 0;
 }
 
-/* ✅ 左右換頁按鈕 - 質感版 */
-.page-button {
-  position: absolute;
-  top: 45%;
-  width: 70px;
-  height: 70px;
-  border: 2px solid #bbb;
-  background: transparent;
-  color: #555;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 50%;
+.page-controls {
+  margin-top: 2rem;
   text-align: center;
-  line-height: 1.2;
+}
+
+.page-button {
+  padding: 0.8rem 2rem;
+  margin: 0 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  background: #ffffff;
+  border: 2px solid #bbb;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 10;
-  padding: 5px;
-}
-
-.page-button span {
-  display: block;
-  font-size: 14px;
-  margin-top: 4px;
-  color: #555;
-}
-
-.prev-button {
-  left: 8rem; /* ✅ 左邊往內縮 */
-}
-
-.next-button {
-  right: 8rem; /* ✅ 右邊往內縮 */
+  font-family: "Poppins", "Noto Sans TC", sans-serif;
 }
 
 .page-button:hover {
   background: #f0e0d0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-color: #aaa;
   color: #222;
 }
 
-.page-button:hover span {
-  color: #222;
-}
-
-/* ✅ 手機版響應式 */
+/* 手機版 */
 @media (max-width: 768px) {
   .brand-cards {
     grid-template-columns: 1fr;
   }
-  .brand-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .brand-card-logo {
-    margin-bottom: 1rem;
-  }
-  .page-button {
-    top: unset;
-    bottom: 1rem;
-    width: 60px;
-    height: 60px;
-    font-size: 16px;
-  }
-  .prev-button {
-    left: 20%; /* ✅ 手機版也往內縮，讓按鈕別太邊緣 */
-    transform: translateX(-50%);
-  }
-  .next-button {
-    right: 20%;
-    transform: translateX(50%);
-  }
+}
+/* ✅ 品牌上方橫幅圖片 */
+.brand-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
 }
 
+.brand-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* 圓角，可有可無 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 淡淡陰影 */
+  object-fit: cover;
+}

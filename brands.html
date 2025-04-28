@@ -6,6 +6,22 @@
   <title>品牌總覽 - 日銓貿易股份有限公司</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/brands.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Poppins", "Noto Sans TC", sans-serif;
+      background: #f8f6f2;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,92 +38,23 @@
 <div class="hero">
   <img src="images/brand-banner.png" alt="品牌總覽主視覺">
 </div>
+<!-- 新增橫幅圖片 -->
+<div class="brand-banner">
+  <img src="images/brand-top-banner.png" alt="品牌橫幅圖片">
+</div>
 
 <main class="brand-wall-wrapper">
 
-  <!-- 左右換頁按鈕（修正版） -->
-<button class="page-button prev-button" onclick="showPage(1)">
-  ←<br><span>上一頁</span>
-</button>
-<button class="page-button next-button" onclick="showPage(2)">
-  →<br><span>下一頁</span>
-</button>
-
-  <!-- 第一頁 (10個品牌) -->
-  <section id="page1" class="brand-cards">
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌FUDA.png" alt="FUDA"></div>
-      <div class="brand-card-text"><h3>FUDA</h3><div class="line"></div><p>提供優質食品原料，致力於成為食品產業的最佳合作夥伴。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌安卡羅.png" alt="Ankara"></div>
-      <div class="brand-card-text"><h3>Ankara</h3><div class="line"></div><p>來自土耳其的經典麵粉品牌。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌VIVOLA.png" alt="VIVOLA"></div>
-      <div class="brand-card-text"><h3>VIVOLA</h3><div class="line"></div><p>義大利傳承，專精於高品質義大利麵及麵粉。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌巨人牌.png" alt="巨人牌"></div>
-      <div class="brand-card-text"><h3>巨人牌</h3><div class="line"></div><p>國際知名品牌，專注於食品加工與原料供應。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌綠巨人.png" alt="綠巨人"></div>
-      <div class="brand-card-text"><h3>綠巨人</h3><div class="line"></div><p>經典蔬菜品牌，堅持天然健康理念。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌克莉絲汀.png" alt="Christine"></div>
-      <div class="brand-card-text"><h3>Christine</h3><div class="line"></div><p>專注於高品質烘焙與甜點材料。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌DAVIA.png" alt="DAVIA"></div>
-      <div class="brand-card-text"><h3>DAVIA</h3><div class="line"></div><p>義大利高端食品品牌，產品風味純正。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌鳥牌.png" alt="三鳥牌"></div>
-      <div class="brand-card-text"><h3>三鳥牌</h3><div class="line"></div><p>亞洲知名老字號品牌，提供多元食品選擇。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌香草粉.png" alt="森和富"></div>
-      <div class="brand-card-text"><h3>森和富</h3><div class="line"></div><p>專業香草粉與香料供應，天然純粹。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌好時.png" alt="Hershey's"></div>
-      <div class="brand-card-text"><h3>Hershey's</h3><div class="line"></div><p>美國百年巧克力品牌，甜點界的經典代表。</p></div>
-    </div>
+  <!-- 品牌區塊 -->
+  <section id="brand-container" class="brand-cards">
+    <!-- 這裡會自動載入品牌 -->
   </section>
 
-  <!-- 第二頁 (7個品牌) -->
-  <section id="page2" class="brand-cards" style="display: none;">
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌瑞豐.png" alt="瑞豐"></div>
-      <div class="brand-card-text"><h3>瑞豐</h3><div class="line"></div><p>深耕農產原料供應，堅持品質與誠信。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌仙菓牌.png" alt="仙菓牌"></div>
-      <div class="brand-card-text"><h3>仙菓牌</h3><div class="line"></div><p>以果乾產品聞名，強調自然與健康。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌仰南.png" alt="仰南"></div>
-      <div class="brand-card-text"><h3>仰南</h3><div class="line"></div><p>專注於高品質食品進出口貿易。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌GELITA.png" alt="GELITA"></div>
-      <div class="brand-card-text"><h3>GELITA</h3><div class="line"></div><p>德國頂尖明膠製造商，品質領導全球。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌喜配多.png" alt="喜配多"></div>
-      <div class="brand-card-text"><h3>喜配多</h3><div class="line"></div><p>提供專業烘焙及甜點材料，品質穩定。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌法國燕子牌.png" alt="LESAFFRE"></div>
-      <div class="brand-card-text"><h3>LESAFFRE</h3><div class="line"></div><p>世界領先酵母生產商，技術與品質並重。</p></div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-card-logo"><img src="images/品牌愛加.png" alt="Aijia"></div>
-      <div class="brand-card-text"><h3>Aijia</h3><div class="line"></div><p>致力於食品添加物及原料供應，專業可靠。</p></div>
-    </div>
-  </section>
+  <!-- 左右切換按鈕 -->
+  <div class="page-controls">
+    <button class="page-button" onclick="prevPage()">← 上一頁</button>
+    <button class="page-button" onclick="nextPage()">下一頁 →</button>
+  </div>
 
 </main>
 
@@ -116,17 +63,64 @@
 </footer>
 
 <script>
-function showPage(page) {
-  const page1 = document.getElementById('page1');
-  const page2 = document.getElementById('page2');
-  if (page === 1) {
-    page1.style.display = 'grid';
-    page2.style.display = 'none';
-  } else {
-    page1.style.display = 'none';
-    page2.style.display = 'grid';
-  }
+const brands = [
+  { img: "images/品牌FUDA.png", name: "FUDA", desc: "食品原料專家。" },
+  { img: "images/品牌安卡羅.png", name: "Ankara", desc: "土耳其麵粉品牌。" },
+  { img: "images/品牌VIVOLA.png", name: "VIVOLA", desc: "義大利麵專家。" },
+  { img: "images/品牌巨人牌.png", name: "巨人牌", desc: "食品加工供應商。" },
+  { img: "images/品牌綠巨人.png", name: "綠巨人", desc: "蔬菜品牌。" },
+  { img: "images/品牌克莉絲汀.png", name: "Christine", desc: "烘焙甜點供應商。" },
+  { img: "images/品牌DAVIA.png", name: "DAVIA", desc: "高端食品品牌。" },
+  { img: "images/品牌鳥牌.png", name: "三鳥牌", desc: "老字號食品品牌。" },
+  { img: "images/品牌香草粉.png", name: "森和富", desc: "天然香草粉供應商。" },
+  { img: "images/品牌好時.png", name: "Hershey's", desc: "經典巧克力品牌。" },
+  { img: "images/品牌瑞豐.png", name: "瑞豐", desc: "農產原料供應商。" },
+  { img: "images/品牌仙菓牌.png", name: "仙菓牌", desc: "自然健康果乾。" },
+  { img: "images/品牌仰南.png", name: "仰南", desc: "食品貿易專家。" },
+  { img: "images/品牌GELITA.png", name: "GELITA", desc: "德國明膠領導品牌。" },
+  { img: "images/品牌喜配多.png", name: "喜配多", desc: "烘焙材料供應商。" },
+  { img: "images/品牌法國燕子牌.png", name: "樂斯福", desc: "頂尖酵母生產商。" },
+  { img: "images/品牌愛加.png", name: "Aijia", desc: "食品添加物專家。" }
+];
+
+let currentPage = 0;
+const itemsPerPage = 6;
+
+function renderPage() {
+  const container = document.getElementById('brand-container');
+  container.innerHTML = '';
+  const start = currentPage * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageBrands = brands.slice(start, end);
+
+  pageBrands.forEach(item => {
+    container.innerHTML += `
+      <div class="brand-card">
+        <div class="brand-card-logo"><img src="${item.img}" alt="${item.name}"></div>
+        <div class="brand-card-text">
+          <h3>${item.name}</h3>
+          <div class="line"></div>
+          <p>${item.desc}</p>
+        </div>
+      </div>
+    `;
+  });
 }
+
+function nextPage() {
+  const totalPages = Math.ceil(brands.length / itemsPerPage);
+  currentPage = (currentPage + 1) % totalPages;
+  renderPage();
+}
+
+function prevPage() {
+  const totalPages = Math.ceil(brands.length / itemsPerPage);
+  currentPage = (currentPage - 1 + totalPages) % totalPages;
+  renderPage();
+}
+
+// 初始載入
+renderPage();
 </script>
 
 </body>
