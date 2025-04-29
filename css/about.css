@@ -1,75 +1,108 @@
-/* ✅ 全站基本設定 */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #333;
+/* ✅ 主區域背景 */
+.about-wrapper {
+  background: #eaf4fb;
+  padding: 4rem 1rem 2rem;
 }
 
-/* ✅ 頁首設定 */
-header {
+/* ✅ 內容排版 */
+.content-row {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  gap: 3rem;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-  color: #333;
+.content-row.reverse {
+  flex-direction: row-reverse;
 }
 
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+.content-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-/* ✅ 區塊與標題 */
-.section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 3rem 1rem;
+.content-text {
+  flex: 1;
 }
 
-h1 {
+.content-text h2 {
   font-size: 28px;
   margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* ✅ 說明段落樣式 */
-p.description {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  color: #666;
-}
-
-/* ✅ 關於我們圖片樣式 */
-.about-img {
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* ✅ 頁尾 */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #f8f8f8;
-  font-size: 14px;
   color: #333;
-  border-top: 1px solid #ddd;
+}
+
+.content-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ✅ 強調字 */
+.highlight {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1a4d8f;
+}
+
+/* ✅ 結尾標語 - 帶線條版 */
+.closing-section.with-lines {
+  text-align: center;
+  margin: 6rem auto 4rem;
+  color: #333;
+}
+
+.closing-section.with-lines h2 {
+  font-size: 28px;
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.closing-section.with-lines p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.closing-section.with-lines .line {
+  width: 120px;
+  height: 2px;
+  background: #bbb;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ✅ 手機版 (螢幕小於 768px 自動適應) */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .content-row.reverse {
+    flex-direction: column;
+  }
+  .content-text {
+    width: 100%;
+  }
+  .content-text h2 {
+    font-size: 24px;
+  }
+  .content-text p {
+    font-size: 16px;
+  }
+  .content-image img {
+    max-width: 100%;
+  }
+  .highlight {
+    font-size: 18px;
+  }
+  .closing-section.with-lines h2 {
+    font-size: 24px;
+  }
+  .closing-section.with-lines p {
+    font-size: 16px;
+  }
 }

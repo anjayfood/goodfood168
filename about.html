@@ -4,13 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>關於日銓 - 日銓貿易股份有限公司</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+  <style>
+    /* ✅ 新增淡入動畫 */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <a href="/goodfood168/" class="logo">日銓貿易股份有限公司</a>
+  <div class="logo">日銓貿易股份有限公司</div>
   <nav>
     <a href="about.html">關於日銓</a>
     <a href="brands.html">品牌總覽</a>
@@ -19,24 +31,72 @@
   </nav>
 </header>
 
-<!-- ✅ 主視覺大圖 -->
 <div class="hero">
-  <img src="images/關於日銓-04.png" alt="關於日銓主視覺">
+  <img src="images/about-banner.png" alt="關於日銓主視覺">
 </div>
 
-<main class="section">
-  <h1>關於日銓</h1>
-  <p class="description">
-    日銓貿易股份有限公司專營進口果乾、堅果、罐頭與烘焙義大利麵原料，供應餐飲與製造通路，堅持品質，服務台灣超過三十年。
-  </p>
-  <p class="description">
-    我們致力於引進高品質進口食材，並與國內多家知名品牌通路合作，提供穩定且多樣化的商品選擇，是您值得信賴的長期夥伴。
-  </p>
+<main class="about-wrapper">
+
+  <!-- 品牌故事（圖左＋文右） -->
+  <section class="brand-story fade-in">
+    <div class="content-row">
+      <div class="content-image">
+        <img src="images/brand-story-photo.png" alt="品牌故事圖片">
+      </div>
+      <div class="content-text">
+        <h2>品牌故事</h2>
+        <p>
+          <span class="highlight">1987</span> 年由洪墩清先生創立之【同燦貿易有限公司】，專營進口世界各地的優質原物料在台北【迪化街商圈】中開拓一片市場，也成為許多老餐飲人與烘焙人的共同記憶。後經年輕一輩接班成為現今的<span class="highlight">日銓貿易股份有限公司</span>。
+        </p>                   
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌理念（圖右＋文左） -->
+  <section class="brand-concept fade-in">
+    <div class="content-row reverse">
+      <div class="content-image">
+        <img src="images/about-company.png" alt="品牌理念圖片">
+      </div>
+      <div class="content-text">
+        <p>
+          經營項目包含罐頭食品、堅果仁、水果乾，並配合現代人的飲食需求新增了義大利麵條等的西餐項目供應予台灣的食品製造業及餐飲業使用。自創立至今逾 35 年，「日銓貿易股份有限公司」始終以提供優質的食品原物料與服務為宗旨，並逐年送檢進口商品，只為確保商品品質及帶給顧客更好的體驗。
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- 結尾標語（帶線條版） -->
+  <section class="closing-section with-lines">
+    <div class="line"></div>
+    <h2>讓我們成為您最信賴的夥伴。</h2>
+    <p>Your Most Trusted Food Partner.</p>
+    <div class="line"></div>
+  </section>
+
+
 </main>
 
 <footer>
-  &copy; 2025 日銓貿易股份有限公司｜統一編號：80548156｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net
+  <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548156｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
 </footer>
+
+<!-- ✅ 小動畫JS -->
+<script>
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
+

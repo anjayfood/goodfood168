@@ -80,24 +80,29 @@
   color: #222;
 }
 
-/* 手機版 */
+/* ✅ 手機版 */
 @media (max-width: 768px) {
   .brand-cards {
     grid-template-columns: 1fr;
   }
-}
-/* ✅ 品牌上方橫幅圖片 */
-.brand-banner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 2rem auto 3rem;
-  padding: 0 1rem;
+
+  .brand-banner img {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .page-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .page-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 16px;
+  }
 }
 
-.brand-banner img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px; /* 圓角，可有可無 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 淡淡陰影 */
-  object-fit: cover;
-}
