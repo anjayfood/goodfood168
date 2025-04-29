@@ -48,15 +48,39 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.product-item img {
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 1rem;
+.product-item {
+  text-decoration: none; /* ✅ 取消超連結藍線 */
+  color: inherit;         /* ✅ 繼承原本顏色，不要藍色 */
 }
-
 .product-item p {
-  font-size: 16px;
   margin: 0;
   color: #333;
+  text-decoration: none;
+}
+
+/* 分類連結列 */
+.category-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.category-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover {
+  background: #f0e0d0;
+  color: #222;
+  transform: translateY(-2px);
 }

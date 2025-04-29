@@ -1,0 +1,106 @@
+/* ✅ 主視覺區塊（不動） */
+.hero {
+    position: relative;
+    width: 100%;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-title {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  }
+  
+  /* ✅ 分類快速導覽 */
+  .category-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .category-button {
+    padding: 0.6rem 1.2rem;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .category-button:hover {
+    background: #f0e0d0;
+    color: #222;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  /* ✅ 商品列表主區塊 */
+  .products-wrapper {
+    background: #f8f6f2;
+    padding: 4rem 1rem 2rem;
+  }
+  
+  /* ✅ 商品卡片排列 */
+  .product-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 固定4欄 */
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  /* ✅ 單一商品卡片 */
+  .product-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  
+  /* ✅ 商品圖片統一大小 */
+  .product-item img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  /* ✅ 商品名稱 */
+  .product-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* ✅ 手機版調整 */
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 手機版每排兩個 */
+    }
+  }
+  
