@@ -8,16 +8,15 @@
   <link rel="stylesheet" href="css/brands.css">
 </head>
 <body>
-
-<header>
-  <div class="logo">日銓貿易股份有限公司</div>
-  <nav>
-    <a href="about.html">關於日銓</a>
-    <a href="brands.html">品牌總覽</a>
-    <a href="products.html">商品總覽</a>
-    <a href="contact.html">聯絡我們</a>
-  </nav>
-</header>
+  <header>
+    <a href="/goodfood168/" class="logo">日銓貿易股份有限公司</a>
+    <nav>
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
 
 <!-- ✅ 品牌總覽主視覺 -->
 <div class="hero">
@@ -56,23 +55,23 @@
 <script>
 // brand 卡片動態載入
 const brands = [
-  { img: "images/品牌FUDA.png", name: "FUDA", desc: "食品原料專家。" },
-  { img: "images/品牌安卡羅.png", name: "Ankara", desc: "土耳其麵粉品牌。" },
-  { img: "images/品牌VIVOLA.png", name: "VIVOLA", desc: "義大利麵專家。" },
-  { img: "images/品牌巨人牌.png", name: "巨人牌", desc: "食品加工供應商。" },
-  { img: "images/品牌綠巨人.png", name: "綠巨人", desc: "蔬菜品牌。" },
-  { img: "images/品牌克莉絲汀.png", name: "Christine", desc: "烘焙甜點供應商。" },
-  { img: "images/品牌DAVIA.png", name: "DAVIA", desc: "高端食品品牌。" },
-  { img: "images/品牌鳥牌.png", name: "三鳥牌", desc: "老字號食品品牌。" },
-  { img: "images/品牌香草粉.png", name: "森和富", desc: "天然香草粉供應商。" },
-  { img: "images/品牌好時.png", name: "Hershey's", desc: "經典巧克力品牌。" },
-  { img: "images/品牌瑞豐.png", name: "瑞豐", desc: "農產原料供應商。" },
-  { img: "images/品牌仙菓牌.png", name: "仙菓牌", desc: "自然健康果乾。" },
-  { img: "images/品牌仰南.png", name: "仰南", desc: "食品貿易專家。" },
-  { img: "images/品牌GELITA.png", name: "GELITA", desc: "德國明膠領導品牌。" },
-  { img: "images/品牌喜配多.png", name: "喜配多", desc: "烘焙材料供應商。" },
-  { img: "images/品牌法國燕子牌.png", name: "樂斯福", desc: "頂尖酵母生產商。" },
-  { img: "images/品牌愛加.png", name: "Aijia", desc: "食品添加物專家。" }
+  { img: "images/品牌FUDA.png", name: "FUDA", desc: "專注於食品原料與進口貿易，為烘焙、食品加工業提供高品質基礎原料。" },
+  { img: "images/品牌安卡羅.png", name: "Ankara", desc: "源自土耳其的專業麵粉品牌，擁有悠久製粉工藝，深受全球食品業信賴。" },
+  { img: "images/品牌VIVOLA.png", name: "VIVOLA", desc: "義大利傳承品牌，提供多樣化義大利麵製品，堅持正統風味與品質。" },
+  { img: "images/品牌巨人牌.png", name: "巨人牌", desc: "知名食品加工品牌，專精於穀物、玉米製品，廣泛應用於多元食品領域。" },
+  { img: "images/品牌綠巨人.png", name: "綠巨人", desc: "美國百年經典蔬菜品牌，以新鮮、健康、自然著稱，全球家庭餐桌首選。" },
+  { img: "images/品牌克莉絲汀.png", name: "Christine", desc: "來自法國的烘焙品牌，專注於高品質麵粉、蛋糕、甜點製作原料供應。" },
+  { img: "images/品牌DAVIA.png", name: "DAVIA", desc: "高端食品品牌，提供專業級乳製品、糖類、穀類原料，滿足頂級需求。" },
+  { img: "images/品牌鳥牌.png", name: "三鳥牌", desc: "台灣在地知名品牌，主打食品乾貨、五穀雜糧，深受業界與家庭青睞。" },
+  { img: "images/品牌香草粉.png", name: "森和富", desc: "專營天然香草粉、香料，產品純度高，廣泛應用於烘焙、調味與飲品。" },
+  { img: "images/品牌好時.png", name: "Hershey's", desc: "美國巧克力界巨擘，百年經典口碑，涵蓋巧克力醬、糖果及烘焙應用。" },
+  { img: "images/品牌瑞豐.png", name: "瑞豐", desc: "專注天然農產品供應，提供穀物、堅果、乾貨等多樣高品質原料。" },
+  { img: "images/品牌仙菓牌.png", name: "仙菓牌", desc: "專注無添加果乾製作，保留水果自然風味與營養，健康零食新選擇。" },
+  { img: "images/品牌仰南.png", name: "仰南", desc: "專業食品貿易商，代理多國高端原物料，服務廣泛餐飲及製造產業。" },
+  { img: "images/品牌GELITA.png", name: "GELITA", desc: "全球領導明膠品牌，來自德國，專業於食品膠質、蛋白質領域超過百年。" },
+  { img: "images/品牌喜配多.png", name: "喜配多", desc: "烘焙食材供應商，提供麵粉、乳酪、堅果等，協助打造多樣烘焙美味。" },
+  { img: "images/品牌法國燕子牌.png", name: "樂斯福", desc: "法國頂尖酵母品牌，廣泛應用於麵包、啤酒與烘焙業界，品質穩定出色。" },
+  { img: "images/品牌愛加.png", name: "Aijia", desc: "專業食品添加劑品牌，提供穩定劑、乳化劑等，提升產品質地與保存性。" }
 ];
 
 let currentPage = 0;
