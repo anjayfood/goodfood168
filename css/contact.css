@@ -45,7 +45,7 @@ main::before {
 main {
   flex: 1;
   position: relative;
-  background-image: url('../images/bg-contact.png');
+  background-image: url('../images/bg-contact.jpg');
   background-size: cover;
   background-repeat: repeat-y;
   background-position: center top;
