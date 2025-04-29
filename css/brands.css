@@ -1,12 +1,53 @@
+/* hero 主視覺 */
+.hero {
+  width: 100%;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 品牌牆大容器 */
 .brand-wall-wrapper {
-  background: #f8f6f2;
-  padding: 2rem 1rem 4rem 1rem; 
-  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 1rem 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.brand-top-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: -4rem auto 2rem auto;
+  padding: 0;
+  background: none;
+  border-radius: 20px; /* ✅ 有圓角 */
+  box-shadow: none;
+  overflow: hidden; /* ✅ 圖片裁切在圓角裡 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-top-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px; /* ✅ 這裡圖片也加 border-radius */
+}
+
+/* 主內容背景色 */
+.brand-wrapper {
+  background: #f8f6f2; /* 跟 about-wrapper 一樣的淡藍色 */
+  padding: 4rem 1rem 2rem;
+  }
+
+/* ✅ 品牌卡片排列 */
 .brand-cards {
   max-width: 1200px;
   width: 100%;
@@ -15,6 +56,7 @@
   gap: 2rem;
 }
 
+/* ✅ 單一品牌卡片 */
 .brand-card {
   background: #ffffff;
   border-radius: 16px;
@@ -55,6 +97,7 @@
   margin: 0;
 }
 
+/* ✅ 分頁按鈕 */
 .page-controls {
   margin-top: 2rem;
   text-align: center;
@@ -86,13 +129,6 @@
     grid-template-columns: 1fr;
   }
 
-  .brand-banner img {
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-    display: block;
-  }
-
   .page-controls {
     display: flex;
     justify-content: center;
@@ -104,5 +140,16 @@
     padding: 0.6rem 1.5rem;
     font-size: 16px;
   }
-}
 
+  .brand-top-banner img {
+    max-height: 100px;
+  }
+  .brand-top-banner {
+    margin: 2rem auto 1.5rem auto; /* 上下間距稍微小一點 */
+    border-radius: 16px; /* ✅ 圓角縮小一點點，避免太誇張 */
+    padding: 0 1rem; /* 左右也留一點呼吸空間 */
+  }
+  .brand-top-banner img {
+    border-radius: 16px; /* ✅ 縮小圖片的圓角 */
+  }
+}

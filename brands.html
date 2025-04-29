@@ -6,22 +6,6 @@
   <title>品牌總覽 - 日銓貿易股份有限公司</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/brands.css">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: "Poppins", "Noto Sans TC", sans-serif;
-      background: #f8f6f2;
-      display: flex;
-      flex-direction: column;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
 </head>
 <body>
 
@@ -35,34 +19,42 @@
   </nav>
 </header>
 
+<!-- ✅ 品牌總覽主視覺 -->
 <div class="hero">
   <img src="images/brand-banner.png" alt="品牌總覽主視覺">
 </div>
-<!-- 新增橫幅圖片 -->
-<div class="brand-banner">
-  <img src="images/brand-top-banner.png" alt="品牌橫幅圖片">
-</div>
 
-<main class="brand-wall-wrapper">
+<!-- ✅ 主內容 -->
+<main class="brand-wrapper">
 
-  <!-- 品牌區塊 -->
-  <section id="brand-container" class="brand-cards">
-    <!-- 這裡會自動載入品牌 -->
+  <section class="brand-wall-wrapper">
+
+    <!-- 品牌介紹橫幅 -->
+    <div class="brand-top-banner">
+      <img src="images/brand-top-banner.png" alt="品牌介紹橫幅">
+    </div>
+
+    <!-- 品牌牆卡片 -->
+    <div id="brand-container" class="brand-cards">
+      <!-- JS動態載入 -->
+    </div>
+
+    <!-- 分頁按鈕 -->
+    <div class="page-controls">
+      <button class="page-button" onclick="prevPage()">← 上一頁</button>
+      <button class="page-button" onclick="nextPage()">下一頁 →</button>
+    </div>
+
   </section>
-
-  <!-- 左右切換按鈕 -->
-  <div class="page-controls">
-    <button class="page-button" onclick="prevPage()">← 上一頁</button>
-    <button class="page-button" onclick="nextPage()">下一頁 →</button>
-  </div>
 
 </main>
 
 <footer>
-  <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548156｜聯絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
+  <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548156｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
 </footer>
 
 <script>
+// brand 卡片動態載入
 const brands = [
   { img: "images/品牌FUDA.png", name: "FUDA", desc: "食品原料專家。" },
   { img: "images/品牌安卡羅.png", name: "Ankara", desc: "土耳其麵粉品牌。" },
@@ -119,7 +111,6 @@ function prevPage() {
   renderPage();
 }
 
-// 初始載入
 renderPage();
 </script>
 
