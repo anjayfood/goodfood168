@@ -45,8 +45,13 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
   a.product-item {
-    text-decoration: none;
     color: #222;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  a.product-item p {
+    color: inherit;
   }
   /* ✅ 商品列表主區塊 */
   .products-wrapper {
