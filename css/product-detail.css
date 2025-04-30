@@ -1,0 +1,185 @@
+/* ✅ 最終版 product-detail.css — 背景正常、卡片不爆版、左右排版、手機切換正常 */
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #f9f7f3; /* 不再設定背景圖，純保底色 */
+}
+
+/* ✅ 麵包屑樣式 */
+.breadcrumb {
+  font-size: 14px;
+  padding: 1rem 2rem;
+  background: #f2f2f2;
+  color: #777;
+}
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: #000;
+}
+.breadcrumb strong {
+  color: #000;
+}
+
+.product-page-bg {
+  padding: 4rem 0;
+  background: url('../images/bg-texture.jpg') no-repeat center top;
+  background-size: cover;
+  background-color: #f9f7f3;
+}
+
+/* ✅ 修正電腦版為左右排、加上內層最大寬度限制 */
+.product-detail-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-box {
+  display: flex;
+  flex-wrap: nowrap; /* 防止掉行 */
+  gap: 3rem;
+  align-items: stretch; /* 讓圖片與文字等高 */
+}
+
+.product-image {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.storage-note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 1rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* ✅ 商品文字 */
+.product-info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+.product-title {
+  font-size: 28px;
+  font-weight: 600; /* ✅ 比 bold 更高級柔和 */
+  margin: 0;
+}
+.product-subtitle {
+  font-size: 16px;
+  color: #888;
+  margin-top: 4px;
+  margin-bottom: 1rem;
+}
+
+/* ✅ 標籤 */
+.tag-group {
+  margin: 1rem 0 1.5rem 0;
+}
+.tag {
+  display: inline-block;
+  background: #f2f2f2;
+  color: #333;
+  font-size: 13px;
+  padding: 0.3em 0.9em;
+  border-radius: 20px;
+  margin: 0.2em 0.4em 0.2em 0;
+}
+
+/* ✅ 資訊欄 */
+.product-meta {
+  background: #f9f9f9; /* ✅ 原為 #fafafa，改更清楚對比 */
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0; /* ✅ 增加明確分層 */
+  margin-bottom: 1.5rem;
+}
+.product-meta p {
+  font-size: 15px;
+  margin: 0.4rem 0;
+  line-height: 1.6;
+}
+
+/* ✅ 商品特色區塊 */
+.product-section {
+  padding: 1rem;
+  background: #fefefe;
+  border-left: 3px solid #e0d8c8;
+  border-radius: 12px;
+  margin-bottom: 1.5rem; /* ✅ 從 1.2rem 微調提升整體呼吸感 */
+  line-height: 1.8; /* ✅ 舒適閱讀 */
+}
+.product-section h3 {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.product-section ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+.product-section li {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 0.3rem;
+}
+
+.contact-banner {
+  margin: 4rem auto 3rem;
+  background: #d9caa4; /* 可自調 */
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  max-width: 420px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-banner a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ✅ 手機版：改為上下排 */
+@media (max-width: 768px) {
+  .product-box {
+    flex-direction: column;
+  }
+
+  .product-image, .product-info {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .product-detail-wrapper {
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+  }
+}

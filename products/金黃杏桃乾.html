@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>金黃杏桃乾 - 日銓貿易股份有限公司</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-detail.css">
+</head>
+<body>
+
+  <header>
+    <a href="/goodfood168/" class="logo">日銓貿易股份有限公司</a>
+    <nav>
+      <a href="../about.html">關於日銓</a>
+      <a href="../brands.html">品牌總覽</a>
+      <a href="../products.html">商品總覽</a>
+      <a href="../contact.html">聯絡我們</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">首頁</a> &gt;
+    <a href="../products.html">商品總覽</a> &gt;
+    <a href="../nuts.html">堅果・果乾</a> &gt;
+    <strong>金黃杏桃乾</strong>
+  </div>
+
+  <div class="product-page-bg">
+    <div class="container">
+      <div class="product-detail-wrapper">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="../images/金黃杏桃乾.jpg" alt="金黃杏桃乾">
+            <p class="storage-note">
+              保存方式：放於陰涼乾燥處，避免高溫及受潮，開封後建議冷藏密封保存。<br>
+            </p>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">金黃杏桃乾</h1>
+            <div class="tag-group">
+              <span class="tag">🇹🇷 土耳其進口</span>
+              <span class="tag">🍃 無添加</span>
+              <span class="tag">10kg</span>
+            </div>
+            <h2 class="product-subtitle">Golden Dried Apricots</h2>
+            <div class="product-meta">
+              <p><strong>成分：</strong>杏桃乾</p>
+              <p><strong>產地：</strong>土耳其</p>
+              <p><strong>商品規格：</strong>10kg</p>
+            </div>
+            <div class="product-section">
+              <h3>商品特色：</h3>
+              <ul>
+                <li>精選金黃杏桃片，果肉飽滿柔軟</li>
+                <li>天然日曬微酸帶甜，色澤亮眼食慾佳</li>
+                <li>無加糖無防腐劑，保留杏桃原始果香</li>
+                <li>富含膳食纖維、β胡蘿蔔素與抗氧化成分</li>
+              </ul>
+            </div>
+            <div class="product-section">
+              <h3>適用範圍：</h3>
+              <ul>
+                <li>健康零食（直接食用，酸甜開胃）</li>
+                <li>早餐搭配（與優格、穀物、水果混合）</li>
+                <li>烘焙應用（果乾麵包、餅乾、蛋糕）</li>
+                <li>泡茶煮飲（可與紅棗、洛神花等共煮）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-banner">
+        <a href="#" id="back-btn">← 回上一頁</a>
+        <a href="../contact.html">聯絡我們</a>
+      </div>              
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548156｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
+  </footer>
+  <script>
+    document.getElementById('back-btn').addEventListener('click', function (e) {
+      e.preventDefault();
+      // 判斷有前一頁再回上一頁，否則跳回商品總覽
+      if (document.referrer && document.referrer !== location.href) {
+        window.history.back();
+      } else {
+        window.location.href = "../products.html";
+      }
+    });
+  </script>
+</body>
+</html>
