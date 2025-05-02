@@ -1,6 +1,7 @@
 /* hero 主視覺 */
 .hero {
   width: 100%;
+  margin-bottom:-1rem;
 }
 .hero img {
   width: 100%;
@@ -22,16 +23,17 @@
 .brand-top-banner {
   width: 100%;
   max-width: 1200px;
-  margin: -4rem auto 2rem auto;
+  margin: -2rem auto 2rem auto; /* ✅ 減少跳躍感 */
   padding: 0;
   background: none;
-  border-radius: 20px; /* ✅ 有圓角 */
+  border-radius: 20px;
   box-shadow: none;
-  overflow: hidden; /* ✅ 圖片裁切在圓角裡 */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .brand-top-banner img {
   width: 100%;
@@ -128,7 +130,9 @@
   .brand-cards {
     grid-template-columns: 1fr;
   }
-
+  .hero {
+    margin-bottom: -7rem;
+  }
   .page-controls {
     display: flex;
     justify-content: center;

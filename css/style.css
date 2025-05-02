@@ -176,6 +176,26 @@ footer {
   border-top: 1px solid #ddd;
   margin-top: auto;
 }
+/* ✅ 回到頂部按鈕樣式 */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none; /* 預設隱藏 */
+  transition: opacity 0.3s ease;
+}
+#scrollTopBtn:hover {
+  background-color: #555;
+}
 
 @media (max-width: 768px) {
   .about-box {
@@ -184,7 +204,12 @@ footer {
     gap: 1rem;
     text-align: center;
   }
-
+  #scrollTopBtn {
+    padding: 0.5rem 0.8rem;
+    font-size: 13px;
+    bottom: 1.5rem;
+    right: 1rem;
+  }
   .about-img {
     width: 100%;
     max-width: 100%;
@@ -224,9 +249,18 @@ footer {
     max-width: 100%;
   }
 
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
   nav a {
-    margin: 0 0.5rem;
     font-size: 14px;
+    white-space: nowrap;
+    margin: 0 0.5rem;
   }
 
   .carousel-arrows {
