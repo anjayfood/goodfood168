@@ -109,16 +109,17 @@
   @media (max-width: 768px) {
     /* ✅ 主視覺圖片顯示正常 */
     .hero {
-      height: auto;
+      width: 100%;
+      display: block;
       overflow: visible;
-      position: relative;
+      margin-bottom: 1rem;
     }
   
     .hero img {
       width: 100%;
       height: auto;
-      object-fit: cover;
       display: block;
+      max-height: none;
     }
   
     .hero-title {
