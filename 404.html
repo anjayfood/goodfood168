@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>頁面搬家了，正在導向...</title>
+  <script>
+    (function () {
+      const path = window.location.pathname;
+
+      // 若原本是 /products/腰果粒，則自動補上 .html
+      if (path && !path.endsWith('.html')) {
+        const newPath = path.endsWith('/') 
+          ? path.slice(0, -1) + '.html' 
+          : path + '.html';
+
+        window.location.replace(newPath);
+      } else {
+        document.body.innerHTML = '<h1>404 - 找不到頁面</h1>';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>正在導向到正確頁面，請稍候...</p>
+</body>
+</html>
