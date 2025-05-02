@@ -107,8 +107,69 @@
   
   /* ✅ 手機版調整 */
   @media (max-width: 768px) {
+    /* ✅ 主視覺圖片顯示正常 */
+    .hero {
+      height: auto;
+      overflow: visible;
+      position: relative;
+    }
+  
+    .hero img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+  
+    .hero-title {
+      font-size: 24px;
+      bottom: 1rem;
+    }
+  
+    /* ✅ 導覽列按鈕不換行可滑動 */
+    nav {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 0.5rem;
+    }
+  
+    nav a {
+      font-size: 14px;
+      white-space: nowrap;
+      margin: 0 0.5rem;
+    }
+  
+    /* ✅ 商品卡片每行 2 個 */
     .product-grid {
-      grid-template-columns: repeat(2, 1fr); /* 手機版每排兩個 */
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-items: center;
+    }
+  
+    /* ✅ 商品卡片樣式統一 */
+    .product-item {
+      height: auto;
+      padding: 1rem;
+    }
+  
+    /* ✅ 商品圖片穩定縮放不跑版 */
+    .product-item img {
+      max-width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+  
+    /* ✅ 回頂部按鈕 */
+    #scrollTopBtn {
+      padding: 0.5rem 0.8rem;
+      font-size: 13px;
+      bottom: 1.2rem;
+      right: 1rem;
     }
   }
+  
+
   
