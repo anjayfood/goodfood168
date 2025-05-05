@@ -158,25 +158,24 @@
   }
 
   .brand-top-banner {
-    margin: 2rem auto 1.5rem auto;
-    border-radius: 16px;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 140px;
+    height: auto;               /* ✅ 讓它隨圖片撐開 */
+    min-height: unset;          /* ✅ 移除原本限制高度 */
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .brand-top-banner img {
+  .brand-top-banner picture {
     display: block;
-    border-radius: 16px;
     width: 100%;
-    height: auto;
   }
 
-  body.brands-page .brand-top-banner img {
-    content: url("../images/brand-top-banner-mobile.png");
+  .brand-top-banner picture img {
+    display: block;
+    width: 100%;
+    height: auto;               /* ✅ 圖片依比例縮放 */
+    max-height: none;
+    object-fit: cover;
+    border-radius: 16px;
   }
 
   .brand-tabs {

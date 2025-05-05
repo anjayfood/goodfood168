@@ -26,8 +26,11 @@
     <section class="brand-wall-wrapper">
 
       <div class="brand-top-banner">
-        <img src="images/brand-top-banner.png" alt="品牌介紹橫幅">
-      </div>
+        <picture>
+          <source media="(max-width: 768px)" srcset="images/brand-top-banner-mobile.png">
+          <img src="images/brand-top-banner.png" alt="品牌介紹橫幅">
+        </picture>
+      </div>      
       
       <div class="brand-tabs">
         <button class="brand-tab active" onclick="switchCategory('own')">自有品牌</button>
