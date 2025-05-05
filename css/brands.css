@@ -127,12 +127,49 @@
 
 /* ✅ 手機版 */
 @media (max-width: 768px) {
+  .brand-wrapper {
+    padding: 2rem 1rem;
+  }
+
   .brand-cards {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
+
+  .brand-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .brand-card-logo {
+    height: 150px;
+    margin-bottom: 0.8rem;
+  }
+
+  .brand-card-logo img {
+    max-width: 200px;
+    max-height: 100%;
+  }
+
+  .brand-card-text h3 {
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+  }
+
+  .brand-card-text p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
   .hero {
-    margin-bottom: -7rem;
+    margin-bottom: -4rem;
   }
+
   .page-controls {
     display: flex;
     justify-content: center;
@@ -145,15 +182,22 @@
     font-size: 16px;
   }
 
-  .brand-top-banner img {
-    max-height: 100px;
-  }
   .brand-top-banner {
-    margin: 2rem auto 1.5rem auto; /* 上下間距稍微小一點 */
-    border-radius: 16px; /* ✅ 圓角縮小一點點，避免太誇張 */
-    padding: 0 1rem; /* 左右也留一點呼吸空間 */
+    margin: 2rem auto 1.5rem auto;
+    border-radius: 16px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .brand-top-banner img {
-    border-radius: 16px; /* ✅ 縮小圖片的圓角 */
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 16px;
+    display: block;
   }
 }
+
