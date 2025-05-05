@@ -271,11 +271,19 @@ footer {
   .carousel-page {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
     justify-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
   }
+
   .carousel-item {
-    max-width: 100%;
+    width: auto;
+    max-width: 140px;
+    padding: 1rem 0.5rem;
+  }
+
+  .carousel-item img {
+    max-height: 100px;
   }
   nav {
     display: flex;
@@ -299,5 +307,27 @@ footer {
   }
   .carousel-right {
     right: 5px;
+  }
+  .carousel-wrapper .carousel-arrows {
+    background: rgba(0, 0, 0, 0.15); /* ✅ 更淡的黑，或改白色都可 */
+    box-shadow: none;
+    border: none;
+    z-index: 5;
+  }
+
+  .carousel-arrows::before {
+    content: "";
+    display: none;
+  }
+
+  .carousel-left,
+  .carousel-right {
+    background: rgba(0,0,0,0.15); /* ✅ 或改白色 #fff 試試效果 */
+  }
+
+  /* ✅ 修正單頁黑條問題：強制隱藏箭頭 */
+  .carousel-track:only-child ~ .carousel-left,
+  .carousel-track:only-child ~ .carousel-right {
+    display: none !important;
   }
 }
