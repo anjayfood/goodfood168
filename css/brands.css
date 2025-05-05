@@ -23,7 +23,7 @@
 .brand-top-banner {
   width: 100%;
   max-width: 1200px;
-  margin: -2rem auto 2rem auto; /* ✅ 減少跳躍感 */
+  margin: -2rem auto 2rem auto;
   padding: 0;
   background: none;
   border-radius: 20px;
@@ -34,20 +34,19 @@
   justify-content: center;
 }
 
-
 .brand-top-banner img {
   width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
-  border-radius: 20px; /* ✅ 這裡圖片也加 border-radius */
+  border-radius: 20px;
 }
 
 /* 主內容背景色 */
 .brand-wrapper {
-  background: #f8f6f2; /* 跟 about-wrapper 一樣的淡藍色 */
+  background: #f8f6f2;
   padding: 4rem 1rem 2rem;
-  }
+}
 
 /* ✅ 品牌卡片排列 */
 .brand-cards {
@@ -127,47 +126,47 @@
 
 /* ✅ 手機版 */
 @media (max-width: 768px) {
-  .brand-wrapper {
-    padding: 2rem 1rem;
-  }
-
   .brand-cards {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   .brand-card {
-    width: 100%;
-    max-width: 320px;
-    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    gap: 1rem;
   }
 
   .brand-card-logo {
-    height: 150px;
-    margin-bottom: 0.8rem;
+    flex: 0 0 auto;
+    height: 100px;
+    width: 60px;
+    margin-bottom: 0;
   }
 
   .brand-card-logo img {
-    max-width: 200px;
+    max-width: 120%;
     max-height: 100%;
+    object-fit: contain;
   }
 
   .brand-card-text h3 {
-    font-size: 18px;
-    margin-bottom: 0.3rem;
+    font-size: 16px;
+    margin-bottom: 0.25rem;
   }
 
   .brand-card-text p {
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .hero {
-    margin-bottom: -4rem;
+    margin-bottom: -7rem;
   }
 
   .page-controls {
@@ -200,4 +199,3 @@
     display: block;
   }
 }
-
