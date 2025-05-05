@@ -1,7 +1,7 @@
 /* hero 主視覺 */
 .hero {
   width: 100%;
-  margin-bottom:-1rem;
+  margin-bottom: -1rem;
 }
 .hero img {
   width: 100%;
@@ -66,12 +66,10 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .brand-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
-
 .brand-card-logo {
   height: 120px;
   display: flex;
@@ -79,80 +77,70 @@
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .brand-card-logo img {
   max-width: 200px;
   max-height: 100%;
   object-fit: contain;
 }
-
 .brand-card-text h3 {
   font-size: 20px;
   margin: 0 0 0.5rem;
   color: #222;
 }
-
 .brand-card-text p {
   font-size: 14px;
   color: #666;
   margin: 0;
 }
 
-/* ✅ 分頁按鈕 */
-.page-controls {
-  margin-top: 2rem;
+/* ✅ 分類按鈕樣式 */
+.brand-tabs {
   text-align: center;
+  margin: 1rem auto 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
-
-.page-button {
-  padding: 0.8rem 2rem;
-  margin: 0 1rem;
-  font-size: 18px;
-  font-weight: bold;
-  color: #555;
-  background: #ffffff;
-  border: 2px solid #bbb;
+.brand-tab {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
   border-radius: 50px;
   cursor: pointer;
+  font-family: "Noto Sans TC", sans-serif;
   transition: all 0.3s ease;
-  font-family: "Poppins", "Noto Sans TC", sans-serif;
 }
-
-.page-button:hover {
+.brand-tab.active {
   background: #f0e0d0;
   border-color: #aaa;
-  color: #222;
+  font-weight: bold;
 }
 
 /* ✅ 手機版 */
 @media (max-width: 768px) {
   .brand-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     padding: 0 1rem;
   }
 
   .brand-card {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: left;
-    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 14px;
+    text-align: center;
   }
 
   .brand-card-logo {
-    flex: 0 0 auto;
-    height: 100px;
-    width: 60px;
-    margin-bottom: 0;
+    height: 80px;
+    margin-bottom: 1rem;
   }
 
   .brand-card-logo img {
-    max-width: 120%;
+    max-width: 140px;
     max-height: 100%;
-    object-fit: contain;
   }
 
   .brand-card-text h3 {
@@ -169,18 +157,6 @@
     margin-bottom: -7rem;
   }
 
-  .page-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .page-button {
-    padding: 0.6rem 1.5rem;
-    font-size: 16px;
-  }
-
   .brand-top-banner {
     margin: 2rem auto 1.5rem auto;
     border-radius: 16px;
@@ -189,13 +165,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 140px;
   }
 
   .brand-top-banner img {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    border-radius: 16px;
     display: block;
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  body.brands-page .brand-top-banner img {
+    content: url("../images/brand-top-banner-mobile.png");
+  }
+
+  .brand-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .brand-tab {
+    flex: 1 1 30%;
+    max-width: 100px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50px;
+    font-size: 15px;
   }
 }
