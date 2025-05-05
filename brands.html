@@ -120,13 +120,16 @@ function nextPage() {
   const totalPages = Math.ceil(brands.length / itemsPerPage);
   currentPage = (currentPage + 1) % totalPages;
   renderPage();
+  window.scrollTo({ top: 0, behavior: "smooth" }); // 自動捲到上方
 }
 
 function prevPage() {
   const totalPages = Math.ceil(brands.length / itemsPerPage);
   currentPage = (currentPage - 1 + totalPages) % totalPages;
   renderPage();
+  window.scrollTo({ top: 0, behavior: "smooth" }); // 自動捲到上方
 }
+
 
 renderPage();
 </script>
