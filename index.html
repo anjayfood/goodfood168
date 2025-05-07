@@ -8,23 +8,18 @@
 </head>
 <body>
   <!-- ✅ 回頂端按鈕 -->
-<button id="scrollTopBtn" title="回頁首">⇧ 回上方</button>
+  <button id="scrollTopBtn" title="回頁首">⇧ 回上方</button>
 
-<script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  });
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
   <header>
     <a href="/" class="logo">日銓貿易股份有限公司</a>
     <nav>
@@ -37,8 +32,8 @@
 
   <div class="hero">
     <img src="images/hero-desktop-1.jpg" id="hero-img">
-    <button class="carousel-arrows carousel-left" onclick="moveHero(-1)">‹</button>
-    <button class="carousel-arrows carousel-right" onclick="moveHero(1)">›</button>
+    <button class="hero-arrow hero-left" onclick="moveHero(-1)">‹</button>
+    <button class="hero-arrow hero-right" onclick="moveHero(1)">›</button>
   </div>
 
   <div class="main-wrapper">
@@ -166,27 +161,26 @@
     const heroImages = isMobile
       ? ["images/hero-mobile-1.png", "images/hero-mobile-2.png", "images/hero-mobile-3.png"]
       : ["images/hero-desktop-1.jpg", "images/hero-desktop-2.jpg", "images/hero-desktop-3.jpg"];
-  
+
     let heroIndex = 0;
     let heroTimer;
-  
-    // ✅ 初始顯示第一張圖（避免一開始顯示錯誤尺寸）
+
     window.addEventListener("DOMContentLoaded", () => {
       const heroImg = document.getElementById("hero-img");
       if (heroImg) heroImg.src = heroImages[0];
     });
-  
+
     function moveHero(dir) {
       heroIndex = (heroIndex + dir + heroImages.length) % heroImages.length;
       document.getElementById("hero-img").src = heroImages[heroIndex];
       resetHeroTimer();
     }
-  
+
     function resetHeroTimer() {
       clearTimeout(heroTimer);
       heroTimer = setTimeout(() => moveHero(1), 10000);
     }
-  
+
     function setupCarousel(wrapperId) {
       const wrapper = document.getElementById(wrapperId);
       if (!wrapper) return;
@@ -195,15 +189,24 @@
       const left = wrapper.querySelector(".carousel-left");
       const right = wrapper.querySelector(".carousel-right");
       if (!track || !pages.length) return;
+
       let index = 0;
+
       function move(dir) {
         index = (index + dir + pages.length) % pages.length;
         track.style.transform = `translateX(-${index * 100}%)`;
       }
+
       left?.addEventListener("click", () => move(-1));
       right?.addEventListener("click", () => move(1));
+
+      // ✅ 如果只有一頁，隱藏箭頭
+      if (pages.length <= 1) {
+        if (left) left.style.display = "none";
+        if (right) right.style.display = "none";
+      }
     }
-  
+
     window.addEventListener("load", () => {
       resetHeroTimer();
       setupCarousel("brands-carousel");
@@ -211,11 +214,6 @@
       setupCarousel("pasta-carousel");
       setupCarousel("nuts-carousel");
     });
-  </script>  
+  </script>
 </body>
 </html>
-
-
-
-
-

@@ -12,9 +12,10 @@ html, body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
-/* ✅ 主內容區塊高度撐開頁面 */
+/* ✅ 主內容背景圖與區塊撐開 */
 .main-wrapper {
   flex: 1;
   background: url('../images/bg-full.png') repeat-y top center / 100% auto;
@@ -26,7 +27,6 @@ html, body {
   }
 }
 
-/* ✅ 圖片與段落 */
 img {
   max-width: 100%;
   height: auto;
@@ -36,7 +36,6 @@ p {
   margin: 0.5rem 0;
 }
 
-/* ✅ 頁首 header 與導覽列 nav */
 header {
   display: flex;
   justify-content: space-between;
@@ -61,13 +60,11 @@ nav a {
   font-weight: bold;
 }
 
-/* ✅ 區塊 section */
 .section {
   max-width: 1200px;
   margin: auto;
   padding: 3rem 1rem;
 }
-.section h1,
 .section h2 {
   text-align: center;
   font-size: 28px;
@@ -79,91 +76,113 @@ nav a {
   color: #777;
   margin-top: 4px;
 }
-.section-box { 
+.section-box {
+  margin-bottom: 2rem;
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px; 
-  padding: 2rem; 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
-  margin-bottom: 3rem; 
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  margin-bottom: 3rem;
 }
 
-/* ✅ 卡片、商品樣式 */
 .carousel-wrapper {
   overflow: hidden;
   position: relative;
+  max-width: 100%;
+  margin: 0 auto;
 }
+
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
+
 .carousel-page {
+  flex-shrink: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-  align-items: center;
-  min-width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background-color: transparent;
+  position: relative;
 }
+
 .carousel-item {
-  flex: 1 1 calc(25% - 1rem);
+  flex: 1 1 220px;
   max-width: 220px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
-  /* ✅ 垂直置中內容 */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
+  overflow: hidden;
 }
 .carousel-item img {
   max-height: 200px;
-  width: auto;
-  height: auto;
-  margin-bottom: 0.5rem;
   object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 .carousel-item p {
   height: 2.8em;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
-  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   font-size: 14px;
   line-height: 1.4;
   margin-top: 0.5rem;
 }
+
 .hero {
   position: relative;
 }
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  color: #fff;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+.hero-left { left: 10px; }
+.hero-right { right: 10px; }
+
 .carousel-arrows {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 36px;
   height: 36px;
-  background: rgba(0,0,0,0.4);
-  color: #fff;
-  border-radius: 50%;
-  font-size: 28px;
-  font-weight: bold;
+  background: transparent;
+  color: #797777;
+  font-size: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   border: none;
-  z-index: 10;
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+  line-height: 1;
 }
-.carousel-left { left: 8px; }
-.carousel-right { right: 8px; }
+.carousel-left { left: -10px; }
+.carousel-right { right: -10px; }
 
-/* ✅ 關於我們區塊 */
 .about-box {
   display: flex;
   flex-wrap: wrap;
@@ -175,17 +194,11 @@ nav a {
   padding: 2rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
-.about-img {
-  flex: 1 1 300px;
-  max-width: 400px;
-  display: none;
-}
 .about-text {
   flex: 1 1 300px;
   text-align: center;
 }
 .about-text h2 {
-  text-align: center;
   font-size: 26px;
 }
 .about-text h2 span {
@@ -195,7 +208,6 @@ nav a {
   margin-top: 4px;
 }
 
-/* ✅ 頁尾 footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -206,7 +218,6 @@ footer {
   margin-top: auto;
 }
 
-/* ✅ 回到頂部按鈕樣式 */
 #scrollTopBtn {
   position: fixed;
   bottom: 2rem;
@@ -219,115 +230,72 @@ footer {
   border-radius: 50px;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: none;
-  transition: opacity 0.3s ease;
-}
-#scrollTopBtn:hover {
-  background-color: #555;
 }
 
+/* ✅ 手機版 */
 @media (max-width: 768px) {
-  .about-box {
-    flex-direction: column;
-    padding: 1rem;
+  .carousel-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: start;
     gap: 1rem;
-    text-align: center;
+    padding: 0.5rem 0;
   }
+
+  .carousel-page:only-child .carousel-item:only-child {
+    grid-column: 1 / span 2;
+  }
+
+  .carousel-item {
+    width: 140px;
+    max-width: none;
+    padding: 1rem 0.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-item img {
+    max-height: 100px;
+  }
+
+  .carousel-arrows {
+    width: 28px;
+    height: 28px;
+    font-size: 60px;
+  }
+
+  .carousel-left { left: -5px; }
+  .carousel-right { right: -5px; }
+
+  .hero-arrow {
+    font-size: 60px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-left { left: 5px; }
+  .hero-right { right: 5px; }
+
   #scrollTopBtn {
     padding: 0.5rem 0.8rem;
     font-size: 13px;
     bottom: 1.5rem;
     right: 1rem;
   }
-  .about-img {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .about-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-  .about-text {
-    flex: 1 1 100%;
-    text-align: center;
-    padding: 0;
-  }
-  .about-box {
-    padding: 1.5rem 1rem;
-  }
-  .about-text h2 {
-    margin-bottom: 0.5rem;
-    font-size: 22px;
-    text-align: center;
-  }
-  .about-text h2 span {
-    font-size: 12px;
-    margin-top: 2px;
-  }
-  .carousel-page {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
-  }
+}
 
-  .carousel-item {
-    width: auto;
-    max-width: 140px;
-    padding: 1rem 0.5rem;
-  }
 
-  .carousel-item img {
-    max-height: 100px;
-  }
-  nav {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 1rem;
-    padding-bottom: 0.5rem;
-  }
-  nav a {
-    font-size: 14px;
-    white-space: nowrap;
-    margin: 0 0.5rem;
-  }
-  .carousel-arrows {
-    width: 32px;
-    height: 32px;
-    font-size: 20px;
-  }
-  .carousel-left {
-    left: 5px;
-  }
-  .carousel-right {
-    right: 5px;
-  }
-  .carousel-wrapper .carousel-arrows {
-    background: rgba(0, 0, 0, 0.15); /* ✅ 更淡的黑，或改白色都可 */
-    box-shadow: none;
-    border: none;
-    z-index: 5;
-  }
-
-  .carousel-arrows::before {
-    content: "";
-    display: none;
-  }
-
-  .carousel-left,
-  .carousel-right {
-    background: rgba(0,0,0,0.15); /* ✅ 或改白色 #fff 試試效果 */
-  }
-
-  /* ✅ 修正單頁黑條問題：強制隱藏箭頭 */
-  .carousel-track:only-child ~ .carousel-left,
-  .carousel-track:only-child ~ .carousel-right {
-    display: none !important;
+@media (max-width: 768px) {
+  .section-box {
+    margin-bottom: 1.5rem;
   }
 }
