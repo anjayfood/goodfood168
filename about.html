@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
   <style>
-    /* ✅ 新增淡入動畫 */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -17,43 +16,38 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 9999;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <!-- ✅ 回頂端按鈕 -->
+
+<!-- ✅ 回頂端按鈕 -->
 <button id="scrollTopBtn" title="回頁首">⇧ 回上方</button>
-
-<script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  });
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
 
 <header>
   <a href="/" class="logo">日銓貿易股份有限公司</a>
-
-  <!-- 電腦版選單 -->
   <nav class="desktop-nav">
     <a href="about.html">關於日銓</a>
     <a href="brands.html">品牌總覽</a>
     <a href="products.html">商品總覽</a>
     <a href="contact.html">聯絡我們</a>
   </nav>
-
-  <!-- 手機版漢堡 -->
   <button class="menu-toggle" id="menuToggle">☰</button>
-
-  <!-- 手機版選單 -->
   <nav class="mobile-nav" id="mobileMenu">
     <button class="close-menu" id="closeMenu">✕</button>
     <div class="mobile-header">選單 Menu</div>
@@ -70,8 +64,6 @@
 </div>
 
 <main class="about-wrapper">
-
-  <!-- 品牌故事（圖左＋文右） -->
   <section class="brand-story fade-in">
     <div class="content-row">
       <div class="content-image">
@@ -81,12 +73,11 @@
         <h2>品牌故事</h2>
         <p>
           <span class="highlight">1987</span> 年由洪墩清先生創立之【同燦貿易有限公司】，專營進口世界各地的優質原物料在台北【迪化街商圈】中開拓一片市場，也成為許多老餐飲人與烘焙人的共同記憶。後經年輕一輩接班成為現今的<span class="highlight">日銓貿易股份有限公司</span>。
-        </p>                   
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 品牌理念（圖右＋文左） -->
   <section class="brand-concept fade-in">
     <div class="content-row reverse">
       <div class="content-image">
@@ -99,57 +90,63 @@
       </div>
     </div>
   </section>
-  <!-- 結尾標語（帶線條版） -->
+
   <section class="closing-section with-lines">
     <div class="line"></div>
     <h2>讓我們成為您最信賴的夥伴。</h2>
     <p>Your Most Trusted Food Partner.</p>
     <div class="line"></div>
   </section>
-
-
 </main>
 
 <footer>
   <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548516｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
 </footer>
 
-<!-- ✅ 小動畫JS -->
 <script>
-  const fadeElements = document.querySelectorAll('.fade-in');
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    const main = document.querySelector("main");
+    if (!scrollBtn || !main) return;
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
+    // 改綁 main 的 scroll 事件
+    main.addEventListener("scroll", () => {
+      console.log("🟨 main.scrollTop =", main.scrollTop);
+      if (main.scrollTop > 300) {
+        scrollBtn.style.setProperty("display", "block", "important");
+      } else {
+        scrollBtn.style.setProperty("display", "none", "important");
       }
     });
-  }, {
-    threshold: 0.3
-  });
 
-  fadeElements.forEach(el => observer.observe(el));
-
-  window.addEventListener("load", () => {
-      resetHeroTimer();
-      setupCarousel("brands-carousel");
-      setupCarousel("products-carousel");
-      setupCarousel("pasta-carousel");
-      setupCarousel("nuts-carousel");
+    scrollBtn.addEventListener("click", () => {
+      main.scrollTo({ top: 0, behavior: "smooth" });
     });
+  
+
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
     const closeMenu = document.getElementById("closeMenu");
 
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.add("open");
-    });
+    if (menuToggle && mobileMenu && closeMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.add("open");
+      });
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+      });
+    }
 
-    closeMenu.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-    });
+    const fadeElements = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.3 });
+    fadeElements.forEach(el => observer.observe(el));
+  });
 </script>
-
 </body>
 </html>
-

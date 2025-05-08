@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>烏鶖煉乳 - 日銓貿易股份有限公司</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/product-detail.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>進口龍眼肉 - 日銓貿易股份有限公司</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-detail.css">
 </head>
 <body>
+
   <header>
     <a href="/" class="logo">日銓貿易股份有限公司</a>
   
@@ -37,8 +38,8 @@
   <div class="breadcrumb">
     <a href="../index.html">首頁</a> &gt;
     <a href="../products.html">商品總覽</a> &gt;
-    <a href="../seasoning.html">調味料・糖漿・香料</a> &gt;
-    <strong>烏鶖煉乳</strong>
+    <a href="../nuts.html">堅果・果乾</a> &gt;
+    <strong>進口龍眼肉</strong>
   </div>
 
   <div class="product-page-bg">
@@ -46,54 +47,65 @@
       <div class="product-detail-wrapper">
         <div class="product-box">
           <div class="product-image">
-            <img src="../images/烏鶖煉乳.png" alt="烏鶖煉乳" />
+            <img src="../images/進口龍眼肉.png" alt="進口龍眼肉">
             <p class="storage-note">
-              保存方式：請置於陰涼乾燥處，避免陽光直射。開封後請冷藏保存，並儘速食用完畢。
+              保存方式：建議冷藏密封保存。<br>
             </p>
           </div>
           <div class="product-info">
-            <h1 class="product-title">烏鶖煉乳</h1>
+            <h1 class="product-title">進口龍眼肉</h1>
             <div class="tag-group">
-              <span class="tag">📦 360g、3640g</span>
-              <span class="tag">調味料</span>
+              <span class="tag">🇹🇭 泰國進口</span>
+              <span class="tag">果乾</span>
+              <span class="tag">🍃 無添加</span>
+              <span class="tag">600g</span>
             </div>
-            <h2 class="product-subtitle">U CHIOU Sweetened Condensed Milk</h2>
+            <h2 class="product-subtitle">Imported Dried Longan</h2>
             <div class="product-meta">
-              <p><strong>成分：</strong>蔗糖、奶粉、水、沙拉油、無水奶油、脂肪酸甘油酯(脂肪酸甘油酯、檸檬酸)、乳糖</p>
-              <p><strong>產地：</strong>台灣</p>
-              <p><strong>商品規格：</strong>360g*24罐/箱、3640g*6罐/箱</p>
+              <p><strong>成分：</strong>龍眼肉</p>
+              <p><strong>產地：</strong>泰國</p>
+              <p><strong>商品規格：</strong>600g</p>
             </div>
             <div class="product-section">
               <h3>商品特色：</h3>
-              <ul><li>濃稠甜香，適合各式甜品與飲品</li>
-<li>口感滑順，乳香濃郁</li></ul>
+              <ul>
+                <li>選用泰國成熟龍眼，經低溫乾燥保留果香與甜味</li>
+                <li>果肉較乾爽，適合大量儲存與長期供應</li>
+                <li>無添加糖、防腐劑與人工香料，自然健康</li>
+                <li>穩定品質與合理價格，是餐飲業與食品加工常用原料</li>
+              </ul>
             </div>
             <div class="product-section">
-              <h3>使用方式：</h3>
-              <ul><li>可直接淋在吐司、剉冰、芋圓上</li>
-<li>搭配紅茶、咖啡製成煉乳奶茶</li></ul>
+              <h3>適用範圍：</h3>
+              <ul>
+                <li>燉湯入菜（適合與雞肉、豬骨燉煮提升湯頭）</li>
+                <li>中式甜品（如龍眼紅棗湯、銀耳湯、八寶粥）</li>
+                <li>健康飲品（泡茶、搭配枸杞紅棗調飲）</li>
+                <li>烘焙製品（製作桂圓蛋糕、果乾點心）</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="contact-banner">
-          <a href="#" id="back-btn">← 回上一頁</a>
-          <a href="../contact.html">聯絡我們</a>
-        </div>
       </div>
+
+      <div class="contact-banner">
+        <a href="#" id="back-btn">← 回上一頁</a>
+        <a href="../contact.html">聯絡我們</a>
+      </div>              
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548516｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
   </footer>
-
   <script>
     document.getElementById('back-btn').addEventListener('click', function (e) {
       e.preventDefault();
+      // 判斷有前一頁再回上一頁，否則跳回商品總覽
       if (document.referrer && document.referrer !== location.href) {
         window.history.back();
       } else {
-        window.location.href = "../seasoning.html";
+        window.location.href = "../products.html";
       }
     });
     const menuToggle = document.getElementById("menuToggle");
