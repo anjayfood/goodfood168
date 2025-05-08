@@ -29,7 +29,23 @@
 </script>
 <header>
   <a href="/" class="logo">日銓貿易股份有限公司</a>
-  <nav>
+
+  <!-- 電腦版選單 -->
+  <nav class="desktop-nav">
+    <a href="about.html">關於日銓</a>
+    <a href="brands.html">品牌總覽</a>
+    <a href="products.html">商品總覽</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+
+  <!-- 手機版漢堡 -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <!-- 手機版選單 -->
+  <nav class="mobile-nav" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">✕</button>
+    <div class="mobile-header">選單 Menu</div>
+    <a href="index.html">首頁</a>
     <a href="about.html">關於日銓</a>
     <a href="brands.html">品牌總覽</a>
     <a href="products.html">商品總覽</a>
@@ -117,5 +133,19 @@
 <footer>
   &copy; 2025 日銓貿易股份有限公司｜統一編號：80548516｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net
 </footer>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.add("open");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+  });
+</script>
+
 </body>
 </html>
