@@ -63,8 +63,6 @@
     <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548516｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
   </footer>
 
-  <!-- ✅ 回到頂端按鈕 -->
-  <button id="scrollTopBtn" title="回頁首">⇧ 回上方</button>
 
   <!-- ✅ JavaScript 動態內容 -->
   <script>
@@ -87,7 +85,7 @@
         { img: "images/品牌綠巨人.png", name: "綠巨人" },
         { img: "images/品牌鳥牌.png", name: "三鳥牌" },
         { img: "images/品牌香草粉.png", name: "森和富" },
-        { img: "images/品牌好時.png", name: "Hershey's" },
+        { img: "images/品牌好時.png", name: "Hershey's" },  
         { img: "images/品牌瑞豐.png", name: "瑞豐" },
         { img: "images/品牌仙菓牌.png", name: "仙菓牌" },
         { img: "images/品牌仰南.png", name: "仰南" },
@@ -122,20 +120,7 @@
 
   <!-- ✅ 回頂端功能 -->
   <script>
-    const scrollBtn = document.getElementById("scrollTopBtn");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollBtn.style.display = "block";
-      } else {
-        scrollBtn.style.display = "none";
-      }
-    });
-
-    scrollBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-    const menuToggle = document.getElementById("menuToggle");
+     const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
   const closeMenu = document.getElementById("closeMenu");
 
