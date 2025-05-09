@@ -36,6 +36,7 @@ p {
   margin: 0.5rem 0;
 }
 
+/* ✅ Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -60,6 +61,7 @@ nav a {
   font-weight: bold;
 }
 
+/* ✅ Section 區塊 */
 .section {
   max-width: 1200px;
   margin: auto;
@@ -85,19 +87,18 @@ nav a {
   margin-bottom: 3rem;
 }
 
+/* ✅ 輪播樣式 */
 .carousel-wrapper {
   overflow: hidden;
   position: relative;
   max-width: 100%;
   margin: 0 auto;
 }
-
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
-
 .carousel-page {
   flex-shrink: 0;
   width: 100%;
@@ -108,7 +109,6 @@ nav a {
   background-color: transparent;
   position: relative;
 }
-
 .carousel-item {
   flex: 1 1 220px;
   max-width: 220px;
@@ -140,6 +140,7 @@ nav a {
   margin-top: 0.5rem;
 }
 
+/* ✅ 主視覺箭頭 */
 .hero {
   position: relative;
 }
@@ -162,6 +163,7 @@ nav a {
 .hero-left { left: 10px; }
 .hero-right { right: 10px; }
 
+/* ✅ 輪播箭頭 */
 .carousel-arrows {
   position: absolute;
   top: 50%;
@@ -183,6 +185,7 @@ nav a {
 .carousel-left { left: -10px; }
 .carousel-right { right: -10px; }
 
+/* ✅ 關於我們 */
 .about-box {
   display: flex;
   flex-wrap: wrap;
@@ -208,6 +211,7 @@ nav a {
   margin-top: 4px;
 }
 
+/* ✅ 頁腳 */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -217,23 +221,6 @@ footer {
   border-top: 1px solid #ddd;
   margin-top: auto;
 }
-
-#scrollTopBtn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 999;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 50px;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  display: none;
-}
-
 /* ✅ 手機版 */
 @media (max-width: 768px) {
   .carousel-page {
@@ -253,14 +240,6 @@ footer {
     width: 140px;
     max-width: none;
     padding: 1rem 0.5rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .carousel-item img {
@@ -285,21 +264,12 @@ footer {
   .hero-left { left: 5px; }
   .hero-right { right: 5px; }
 
-  #scrollTopBtn {
-    padding: 0.5rem 0.8rem;
-    font-size: 13px;
-    bottom: 1.5rem;
-    right: 1rem;
-  }
-}
-
-
-@media (max-width: 768px) {
   .section-box {
     margin-bottom: 1.5rem;
   }
 }
-/* ✅ 手機版溫和風選單 */
+
+/* ✅ 手機選單樣式 */
 .desktop-nav {
   display: flex;
   gap: 1.5rem;

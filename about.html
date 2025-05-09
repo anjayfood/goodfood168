@@ -16,28 +16,9 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 9999;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 0.6rem 1rem;
-      border-radius: 50px;
-      font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      display: none;
-    }
   </style>
 </head>
 <body>
-
-<!-- ✅ 回頂端按鈕 -->
-<button id="scrollTopBtn" title="回頁首">⇧ 回上方</button>
 
 <header>
   <a href="/" class="logo">日銓貿易股份有限公司</a>
@@ -103,27 +84,9 @@
   <p>&copy; 2025 日銓貿易股份有限公司｜統一編號：80548516｜連絡電話：02-2610-6567｜Email：anjay.food@msa.hinet.net</p>
 </footer>
 
+<!-- ✅ 手機選單 + 淡入動畫 -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    const main = document.querySelector("main");
-    if (!scrollBtn || !main) return;
-
-    // 改綁 main 的 scroll 事件
-    main.addEventListener("scroll", () => {
-      console.log("🟨 main.scrollTop =", main.scrollTop);
-      if (main.scrollTop > 300) {
-        scrollBtn.style.setProperty("display", "block", "important");
-      } else {
-        scrollBtn.style.setProperty("display", "none", "important");
-      }
-    });
-
-    scrollBtn.addEventListener("click", () => {
-      main.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  
-
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
     const closeMenu = document.getElementById("closeMenu");
@@ -148,5 +111,6 @@
     fadeElements.forEach(el => observer.observe(el));
   });
 </script>
+
 </body>
 </html>
