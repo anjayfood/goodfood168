@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隱私權政策 - 日銓貿易股份有限公司</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: linear-gradient(to bottom, #fefaf5, #f2ece6);
+      line-height: 1.8;
+      color: #333;
+    }
+    header, footer {
+      background: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: #444;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p, li {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    @media (max-width: 768px) {
+      main {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <a href="/" class="logo">日銓貿易股份有限公司</a>
+    <nav class="desktop-nav">
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="mobile-nav" id="mobileMenu">
+      <button class="close-menu" id="closeMenu">✕</button>
+      <div class="mobile-header">選單 Menu</div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+
+  <!-- 隱私權內容 -->
+  <main>
+    <h1>🔐 隱私權政策</h1>
+    <p>日銓貿易股份有限公司（以下簡稱本公司）非常重視您的個人資料保護與隱私安全。在您使用本網站提供的聯絡表單或其他功能時，本公司將依下列方式蒐集、處理、使用您所提供的個人資訊。</p>
+
+    <h2>一、資料蒐集範圍</h2>
+    <p>當您透過本網站聯絡我們時，系統會蒐集您所提供的資料，包括但不限於：姓名、電話、電子信箱、留言內容等。</p>
+
+    <h2>二、資料使用目的</h2>
+    <ul>
+      <li>回覆您的問題或需求</li>
+      <li>提供相關商品或服務資訊</li>
+      <li>內部統計與服務品質改善用途</li>
+    </ul>
+
+    <h2>三、資料保護措施</h2>
+    <p>本公司將採取合理安全措施保護您的個人資料，避免遭到資料外洩或非法存取、洩漏、修改或損毀。</p>
+
+    <h2>四、資料第三方提供</h2>
+    <p>本公司絕不會在未經您的同意情況下，交換或提供給任何第三方，除非法律另有規定。</p>
+
+    <h2>五、隱私權政策修訂</h2>
+    <p>本公司保留隨時修改本政策之權利，最新版本將公布於本網站，恕不另行通知。</p>
+
+    <p>如您對本政策有任何疑問，歡迎來信聯絡：<strong>anjay.food@msa.hinet.net</strong></p>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p>&copy; 2025 日銓貿易股份有限公司｜隱私權政策僅適用於本站聯絡功能。</p>
+  </footer>
+
+  <!-- JS 控制手機選單 -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.add("open");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>免責聲明 - 日銓貿易股份有限公司</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: linear-gradient(to bottom, #fefaf5, #f2ece6);
+      line-height: 1.8;
+      color: #333;
+    }
+    header, footer {
+      background: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: #444;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p, li {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    @media (max-width: 768px) {
+      main {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <a href="/" class="logo">日銓貿易股份有限公司</a>
+    <nav class="desktop-nav">
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="mobile-nav" id="mobileMenu">
+      <button class="close-menu" id="closeMenu">✕</button>
+      <div class="mobile-header">選單 Menu</div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+
+  <!-- 免責聲明內容 -->
+  <main>
+    <h1>⚠️ 免責聲明</h1>
+    <p>感謝您瀏覽日銓貿易股份有限公司（以下簡稱本公司）所提供的網站內容。請您在使用本網站前，務必詳閱以下免責聲明，當您開始使用本網站，即視為您已閱讀、理解並同意本聲明之所有條款。</p>
+
+    <h2>一、網站內容正確性</h2>
+    <p>本公司力求網站資訊之正確性與即時性，但不保證所有內容完全無誤，若您因資訊不完整、延遲或錯誤而導致損失，本公司概不負責。</p>
+
+    <h2>二、第三方連結</h2>
+    <p>本網站可能包含通往第三方網站之連結，該等網站之內容與隱私政策皆由第三方負責，本公司不保證其安全性或正確性，亦不對其內容承擔任何責任。</p>
+
+    <h2>三、服務中斷與錯誤</h2>
+    <p>本網站可能因維護、更新或不可抗力因素而暫停服務或發生錯誤，造成使用不便或資料遺失等情形，本公司恕不負擔任何損害責任。</p>
+
+    <h2>四、法律適用與管轄</h2>
+    <p>本聲明之解釋與適用，均依中華民國法律處理。如有爭議，雙方同意以本公司所在地之台灣地方法院為第一審管轄法院。</p>
+
+    <p>如您對本網站內容有任何疑問，歡迎來信聯絡：<strong>anjay.food@msa.hinet.net</strong></p>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p>&copy; 2025 日銓貿易股份有限公司｜本站內容僅供參考，請以實際聯繫資訊為準。</p>
+  </footer>
+
+  <!-- JS 控制手機選單 -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.add("open");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  </script>
+</body>
+</html>
