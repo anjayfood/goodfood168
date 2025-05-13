@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>日銓貿易股份有限公司</title>
+  <!-- 已有 CSS、favicon、結構化資料等 -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- ✅ Google 結構化資料：公司名稱與 Logo 圖 -->
@@ -26,7 +27,7 @@
   </script>
 </head>
 <body>
-
+  <!-- ===== Header (不動) ===== -->
 <header>
   <a href="/" class="logo">日銓貿易股份有限公司</a>
 
@@ -41,7 +42,7 @@
   <!-- 手機版漢堡 -->
   <button class="menu-toggle" id="menuToggle">☰</button>
 
-  <!-- 手機版選單 -->
+  <!-- ===== 手機選單 (不動) ===== -->
   <nav class="mobile-nav" id="mobileMenu">
     <button class="close-menu" id="closeMenu">✕</button>
     <div class="mobile-header">選單 Menu</div>
@@ -52,14 +53,15 @@
     <a href="contact.html">聯絡我們</a>
   </nav>
 </header>
-
+<!-- ===== 主視覺 Hero (不動) ===== -->
   <div class="hero">
     <img src="images/hero-desktop-1.jpg" id="hero-img">
     <button class="hero-arrow hero-left" onclick="moveHero(-1)">‹</button>
     <button class="hero-arrow hero-right" onclick="moveHero(1)">›</button>
   </div>
-
+<!-- ===== 主要內容 main-wrapper ===== -->
   <div class="main-wrapper">
+    <!-- ===== Section：關於我們 About Us ===== -->
     <div class="section" id="about">
       <div class="about-box center-only-text">
         <div class="about-text">
@@ -68,7 +70,7 @@
         </div>
       </div>
     </div>
-
+<!-- ===== Section：品牌總覽 Brand Overview ===== -->
     <div class="section" id="brands">
       <div class="section-box">
         <h2>品牌總覽 <small>Brand Overview</small></h2>
@@ -96,6 +98,7 @@
         </div>
       </div>
     </div>
+    <!-- ===== Section：精選商品 Featured Products ===== -->
     <div class="section" id="products">
       <div class="section-box">
         <h2>精選商品 <small>Featured Products</small></h2>
@@ -125,6 +128,7 @@
         </div>
       </div>
     </div>
+    <!-- ===== Section：義大利麵 Pasta ===== -->
     <div class="section" id="pasta">
       <div class="section-box">
         <h2>義大利麵 <small>Pasta</small></h2>
@@ -153,6 +157,7 @@
         </div>
       </div>
     </div>
+    <!-- ===== Section：堅果・果乾 Nuts & Dried Fruits ===== -->
     <div class="section" id="nuts">
       <div class="section-box">
         <h2>堅果、果乾 <small>Nuts & Dried Fruits</small></h2>
@@ -177,6 +182,7 @@
       </div>
     </div>
   </div>
+   <!-- ===== Footer (不動) ===== -->
   <footer style="background-color: #f9f9f9; padding: 2rem 1rem; text-align: center; font-size: 0.95rem; color: #444; line-height: 1.6; border-top: 1px solid #ddd;">
    <div style="margin-bottom: 0.5rem; font-weight: 600;">
     &copy; 2025 日銓貿易股份有限公司｜統一編號：80548516
@@ -191,7 +197,7 @@
      詳細內容請參閱：<a href="privacy.html" style="color: #666;">隱私權政策</a>｜<a href="disclaimer.html" style="color: #666;">免責聲明</a>
    </p>
   </footer>
-
+ <!-- ===== 原有的 JS (不動) ===== -->
   <script>
     const isMobile = window.innerWidth <= 768;
     const heroImages = isMobile

@@ -1,0 +1,27 @@
+/* ✅ About Us - 左文右圖 */
+#about .about-box {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  gap: 2rem;
+}
+#about .about-text {
+  flex: 1 1 50%;
+  text-align: left;
+  padding: 2rem 1rem;
+}
+#about .about-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+#about .about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+/* ✅ 輪播、精選商品等其他樣式略... 請補入 natural.css 的全部內容 */
