@@ -1,0 +1,603 @@
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ===== 關於我們 Step 圖片＋滿版底色+防爆 ===== */
+.about-section-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #fcfaf5;  /* 米白色底 */
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.about-section-inner.about-step-images {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5rem 2rem 5rem 0;
+  min-height: 420px;
+  gap: 3.5rem;
+  box-sizing: border-box;
+  overflow: hidden;  /* 圖片不會爆版 */
+}
+
+/* 主要圖片組，下樓梯錯位感 */
+.about-step-imgwrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.8rem;
+  min-width: 0;
+  margin-right: 0;
+}
+
+.about-step-imgwrap img {
+  width: 280px;         /* 你要更高長直接改這裡 */
+  height: 400px;
+  max-width: 22vw;      /* 自適應防爆，最大不超過區塊寬度 */
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 8px 28px rgba(60,40,20,0.10);
+  background: #fff;
+  transition: box-shadow 0.18s;
+  display: block;
+}
+
+.about-step-imgwrap .about-img1 {
+  align-self: flex-start; /* 左圖往上 */
+  margin-top: 0;
+  box-shadow: 0 6px 20px rgba(80,60,30,0.10);
+}
+
+.about-step-imgwrap .about-img2 {
+  align-self: flex-end;   /* 右圖往下 */
+  margin-top: 100px;       /* 下樓梯高度（你要更低調這個）*/
+  box-shadow: 0 10px 32px rgba(80,60,30,0.14);
+}
+
+/* 右側文字 */
+.about-text {
+  flex: 1;
+  padding-left: 2.5rem;
+  margin-top: -80px;
+}
+
+.about-text h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.about-text span {
+  display: block;
+  font-size: 1.05rem;
+  color: #777;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  transition: background 0.2s;
+}
+.about-btn:hover {
+  background: #543B19;
+}
+
+/* 手機板自動上下排列 */
+@media (max-width: 900px) {
+  .about-section-inner.about-step-images {
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 2.5rem 1.5rem;
+    min-height: unset;
+  }
+  .about-step-imgwrap {
+    flex-direction: row;
+    min-width: 0;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .about-step-imgwrap img {
+    width: 30vw;       /* 圖片寬度，可調 20~50vw 看你想多大 */
+    max-width: 200px;  /* 最大寬度，建議不要超過畫面一半 */
+    min-width: 70px;   /* 最小寬度 */
+    height: 300px;      /* 固定高度，可調整如 80px、120px */
+    max-height: 160px; /* 最大高度，可自行調整 */
+    border-radius: 2px;
+  }
+  .about-step-imgwrap .about-img2 {
+    margin-top: 18px;
+  }
+  .about-text {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 0px;
+  }
+}
+/* 品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊品牌總覽區塊 */
+
+/* ===== 桌機品牌總覽區塊（只管桌機！）===== */
+@media (min-width: 1100px) {
+  /* ===== 電腦版 品牌總覽區塊優化 ===== */
+.brands-section {
+  display: flex;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #fff6ed;
+  min-height: 440px;
+  position: relative;
+  overflow: hidden;
+  /* 多一層光暈（圓形）放底層 */
+}
+.brands-section::before {
+  content: "";
+  position: absolute;
+  left: -120px;    /* 靠更左，擴散在左下 */
+  top: 40px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #ffe4b6 0%, #fff6ed00 70%);
+  opacity: 0.27;
+  z-index: 1;   /* 底層 */
+  pointer-events: none;
+}
+
+/* 右下葉子層（z-index:3，光暈z-index:1） */
+.brands-section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 500px;
+  background: url('../images/leaf-1.png') no-repeat right bottom;
+  background-size: contain;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* 主標區左邊小麥不動（原本就有） */
+.brands-left {
+  width: 37vw;
+  min-width: 250px;
+  max-width: 540px;
+  background: linear-gradient(120deg, #f8c79d 85%, #f6b06a 100%);
+  clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 12vw;
+  padding-right: 2vw;
+  z-index: 4;   /* 主標區要在最上 */
+  position: relative;
+}
+.brands-left h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 0 3px 16px rgba(140,60,10,0.08);
+}
+.brands-left h2 small {
+  font-size: 1.18rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 0.4em;
+  color: #fffdf6;
+  letter-spacing: 1.6px;
+}
+.brands-left::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 8px;
+  width: 200px;
+  height: 200px;
+  background: url('../images/small-wheat.png') no-repeat left bottom;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 右側品牌卡片排列 */
+.brands-wall-rows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 上下平均分配 */
+  align-items: flex-start;
+  padding: 2.6rem 4vw 2.6rem 4vw; /* 上下 padding 拉成一樣 */
+  z-index: 4;
+  min-height: 400px; /* 如果空間不夠可以手動給高度 */
+}
+.brands-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+.brands-row-bottom {
+  margin-left: 120px;
+}
+
+/* ===== 品牌卡片調整 ===== */
+.brand-card {
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 8px 32px #ecd7be5b, 0 0 2px #edb76a33;
+  border: 2.3px solid #e9dac696;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  transition: box-shadow 0.18s, border 0.15s, transform 0.13s;
+  padding: 22px 15px 8px 15px;
+  position: relative;
+  z-index: 4;
+}
+.brand-card:hover {
+  box-shadow: 0 18px 48px #ffe6b7a1;
+  border: 2.7px solid #ffb746;
+  transform: translateY(-10px) scale(1.08);
+}
+.brand-card img {
+  max-width: 150px;
+  max-height: 90px;
+  object-fit: contain;
+  background: none;
+  margin-bottom: 12px;
+}
+.brand-name {
+  font-size: 1.27rem;
+  color: #4c2c08;
+  font-weight: 900;
+  margin-top: 8px;
+  letter-spacing: 1.3px;
+  text-align: center;
+  white-space: nowrap;
+  font-family: 'Noto Sans TC', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 10px #ffe3ba60;
+}
+@media (max-width: 1650px) and (min-width: 1450px) {
+  .brands-left {
+    width: 29vw;
+    min-width: 180px;
+    max-width: 350px;
+    padding-left: 2vw;
+    padding-right: 0.5vw;
+  }
+  .brands-wall-rows {
+  gap: 42px;    /* <--- 這個 gap 控制上下兩排的間距（推薦！）*/
+}
+  .brand-card {
+    background: #fff;
+    border-radius: 26px;
+    box-shadow: 0 8px 32px #ecd7be5b, 0 0 2px #edb76a33;
+    border: 2.3px solid #e9dac696;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    transition: box-shadow 0.18s, border 0.15s, transform 0.13s;
+    padding: 22px 15px 8px 15px;
+    position: relative;
+    z-index: 4;
+  }
+  .brands-section {
+    min-height: 380px;
+  } 
+}
+@media (max-width: 1450px) and (min-width: 1100px) {
+  .brands-left {
+    width: 29vw;
+    min-width: 180px;
+    max-width: 350px;
+    padding-left: 2vw;
+    padding-right: 0.5vw;
+  }
+  .brands-wall-rows {
+  gap: 25px;    /* <--- 這個 gap 控制上下兩排的間距（推薦！）*/
+}
+  .brands-section {
+    min-height: 380px;
+  }
+  .brands-row {
+    gap: 2.2rem;
+  }
+  .brand-card {
+    width: 120px;
+    height: 120px;
+  }
+  .brand-card img {
+    max-width: 82px;
+    max-height: 60px;
+    margin-bottom: 7px;
+  }
+  .brand-name {
+    font-size: 0.98rem;
+    margin-top: 5px;
+    letter-spacing: 1px;
+  }
+}
+}
+/* 桌機顯示 .brands-desktop，手機顯示 .brands-mobile */
+.brands-desktop { display: flex !important; }
+.brands-mobile { display: none !important; }
+
+
+/* 商品精選入口 - Mockup 視覺風格 */
+.product-entrance-section {
+  position: relative;
+  background: #fffaf4;
+  padding: 60px 0 80px 0;
+  overflow: hidden;
+}
+.product-entrance-title {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #6c3c0f;
+  margin-bottom: 30px;
+}
+.product-entrance-title span {
+  font-size: 1.45rem;
+  font-family: 'Pacifico', cursive, serif;
+  color: #b98b50;
+  letter-spacing: 1.1px;
+}
+.product-entrance-bg {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: url('../images/bg-food-illustration.png') no-repeat center/cover;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.product-entrance-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 54px;
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.product-entrance-card {
+  position: relative;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 10px 44px #e2b88042;
+  width: 320px;
+  min-height: 420px;
+  padding: 38px 18px 30px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.product-entrance-card:hover {
+  box-shadow: 0 22px 62px #ffcd7980;
+  transform: translateY(-8px) scale(1.04);
+  z-index: 2;
+}
+
+/* 卡片模糊背景 */
+.entrance-card-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(1.08) saturate(1.08);
+  z-index: 0;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* 商品主圖 */
+.entrance-img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  z-index: 1;
+  position: relative;
+}
+
+/* 內容（標題＋按鈕） */
+.entrance-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+.entrance-name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #52330d;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px #fff8eea8;
+}
+.entrance-btn {
+  display: inline-block;
+  padding: 0.95rem 2.6rem;
+  background: linear-gradient(90deg, #ffcb83 70%, #ffedc4 100%);
+  color: #52330d;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 1.18rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 2px 16px #ffd18b50;
+  transition: background 0.18s, color 0.12s;
+  border: none;
+}
+.entrance-btn:hover {
+  background: linear-gradient(90deg, #ffa32b 60%, #ffedc4 100%);
+  color: #fff;
+}
+
+/* 手機RWD */
+@media (max-width: 700px) {
+  .product-entrance-list {
+    position: relative;
+    overflow: visible;
+    min-height: 420px; /* 避免高度跳動 */
+    margin-bottom: 10px;
+  }
+  .product-entrance-card {
+    display: none;
+    position: absolute;
+    left: 0; right: 0;
+    margin: 0 auto;
+    transition: opacity 0.25s;
+    z-index: 10;
+    width: 92vw !important;
+    max-width: 300px;
+    min-width: 0;
+    min-height: 500px;
+    height: 82vw;
+    border-radius: 30px;
+    padding: 36px 12px 30px 12px;
+    box-shadow: 0 10px 44px #e2b88042;
+  }
+  .product-entrance-card.active {
+    display: flex;
+    position: relative;
+    opacity: 1;
+    z-index: 12;
+  }
+  /* 品牌總覽箭頭風格 */
+  .entrance-swiper-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    left: auto;
+    right: auto;
+    /* ...原本品牌總覽的樣式... */
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #de9945 !important;
+    font-size: 2.8rem !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    width: 38px !important;
+    height: 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, "Segoe UI Symbol", sans-serif !important;
+    user-select: none;
+    margin-top: 0;   /* 記得設0，避免品牌總覽的margin影響 */
+    cursor: pointer;
+    opacity: 1;
+    outline: none;
+    transition: color 0.18s;
+  }
+  .entrance-swiper-btn.prev { left: 8px; }
+  .entrance-swiper-btn.next { right: 8px; }
+  .entrance-swiper-btn.prev::after {
+    content: "\2039";
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+  .entrance-swiper-btn.next::after {
+    content: "\203A";
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+  .entrance-swiper-btn.prev,
+  .entrance-swiper-btn.next {
+    font-size: 0;
+  }
+}
+  /* 分頁點點 */
+  .entrance-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 0 0;
+    gap: 8px;
+    z-index: 40;
+    position: relative;
+  }
+  .entrance-pagination-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eed18e;
+    opacity: 0.45;
+    transition: all 0.22s;
+    margin: 0 2px;
+    display: inline-block;
+  }
+  .entrance-pagination-dot.active {
+    background: #e6b32d;
+    opacity: 1;
+    width: 16px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px #ffd3897c;
+  }
+@media (max-width: 700px) {
+  .product-entrance-card { display: none; }
+  .product-entrance-card.active { display: flex; }
+}
+
+@media (min-width: 701px) {
+  .entrance-swiper-btn { display: none !important; }
+  .product-entrance-card { display: flex !important; position: relative !important; }
+  .entrance-pagination { display: none !important; }
+}
+
+
+body, html {
+  display: block !important;
+  height: auto !important;
+}
+

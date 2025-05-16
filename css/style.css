@@ -235,36 +235,6 @@ nav a {
 .carousel-right { right: -10px; }
 
 /* ==========================================================================
-   關於我們 About Us ── Special Section
-   ========================================================================== */
-
-/* ✅ About 區塊排版 */
-.about-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.85);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-}
-.about-text {
-  flex: 1 1 300px;
-  text-align: center;
-}
-.about-text h2 {
-  font-size: 26px;
-}
-.about-text h2 span {
-  font-size: 14px;
-  color: #888;
-  display: block;
-  margin-top: 4px;
-}
-
-/* ==========================================================================
    Footer ── 頁腳
    ========================================================================== */
 

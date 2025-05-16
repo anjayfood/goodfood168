@@ -6,6 +6,8 @@
   <title>日銓貿易股份有限公司</title>
   <!-- 已有 CSS、favicon、結構化資料等 -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/brands-mobile.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- ✅ Google 結構化資料：公司名稱與 Logo 圖 -->
   <script type="application/ld+json">
@@ -59,129 +61,229 @@
     <button class="hero-arrow hero-left" onclick="moveHero(-1)">‹</button>
     <button class="hero-arrow hero-right" onclick="moveHero(1)">›</button>
   </div>
-<!-- ===== 主要內容 main-wrapper ===== -->
-  <div class="main-wrapper">
-    <!-- ===== Section：關於我們 About Us ===== -->
-    <div class="section" id="about">
-      <div class="about-box center-only-text">
-        <div class="about-text">
-          <h2>關於我們 <span>About Us</span></h2>
-          <p>日銓貿易股份有限公司為專業食品進口商，致力提供無添加天然果乾、原味堅果、罐頭食材與經典義大利麵產品。選品嚴格、品質穩定，深受各大烘焙業者與餐飲業者的信賴。</p>
-        </div>
+<!-- ===== 關於我們 About Us（下樓梯雙圖+滿版底色） ===== -->
+<section class="about-section-full">
+  <div class="about-section-inner about-step-images">
+    <div class="about-step-imgwrap">
+      <img src="images/about-1.jpg" alt="關於我們1" class="about-img1">
+      <img src="images/about-2.jpg" alt="關於我們2" class="about-img2">
+    </div>
+    <div class="about-text">
+      <h2>關於我們 <span>About Us</span></h2>
+      <p>
+        日銓貿易股份有限公司為專業食品進口商，致力提供無添加天然果乾、原味堅果、罐頭食材與經典義大利麵產品。選品嚴格、品質穩定，深受各大烘焙業者與餐飲業者的信賴。
+      </p>
+      <a href="about.html" class="about-btn">瞭解更多</a>
+    </div>
+  </div>
+</section> 
+<!-- ===== 電腦版 品牌總覽 Brand Overview 區塊 ===== -->
+<section class="brands-section brands-desktop">
+  <div class="brands-left">
+    <h2>品牌總覽<br><small>Brand Overview</small></h2>
+  </div>
+  <div class="brands-wall-rows">
+    <div class="brands-row brands-row-5 brands-row-top">
+      <div class="brand-card"><img src="images/品牌FUDA.png" alt="FUDA"><div class="brand-name">FUDA</div></div>
+      <div class="brand-card"><img src="images/品牌巨人牌.png" alt="巨人"><div class="brand-name">巨人</div></div>
+      <div class="brand-card"><img src="images/品牌草原.png" alt="草原"><div class="brand-name">草原</div></div>
+      <div class="brand-card"><img src="images/品牌安卡羅.png" alt="Ankara"><div class="brand-name">Ankara</div></div>
+      <div class="brand-card"><img src="images/品牌TADENKA.png" alt="TADENKA"><div class="brand-name">TADENKA</div></div>
+    </div>
+    <div class="brands-row brands-row-5 brands-row-bottom">
+      <div class="brand-card"><img src="images/品牌克莉絲汀.png" alt="Christine"><div class="brand-name">Christine</div></div>
+      <div class="brand-card"><img src="images/品牌豹牌.png" alt="豹牌"><div class="brand-name">豹牌</div></div>
+      <div class="brand-card"><img src="images/品牌VIVOLA.png" alt="VIVOLA"><div class="brand-name">VIVOLA</div></div>
+      <div class="brand-card"><img src="images/品牌DAVIA.png" alt="DAVIA"><div class="brand-name">DAVIA</div></div>
+      <div class="brand-card"><img src="images/品牌百樂.png" alt="百樂"><div class="brand-name">百樂</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 手機版 品牌總覽（2x2 輪播）===== -->
+<section class="brands-section brands-mobile">
+  <div class="brands-left">
+    <h2>品牌總覽<br><small>Brand Overview</small></h2>
+  </div>
+  <div class="brands-carousel">
+    <button class="carousel-arrow left" onclick="prevBrandPage()"></button>
+    <div class="brands-carousel-pages">
+      <!-- 第一頁 -->
+      <div class="brands-carousel-page">
+        <div class="brand-card"><img src="images/品牌FUDA.png" alt="FUDA"><div class="brand-name">FUDA</div></div>
+        <div class="brand-card"><img src="images/品牌巨人牌.png" alt="巨人"><div class="brand-name">巨人</div></div>
+        <div class="brand-card"><img src="images/品牌草原.png" alt="草原"><div class="brand-name">草原</div></div>
+        <div class="brand-card"><img src="images/品牌安卡羅.png" alt="Ankara"><div class="brand-name">Ankara</div></div>
+      </div>
+      <!-- 第二頁 -->
+      <div class="brands-carousel-page">
+        <div class="brand-card"><img src="images/品牌TADENKA.png" alt="TADENKA"><div class="brand-name">TADENKA</div></div>
+        <div class="brand-card"><img src="images/品牌克莉絲汀.png" alt="Christine"><div class="brand-name">Christine</div></div>
+        <div class="brand-card"><img src="images/品牌豹牌.png" alt="豹牌"><div class="brand-name">豹牌</div></div>
+        <div class="brand-card"><img src="images/品牌VIVOLA.png" alt="VIVOLA"><div class="brand-name">VIVOLA</div></div>
+      </div>
+      <!-- 第三頁 -->
+      <div class="brands-carousel-page">
+        <div class="brand-card"><img src="images/品牌DAVIA.png" alt="DAVIA"><div class="brand-name">DAVIA</div></div>
+        <div class="brand-card"><img src="images/品牌百樂.png" alt="百樂"><div class="brand-name">百樂</div></div>
       </div>
     </div>
-<!-- ===== Section：品牌總覽 Brand Overview ===== -->
-    <div class="section" id="brands">
-      <div class="section-box">
-        <h2>品牌總覽 <small>Brand Overview</small></h2>
-        <div class="carousel-wrapper" id="brands-carousel">
-          <button class="carousel-arrows carousel-left">‹</button>
-          <div class="carousel-track">
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/品牌FUDA.png"><p>FUDA</p></div>
-              <div class="carousel-item"><img src="images/品牌巨人牌.png"><p>巨人</p></div>
-              <div class="carousel-item"><img src="images/品牌克莉絲汀.png"><p>Christine</p></div>
-              <div class="carousel-item"><img src="images/品牌豹牌.png"><p>豹牌</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/品牌草原.png"><p>草原</p></div>
-              <div class="carousel-item"><img src="images/品牌安卡羅.png"><p>Ankara</p></div>
-              <div class="carousel-item"><img src="images/品牌VIVOLA.png"><p>VIVOLA</p></div>
-              <div class="carousel-item"><img src="images/品牌DAVIA.png"><p>DAVIA</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/品牌TADENKA.png"><p>TADENKA</p></div>
-              <div class="carousel-item"><img src="images/品牌百樂.png"><p>百樂</p></div>
-            </div>
-          </div>
-          <button class="carousel-arrows carousel-right">›</button>
-        </div>
+    <button class="carousel-arrow right" onclick="nextBrandPage()"></button>
+  </div>
+</section>
+
+<!-- ===== 商品精選入口（五分類，每張卡片五圖自動輪播） ===== -->
+<section class="product-entrance-section">
+  <h2 class="product-entrance-title">商品精選入口<br><span>Featured Picks</span></h2>
+  <div class="product-entrance-bg"></div>
+  <button class="entrance-swiper-btn prev" type="button"></button>
+  <button class="entrance-swiper-btn next" type="button"></button>
+  <div class="product-entrance-list">
+
+    <!-- 堅果果乾 -->
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-nuts-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/nuts1.png" alt="堅果果乾1" class="entrance-img">
+        <img src="images/nuts2.png" alt="堅果果乾2" class="entrance-img" style="display:none;">
+        <img src="images/nuts3.png" alt="堅果果乾3" class="entrance-img" style="display:none;">
+        <img src="images/nuts4.png" alt="堅果果乾4" class="entrance-img" style="display:none;">
+        <img src="images/nuts5.png" alt="堅果果乾5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">堅果・果乾原料</div>
+        <a href="nuts.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-    <!-- ===== Section：精選商品 Featured Products ===== -->
-    <div class="section" id="products">
-      <div class="section-box">
-        <h2>精選商品 <small>Featured Products</small></h2>
-        <div class="carousel-wrapper" id="products-carousel">
-          <button class="carousel-arrows carousel-left">‹</button>
-          <div class="carousel-track">
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/富達-什錦水果罐.png"><p>富達 什錦水果罐</p></div>
-              <div class="carousel-item"><img src="images/富達-鳳梨片.png"><p>富達 鳳梨片</p></div>
-              <div class="carousel-item"><img src="images/富達-迷你鳳梨片.png"><p>富達 迷你鳳梨片</p></div>
-              <div class="carousel-item"><img src="images/富達-紅毛丹夾鳳梨.png"><p>富達 紅毛丹夾鳳梨</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/富達-椰漿.png"><p>富達 椰漿</p></div>
-              <div class="carousel-item"><img src="images/富達-特甜玉米粒.png"><p>富達 特甜玉米粒</p></div>
-              <div class="carousel-item"><img src="images/富達-甜玉米醬.png"><p>富達 甜玉米醬</p></div>
-              <div class="carousel-item"><img src="images/Christine-3.jpg"><p>Christine 鳳梨角</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/Giant-2.jpg"><p>巨人 調製奶水</p></div>
-              <div class="carousel-item"><img src="images/富達-泰式甜辣醬.png"><p>富達 泰式甜辣醬</p></div>
-              <div class="carousel-item"><img src="images/龍眼蜂蜜調味糖漿.png"><p>龍眼蜂蜜調味糖漿</p></div>
-              <div class="carousel-item"><img src="images/富達-檸檬汁.jpg"><p>富達 檸檬汁</p></div>
-            </div>
-          </div>
-          <button class="carousel-arrows carousel-right">›</button>
-        </div>
+
+    <!-- 義大利麵 -->
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-pasta-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/pasta1.png" alt="義大利麵1" class="entrance-img">
+        <img src="images/pasta2.png" alt="義大利麵2" class="entrance-img" style="display:none;">
+        <img src="images/pasta3.png" alt="義大利麵3" class="entrance-img" style="display:none;">
+        <img src="images/pasta4.png" alt="義大利麵4" class="entrance-img" style="display:none;">
+        <img src="images/pasta5.png" alt="義大利麵5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">義大利麵</div>
+        <a href="pasta.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-    <!-- ===== Section：義大利麵 Pasta ===== -->
-    <div class="section" id="pasta">
-      <div class="section-box">
-        <h2>義大利麵 <small>Pasta</small></h2>
-        <div class="carousel-wrapper" id="pasta-carousel">
-          <button class="carousel-arrows carousel-left">‹</button>
-          <div class="carousel-track">
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/pasta-1.png"><p>Ankara直麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-2.png"><p>Ankara筆尖麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-3.png"><p>Ankara蝴蝶麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-4.png"><p>Ankara螺旋麵</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/pasta-5.png"><p>Ankara貝殼麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-6.png"><p>Ankara螺旋蔬菜麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-7.png"><p>Ankara蔬菜卡通麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-8.png"><p>Christine直麵</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/pasta-9.png"><p>VIVOLA筆管麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-10.png"><p>VIVOLA螺旋麵</p></div>
-              <div class="carousel-item"><img src="images/pasta-11.png"><p>VIVOLA通心麵</p></div>
-            </div>
-          </div>
-          <button class="carousel-arrows carousel-right">›</button>
-        </div>
+
+    <!-- 罐頭食品 -->
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-canned-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/canned1.png" alt="罐頭食品1" class="entrance-img">
+        <img src="images/canned2.png" alt="罐頭食品2" class="entrance-img" style="display:none;">
+        <img src="images/canned3.png" alt="罐頭食品3" class="entrance-img" style="display:none;">
+        <img src="images/canned4.png" alt="罐頭食品4" class="entrance-img" style="display:none;">
+        <img src="images/canned5.png" alt="罐頭食品5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">罐頭食品</div>
+        <a href="canned.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-    <!-- ===== Section：堅果・果乾 Nuts & Dried Fruits ===== -->
-    <div class="section" id="nuts">
-      <div class="section-box">
-        <h2>堅果、果乾 <small>Nuts & Dried Fruits</small></h2>
-        <div class="carousel-wrapper" id="nuts-carousel">
-          <button class="carousel-arrows carousel-left">‹</button>
-          <div class="carousel-track">
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/腰果粒.jpg"><p>腰果粒</p></div>
-              <div class="carousel-item"><img src="images/腰果片.jpg"><p>腰果片</p></div>
-              <div class="carousel-item"><img src="images/南瓜子仁.jpg"><p>南瓜子仁</p></div>
-              <div class="carousel-item"><img src="images/翠綠開心果仁.jpg"><p>翠綠開心果仁</p></div>
-            </div>
-            <div class="carousel-page">
-              <div class="carousel-item"><img src="images/西瓜子仁.jpg"><p>西瓜子仁</p></div>
-              <div class="carousel-item"><img src="images/去皮榛果粒.jpg"><p>去皮榛果粒</p></div>
-              <div class="carousel-item"><img src="images/土耳其無花果乾.jpg"><p>土耳其無花果乾</p></div>
-              <div class="carousel-item"><img src="images/金黃杏桃乾.jpg"><p>金黃杏桃乾</p></div>
-            </div>
-          </div>
-          <button class="carousel-arrows carousel-right">›</button>
-        </div>
+
+    <!-- 調味料糖漿醬汁 -->
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-seasoning-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/seasoning1.png" alt="調味料糖漿醬汁1" class="entrance-img">
+        <img src="images/seasoning2.png" alt="調味料糖漿醬汁2" class="entrance-img" style="display:none;">
+        <img src="images/seasoning3.png" alt="調味料糖漿醬汁3" class="entrance-img" style="display:none;">
+        <img src="images/seasoning4.png" alt="調味料糖漿醬汁4" class="entrance-img" style="display:none;">
+        <img src="images/seasoning5.png" alt="調味料糖漿醬汁5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">調味料・糖漿・醬汁</div>
+        <a href="seasoning.html" class="entrance-btn">看全部</a>
+      </div>
+    </div>
+
+    <!-- 烘焙餐飲原料 -->
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-baking-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/baking1.png" alt="烘焙餐飲原料1" class="entrance-img" style="display:none;">
+        <img src="images/baking2.png" alt="烘焙餐飲原料2" class="entrance-img" style="display:none;">
+        <img src="images/baking3.png" alt="烘焙餐飲原料3" class="entrance-img" style="display:none;">
+        <img src="images/baking4.png" alt="烘焙餐飲原料4" class="entrance-img" style="display:none;">
+        <img src="images/baking5.png" alt="烘焙餐飲原料5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">烘焙・餐飲相關原料</div>
+        <a href="baking.html" class="entrance-btn">看全部</a>
       </div>
     </div>
   </div>
+</section>
+
+
+<!-- 商品精選入口輪播（本區專用，不會動到其他） -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.product-entrance-card');
+  const dotsWrap = document.querySelector('.entrance-pagination');
+  const btnPrev = document.querySelector('.entrance-swiper-btn.prev');
+  const btnNext = document.querySelector('.entrance-swiper-btn.next');
+  let idx = 0;
+  let imgTimer = null;
+
+  function startImageCarousel(card) {
+    clearImageTimer();
+    const imgs = card.querySelectorAll('.card-img-carousel img');
+    if (imgs.length <= 1) return;
+    let i = 0;
+    imgs.forEach((img, k) => img.style.display = k === 0 ? '' : 'none');
+    imgTimer = setInterval(() => {
+      imgs.forEach((img, k) => img.style.display = k === i ? '' : 'none');
+      i = (i + 1) % imgs.length;
+    }, 3000);
+  }
+  function clearImageTimer() {
+    if (imgTimer) clearInterval(imgTimer);
+    imgTimer = null;
+  }
+
+  function updateEntranceSwiper() {
+    const isMobile = window.innerWidth <= 700;
+    cards.forEach((el, i) => {
+      if (isMobile) {
+        el.classList.toggle('active', i === idx);
+      } else {
+        el.classList.add('active');
+      }
+      // 圖片初始化
+      const imgs = el.querySelectorAll('.card-img-carousel img');
+      imgs.forEach((img, k) => img.style.display = k === 0 ? '' : 'none');
+    });
+
+    clearImageTimer();
+    if (isMobile) startImageCarousel(cards[idx]);
+  }
+
+  updateEntranceSwiper();
+
+  if (btnPrev) btnPrev.onclick = function() {
+    idx = (idx - 1 + cards.length) % cards.length;
+    updateEntranceSwiper();
+  };
+  if (btnNext) btnNext.onclick = function() {
+    idx = (idx + 1) % cards.length;
+    updateEntranceSwiper();
+  };
+
+  window.addEventListener('resize', updateEntranceSwiper);
+  window.addEventListener('beforeunload', clearImageTimer);
+});
+
+</script>
+
+
    <!-- ===== Footer (不動) ===== -->
   <footer style="background-color: #f9f9f9; padding: 2rem 1rem; text-align: center; font-size: 0.95rem; color: #444; line-height: 1.6; border-top: 1px solid #ddd;">
    <div style="margin-bottom: 0.5rem; font-weight: 600;">
@@ -241,7 +343,11 @@
 
       left?.addEventListener("click", () => move(-1));
       right?.addEventListener("click", () => move(1));
-
+    function resetHeroTimer() {
+  clearTimeout(heroTimer);
+  console.log('timer reset!'); // ← 這裡
+  heroTimer = setTimeout(() => moveHero(1), 10000);
+}  
       // ✅ 如果只有一頁，隱藏箭頭
       if (pages.length <= 1) {
         if (left) left.style.display = "none";
@@ -267,6 +373,66 @@
     closeMenu.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
     });
+// 手機品牌輪播
+let brandPage = 0;
+function showBrandPage(n) {
+  const pages = document.querySelectorAll('.brands-carousel-page');
+  brandPage = Math.max(0, Math.min(n, pages.length - 1));
+  pages.forEach((p, i) => {
+    p.style.display = (i === brandPage) ? 'grid' : 'none';
+  });
+}
+window.prevBrandPage = function () { showBrandPage(brandPage - 1); }
+window.nextBrandPage = function () { showBrandPage(brandPage + 1); }
+document.addEventListener("DOMContentLoaded", () => showBrandPage(0));
+function showBrandPage(n) {
+  const pages = document.querySelectorAll('.brands-carousel-page');
+  const len = pages.length;
+  // 讓 n 超出範圍時循環
+  brandPage = (n + len) % len;
+  pages.forEach((p, i) => {
+    p.style.display = (i === brandPage) ? 'grid' : 'none';
+  });
+}
+document.addEventListener('DOMContentLoaded', function () {
+  function updateMobileEntranceSwiper(idx) {
+    const cards = document.querySelectorAll('.product-entrance-card');
+    cards.forEach((el, i) => el.classList.toggle('active', i === idx));
+  }
+  let idx = 0;
+  const cards = document.querySelectorAll('.product-entrance-card');
+  updateMobileEntranceSwiper(idx);
+
+  document.querySelector('.entrance-swiper-btn.prev').onclick = function() {
+    idx = (idx - 1 + cards.length) % cards.length;
+    updateMobileEntranceSwiper(idx);
+  };
+  document.querySelector('.entrance-swiper-btn.next').onclick = function() {
+    idx = (idx + 1) % cards.length;
+    updateMobileEntranceSwiper(idx);
+  };
+
+  // 畫面切回桌機/手機時，立即正確顯示
+  window.addEventListener('resize', function() {
+    if(window.innerWidth > 700){
+      cards.forEach(el => el.classList.add('active'));
+    } else {
+      updateMobileEntranceSwiper(idx);
+    }
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.card-img-carousel').forEach(carousel => {
+    const imgs = carousel.querySelectorAll('img');
+    let i = 0;
+    setInterval(() => {
+      imgs.forEach((img, idx) => img.style.display = idx === i ? '' : 'none');
+      i = (i + 1) % imgs.length;
+    }, 3000);
+  });
+});
+
   </script>
+
 </body>
 </html>

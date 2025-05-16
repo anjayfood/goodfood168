@@ -1,0 +1,129 @@
+/* ===== 手機品牌總覽區塊 ===== */
+@media (max-width: 1099px) {
+  .brands-desktop { display: none !important; }
+  .brands-mobile { display: block !important; }
+
+  .brands-mobile {
+  width: 100vw;
+  background: #fff6ed;
+  padding: 0 0 56px 0;       /* 下方多加 padding，防止被吃掉 */
+  position: relative;
+  overflow: visible !important;  /* 這裡改 visible */
+}
+  .brands-mobile .brands-left {
+    background: none;
+    padding: 22px 0 0 7vw;
+    margin-bottom: 28px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .brands-mobile .brands-left h2 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #de9945;
+    margin: 0 0 2px 0;
+    letter-spacing: 1.2px;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px #f6b06a25;
+  }
+  .brands-mobile .brands-left h2 small {
+    display: block;
+    font-size: 1.01rem;
+    color: #b87c3c;
+    opacity: 0.95;
+    margin-top: 3px;
+    font-weight: 400;
+  }
+  .brands-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100vw;
+    margin-top: 18px;
+    position: relative;
+    min-height: 220px;
+  }
+  .brands-carousel-pages {
+    flex: 1;
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-bottom: 5px;
+  }
+  .brands-carousel-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 18px 15px;
+    width: 100%;
+    min-width: 0;
+    justify-items: center;
+    align-items: center;
+  }
+  .brand-card {
+    width: 44vw !important;
+    min-width: 122px !important;
+    max-width: 150px !important;
+    height: 110px !important;
+    padding: 12px 6px 7px 6px !important;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 22px #ecd7be57, 0 0 1px #edb76a2b;
+    border: 1.5px solid #f8e2c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    transition: box-shadow 0.18s, border 0.15s;
+  }
+  .brand-card img {
+    width: 90px !important;
+    height: 90px !important;
+    margin-bottom: 5px;
+    object-fit: contain !important;
+    background: none !important;
+  }
+  .brand-name {
+    font-size: 1.16rem;
+    font-weight: 700;
+    color: #965f23;
+    margin-top: 0px;
+    text-align: center;
+    letter-spacing: 1.1px;
+    font-family: 'Noto Sans TC', 'Segoe UI', Arial, sans-serif;
+  }
+  .carousel-arrow {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #de9945 !important;
+    font-size: 2.8rem !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    width: 38px !important;
+    height: 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, "Segoe UI Symbol", sans-serif !important;
+    user-select: none;
+    margin-top: -6px;
+  }
+  .carousel-arrow.left::after {
+    content: "\2039";
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+  .carousel-arrow.right::after {
+    content: "\203A";
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+  .carousel-arrow.left,
+  .carousel-arrow.right {
+    font-size: 0;
+  }
+}
