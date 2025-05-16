@@ -30,32 +30,33 @@
 </head>
 <body>
   <!-- ===== Header (不動) ===== -->
-<header>
-  <a href="/" class="logo">日銓貿易股份有限公司</a>
+  <header>
+    <a href="/" class="logo">日銓貿易股份有限公司</a>
 
-  <!-- 電腦版選單 -->
-  <nav class="desktop-nav">
-    <a href="about.html">關於日銓</a>
-    <a href="brands.html">品牌總覽</a>
-    <a href="products.html">商品總覽</a>
-    <a href="contact.html">聯絡我們</a>
-  </nav>
+    <!-- 電腦版選單 -->
+    <nav class="desktop-nav">
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
 
-  <!-- 手機版漢堡 -->
-  <button class="menu-toggle" id="menuToggle">☰</button>
+    <!-- 手機版漢堡 -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
 
-  <!-- ===== 手機選單 (不動) ===== -->
-  <nav class="mobile-nav" id="mobileMenu">
-    <button class="close-menu" id="closeMenu">✕</button>
-    <div class="mobile-header">選單 Menu</div>
-    <a href="index.html">首頁</a>
-    <a href="about.html">關於日銓</a>
-    <a href="brands.html">品牌總覽</a>
-    <a href="products.html">商品總覽</a>
-    <a href="contact.html">聯絡我們</a>
-  </nav>
-</header>
-<!-- ===== 主視覺 Hero (不動) ===== -->
+    <!-- 手機版選單 -->
+    <nav class="mobile-nav" id="mobileMenu">
+      <button class="close-menu" id="closeMenu">✕</button>
+      <div class="mobile-header">選單 Menu</div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於日銓</a>
+      <a href="brands.html">品牌總覽</a>
+      <a href="products.html">商品總覽</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  <main>
+  <!-- ===== 主視覺 Hero (不動) ===== -->
   <div class="hero">
     <img src="images/hero-desktop-1.jpg" id="hero-img">
     <button class="hero-arrow hero-left" onclick="moveHero(-1)">‹</button>
@@ -64,6 +65,7 @@
 <!-- ===== 關於我們 About Us（下樓梯雙圖+滿版底色） ===== -->
 <section class="about-section-full">
   <div class="about-section-inner about-step-images">
+    
     <div class="about-step-imgwrap">
       <img src="images/about-1.jpg" alt="關於我們1" class="about-img1">
       <img src="images/about-2.jpg" alt="關於我們2" class="about-img2">
@@ -222,7 +224,7 @@
   </div>
 </section>
 
-
+<main>
 <!-- 商品精選入口輪播（本區專用，不會動到其他） -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
