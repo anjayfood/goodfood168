@@ -1,4 +1,4 @@
-/* ==========================================================================
+  /* ==========================================================================
    基本重置與版面設定 ── Reset & Base Styles
    ========================================================================== */
 
@@ -307,6 +307,7 @@ footer {
 .desktop-nav {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 .mobile-nav,
 .menu-toggle,
@@ -382,3 +383,190 @@ footer {
     color: #333;
   }
 }
+.nav-search-wrap {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+#site-search-input {
+  padding: 8px 32px 8px 12px;
+  border-radius: 18px;
+  border: 1.5px solid #ffcc80;
+  font-size: 1rem;
+  outline: none;
+  width: 140px;
+  transition: width 0.25s;
+}
+#site-search-input:focus {
+  width: 200px;
+}
+.nav-search-btn {
+  position: absolute;
+  right: 2px; top: 2px;
+  border: none;
+  background: none;
+  font-size: 1.18rem;
+  color: #cc9900;
+  cursor: pointer;
+}
+#search-results {
+  display: none;
+  position: absolute;
+  top: 110%; /* 或根據你 header 高度微調 */
+  right: 0;
+  background: #fffbe8;
+  width: 350px;
+  box-shadow: 0 2px 18px #f6e6b3c0;
+  border-radius: 10px;
+  z-index: 999;
+  max-height: 400px;
+  overflow-y: auto;
+}
+#search-results.active {
+  display: block;
+}
+
+.search-result-item {
+  display: block;
+  padding: 8px 18px;
+  color: #804600;
+  text-decoration: none;
+  font-size: 1.03rem;
+  border-bottom: 1px solid #ffe9b9;
+  transition: background 0.14s;
+}
+.search-result-item:last-child {
+  border-bottom: none;
+}
+.search-result-item:hover {
+  background: #ffefc9;
+}
+.no-result {
+  color: #b7a282;
+  text-align: center;
+  padding: 12px 0;
+}
+.mobile-nav {
+  width: 94vw !important;
+  max-width: 430px;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-bottom: 24px;
+}
+
+.mobile-search-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 18px auto 10px auto;
+  padding: 0 8px;
+  position: relative;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.mobile-search-wrap input#mobile-search-input {
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: none !important;
+  padding: 0.65em 1em;
+  border-radius: 20px 0 0 20px;
+  border: 1.5px solid #ffd28d;
+  border-right: none;
+  font-size: 1em;
+  background: #fff;
+  outline: none;
+  transition: border 0.18s;
+  box-sizing: border-box;
+  height: 38px;
+  margin: 0;
+  display: inline-block;
+}
+
+.mobile-search-wrap button.mobile-search-btn {
+  background: #ffdcae;
+  border: 1.5px solid #ffd28d;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.18em;
+  color: #de9945;
+  cursor: pointer;
+  padding: 0 14px 0 10px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: background 0.18s, color 0.15s;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav {
+    max-width: 99vw !important;
+    min-width: 0;
+  }
+  .mobile-search-wrap {
+    max-width: 99vw;
+    padding: 0 2vw;
+  }
+}
+
+/* 搜尋下拉選單統一美化，電腦與手機都適用 */
+#search-results,
+#mobile-search-results {
+  position: absolute;
+  top: 100%;    /* 在搜尋框下方 */
+  left: 0;
+  width: 100%;
+  min-width: 120px;
+  background: #fffbe8;
+  box-shadow: 0 6px 24px #efdcb21e, 0 0 2px #d8c18c46;
+  border-radius: 12px;
+  z-index: 999;
+  padding: 6px 0;
+  margin-top: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid #f2d088;
+  font-size: 1rem;
+}
+
+#search-results a,
+#mobile-search-results a {
+  display: block;
+  padding: 10px 18px;
+  color: #573600;
+  text-decoration: none;
+  border-bottom: 1px solid #f9e2b7;
+  transition: background 0.14s, color 0.12s;
+  font-size: 1.04rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#search-results a:last-child,
+#mobile-search-results a:last-child {
+  border-bottom: none;
+}
+
+#search-results a:hover,
+#mobile-search-results a:hover {
+  background: #ffe3a3;
+  color: #a46c02;
+}
+
+#search-results .no-result,
+#mobile-search-results .no-result {
+  padding: 14px 22px;
+  color: #aaa;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* 讓搜尋框父層加 position:relative，讓下拉不會超出 */
+.nav-search-wrap, .mobile-search-wrap {
+  position: relative;
+}
+
