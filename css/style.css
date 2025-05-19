@@ -473,6 +473,7 @@ footer {
   box-sizing: border-box;
   background: #fffcf7;   /* 你的主體底色 */
   overflow-x: visible !important;
+  padding-right: 16px !important;
 }
 .mobile-search-wrap {
   display: flex;
@@ -501,7 +502,7 @@ footer {
   background: #fff;
   outline: none;
   box-sizing: border-box;
-  height: 38px;
+  height: 30px;
   margin: 0;
 }
 .mobile-search-wrap button.mobile-search-btn {
