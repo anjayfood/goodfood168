@@ -21,10 +21,10 @@ const siteData = [
   { name: "南瓜子仁", url: "/products/南瓜子仁.html", tags: ["南瓜子", "種子", "堅果"] },
   { name: "翠綠開心果仁", url: "/products/翠綠開心果仁.html", tags: ["開心果", "堅果"] },
   { name: "葵花子", url: "/products/葵花子.html", tags: ["葵花子", "種子", "堅果"] },
-  { name: "去皮榛果粒", url: "/products/去皮榛果粒.html", tags: ["榛果", "堅果"] },
-  { name: "去皮榛果粉", url: "/products/去皮臻果粉.html", tags: ["榛果", "堅果", "粉"] },
-  { name: "帶皮榛果粒", url: "/products/帶皮臻果粒.html", tags: ["榛果", "堅果"] },
-  { name: "金黃杏桃乾", url: "/products/金黃杏桃乾.html", tags: ["杏桃", "果乾", "乾果"] },
+  { name: "去皮榛果粒", url: "/products/去皮榛果粒.html", tags: ["榛果", "堅果", "去皮"] },
+  { name: "去皮榛果粉", url: "/products/去皮臻果粉.html", tags: ["榛果", "堅果", "粉", "去皮"] },
+  { name: "帶皮榛果粒", url: "/products/帶皮臻果粒.html", tags: ["榛果", "堅果", "帶皮"] },
+  { name: "金黃杏桃乾", url: "/products/金黃杏桃乾.html", tags: ["杏桃", "果乾", "乾果", "金黃"] },
   { name: "土耳其無花果乾", url: "/products/truckish-dried-figs.html", tags: ["無花果", "果乾", "土耳其"] },
   { name: "伊朗無花果乾", url: "/products/伊朗無花果乾.html", tags: ["無花果", "果乾", "伊朗"] },
   { name: "青提子", url: "/products/青提子.html", tags: ["提子", "葡萄乾", "果乾"] },
@@ -79,8 +79,8 @@ const siteData = [
   { name: "吉利T果凍粉", url: "/products/吉利T果凍粉.html", tags: ["吉利T", "果凍粉", "烘焙原料","吉利", "烘焙"] },
   { name: "白明膠粉", url: "/products/白明膠粉.html", tags: ["白明膠粉", "烘焙原料","明膠", "烘焙"] },
   { name: "月光牌無鋁泡打粉", url: "/products/月光牌無鋁泡打粉.html", tags: ["月光牌", "泡打粉", "烘焙原料", "烘焙"] },
-  { name: "五彩米", url: "/products/五彩米.html", tags: ["五彩米", "米", "穀類","巧克力"] },
-  { name: "一色米", url: "/products/一色米.html", tags: ["一色米", "米", "穀類","巧克力"] },
+  { name: "五彩米", url: "/products/五彩米.html", tags: ["五彩米", "米","巧克力"] },
+  { name: "一色米", url: "/products/一色米.html", tags: ["一色米", "米","巧克力"] },
 ];
 
 function setupSiteSearch(inputId, resultId) {
