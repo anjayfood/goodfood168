@@ -120,30 +120,27 @@
   <div class="brands-left">
     <h2>品牌總覽<br><small>Brand Overview</small></h2>
   </div>
-  <div class="brands-carousel">
-    <button class="carousel-arrow left" onclick="prevBrandPage()"></button>
-    <div class="brands-carousel-pages">
-      <!-- 第一頁 -->
-      <div class="brands-carousel-page">
+  <div class="brands-carousel-snap" id="brandSnap">
+    <div class="brands-snap-page">
         <div class="brand-card"><img src="images/品牌FUDA.png" alt="FUDA"><div class="brand-name">FUDA</div></div>
         <div class="brand-card"><img src="images/品牌巨人牌.png" alt="巨人"><div class="brand-name">巨人</div></div>
         <div class="brand-card"><img src="images/品牌草原.png" alt="草原"><div class="brand-name">草原</div></div>
         <div class="brand-card"><img src="images/品牌安卡羅.png" alt="Ankara"><div class="brand-name">Ankara</div></div>
       </div>
       <!-- 第二頁 -->
-      <div class="brands-carousel-page">
+      <div class="brands-snap-page">
         <div class="brand-card"><img src="images/品牌TADENKA.png" alt="TADENKA"><div class="brand-name">TADENKA</div></div>
         <div class="brand-card"><img src="images/品牌克莉絲汀.png" alt="Christine"><div class="brand-name">Christine</div></div>
         <div class="brand-card"><img src="images/品牌豹牌.png" alt="豹牌"><div class="brand-name">豹牌</div></div>
         <div class="brand-card"><img src="images/品牌VIVOLA.png" alt="VIVOLA"><div class="brand-name">VIVOLA</div></div>
       </div>
       <!-- 第三頁 -->
-      <div class="brands-carousel-page">
+      <div class="brands-snap-page">
         <div class="brand-card"><img src="images/品牌DAVIA.png" alt="DAVIA"><div class="brand-name">DAVIA</div></div>
         <div class="brand-card"><img src="images/品牌百樂.png" alt="百樂"><div class="brand-name">百樂</div></div>
       </div>
     </div>
-    <button class="carousel-arrow right" onclick="nextBrandPage()"></button>
+    <div class="brands-snap-indicator" id="brandsSnapIndicator"></div>
   </div>
 </section>
 
@@ -297,7 +294,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
+<!-- ===== 品牌總攬手機板 ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const snapBox = document.getElementById('brandSnap');
+  const pages = snapBox.querySelectorAll('.brands-snap-page');
+  const indicator = document.getElementById('brandsSnapIndicator');
 
+  // 產生圓點
+  indicator.innerHTML = '';
+  pages.forEach((p, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'brands-snap-indicator-dot';
+    if (i === 0) dot.classList.add('active');
+    indicator.appendChild(dot);
+  });
+  const dots = indicator.querySelectorAll('.brands-snap-indicator-dot');
+
+  // scroll 事件偵測目前頁
+  snapBox.addEventListener('scroll', () => {
+    let pageIndex = 0;
+    const scrollLeft = snapBox.scrollLeft;
+    const pageWidth = snapBox.offsetWidth;
+    pageIndex = Math.round(scrollLeft / pageWidth);
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === pageIndex));
+  });
+});
+</script>
 
    <!-- ===== Footer (不動) ===== -->
   <footer style="background-color: #f9f9f9; padding: 2rem 1rem; text-align: center; font-size: 0.95rem; color: #444; line-height: 1.6; border-top: 1px solid #ddd;">
