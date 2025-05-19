@@ -3,7 +3,7 @@ const siteData = [
   { name: "富達 椰漿", url: "/products/富達椰漿.html", tags: ["富達", "椰漿", "罐頭","FUDA","FU","fu"] },
   { name: "富達 特甜玉米粒", url: "/products/富達特甜玉米粒.html", tags: ["富達", "玉米粒", "玉米", "特甜", "罐頭","FUDA","FU","fu"] },
   { name: "富達 甜玉米醬", url: "/products/富達甜玉米醬.html", tags: ["富達", "玉米醬", "玉米", "甜玉米", "罐頭","FUDA","FU","fu"] },
-  { name: "富達 鳳梨片", url: "/products/富達 鳳梨片.html", tags: ["富達", "鳳梨片", "鳳梨", "罐頭","FUDA","FU","fu"] },
+  { name: "富達 鳳梨片", url: "/products/富達鳳梨片.html", tags: ["富達", "鳳梨片", "鳳梨", "罐頭","FUDA","FU","fu"] },
   { name: "富達 糖水鳳梨角", url: "/products/富達糖水鳳梨角.html", tags: ["富達", "鳳梨角", "鳳梨", "糖水", "罐頭","FUDA","FU","fu"] },
   { name: "富達 迷你鳳梨片", url: "/products/富達迷你鳳梨片.html", tags: ["富達", "迷你", "鳳梨片", "鳳梨", "罐頭","FUDA","FU","fu"] },
   { name: "富達 紅毛丹夾鳳梨", url: "/products/富達紅毛丹夾鳳梨.html", tags: ["富達", "紅毛丹", "鳳梨", "罐頭","FUDA","FU","fu"] },
