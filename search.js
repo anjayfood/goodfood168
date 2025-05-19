@@ -83,15 +83,13 @@ const siteData = [
   { name: "一色米", url: "/products/一色米.html", tags: ["一色米", "米", "穀類","巧克力"] },
 ];
 
-// 通用搜尋函式（name/tag模糊搜尋）
 function setupSiteSearch(inputId, resultId) {
   const input = document.getElementById(inputId);
   const resultBox = document.getElementById(resultId);
-
   if (!input || !resultBox) return;
-
   let result = [];
 
+  // 搜尋輸入
   input.addEventListener('input', function() {
     const keyword = input.value.trim().toLowerCase();
     if (!keyword) {
@@ -99,12 +97,10 @@ function setupSiteSearch(inputId, resultId) {
       resultBox.style.display = 'none';
       return;
     }
-    result = siteData.filter(item => {
-      // 比對商品名稱或 tag
-      if (item.name.toLowerCase().includes(keyword)) return true;
-      if (item.tags && item.tags.some(tag => tag.toLowerCase().includes(keyword))) return true;
-      return false;
-    });
+    result = siteData.filter(item =>
+      item.name.toLowerCase().includes(keyword) ||
+      (item.tags && item.tags.some(tag => tag.toLowerCase().includes(keyword)))
+    );
     if (result.length === 0) {
       resultBox.innerHTML = '<div class="no-result">查無結果</div>';
       resultBox.style.display = 'block';
@@ -116,17 +112,15 @@ function setupSiteSearch(inputId, resultId) {
     resultBox.style.display = 'block';
   });
 
-  // Enter 鍵自動跳轉第一個結果
+  // 按下 Enter 跳轉
   input.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      if (result.length > 0) {
-        window.location.href = result[0].url;
-      }
+    if (e.key === 'Enter' && result.length > 0) {
+      window.location.href = result[0].url;
     }
   });
 
-  // 搜尋按鈕自動跳轉第一個結果
-  const searchBtn = input.parentElement.querySelector('.nav-search-btn');
+  // 搜尋按鈕（桌機/手機）直接跳轉
+  const searchBtn = input.parentElement.querySelector('.nav-search-btn, .mobile-search-btn');
   if (searchBtn) {
     searchBtn.addEventListener('click', function() {
       if (result.length > 0) {
@@ -135,20 +129,21 @@ function setupSiteSearch(inputId, resultId) {
     });
   }
 
-  // 點搜尋框外收起
-  document.addEventListener('click', function(e) {
+  // 點選搜尋結果 a 直接跳轉，且不會提前收起
+  resultBox.addEventListener('mousedown', function(e) {
+    // 只要是 a 就直接導頁，不要讓外部的 mousedown 先把它收掉
+    if (e.target.tagName.toLowerCase() === 'a') {
+      window.location.href = e.target.href;
+    }
+  });
+
+  // 點到 input 以外才收起選單
+  document.addEventListener('mousedown', function(e) {
     if (!resultBox.contains(e.target) && e.target !== input) {
       resultBox.style.display = 'none';
     }
   });
-  resultBox.addEventListener('click', function(e) {
-    if (e.target.tagName.toLowerCase() === 'a') {
-      resultBox.style.display = 'none';
-    }
-  });
 }
-
-// 初始化（桌機+手機）
 window.addEventListener('DOMContentLoaded', function() {
   setupSiteSearch('site-search-input', 'search-results');
   setupSiteSearch('mobile-search-input', 'mobile-search-results');

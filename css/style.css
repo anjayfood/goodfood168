@@ -513,26 +513,39 @@ footer {
   }
 }
 
-/* 搜尋下拉選單統一美化，電腦與手機都適用 */
+/* 統一搜尋下拉區，避免 overflow */
 #search-results,
 #mobile-search-results {
   position: absolute;
-  top: 100%;    /* 在搜尋框下方 */
   left: 0;
-  width: 100%;
+  top: 100%;
+  width: 100%;          /* 下拉寬度與輸入欄對齊 */
   min-width: 120px;
+  max-width: 360px;     /* 桌機極限寬度，手機版會自動縮 */
   background: #fffbe8;
   box-shadow: 0 6px 24px #efdcb21e, 0 0 2px #d8c18c46;
   border-radius: 12px;
   z-index: 999;
   padding: 6px 0;
   margin-top: 6px;
-  max-height: 320px;
+  max-height: 260px;    /* 控制下拉最大高度 */
   overflow-y: auto;
   border: 1px solid #f2d088;
   font-size: 1rem;
+  box-sizing: border-box;
 }
-
+@media (max-width: 600px) {
+  #mobile-search-results {
+    left: 0;
+    width: 100vw;       /* 手機直接鋪滿寬度 */
+    min-width: 0;
+    max-width: 98vw;
+    border-radius: 12px;
+    margin-left: -2vw;  /* 可視需要微調 */
+    font-size: 1.02rem;
+    max-height: 44vw;   /* 手機高度再矮一點，避免蓋到鍵盤 */
+  }
+}
 #search-results a,
 #mobile-search-results a {
   display: block;
