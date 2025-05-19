@@ -458,54 +458,7 @@ document.addEventListener("DOMContentLoaded", function() {
     closeMenu.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
     });
-// 手機品牌輪播
-let brandPage = 0;
-function showBrandPage(n) {
-  const pages = document.querySelectorAll('.brands-carousel-page');
-  brandPage = Math.max(0, Math.min(n, pages.length - 1));
-  pages.forEach((p, i) => {
-    p.style.display = (i === brandPage) ? 'grid' : 'none';
-  });
-}
-window.prevBrandPage = function () { showBrandPage(brandPage - 1); }
-window.nextBrandPage = function () { showBrandPage(brandPage + 1); }
-document.addEventListener("DOMContentLoaded", () => showBrandPage(0));
-function showBrandPage(n) {
-  const pages = document.querySelectorAll('.brands-carousel-page');
-  const len = pages.length;
-  // 讓 n 超出範圍時循環
-  brandPage = (n + len) % len;
-  pages.forEach((p, i) => {
-    p.style.display = (i === brandPage) ? 'grid' : 'none';
-  });
-}
-document.addEventListener('DOMContentLoaded', function () {
-  function updateMobileEntranceSwiper(idx) {
-    const cards = document.querySelectorAll('.product-entrance-card');
-    cards.forEach((el, i) => el.classList.toggle('active', i === idx));
-  }
-  let idx = 0;
-  const cards = document.querySelectorAll('.product-entrance-card');
-  updateMobileEntranceSwiper(idx);
 
-  document.querySelector('.entrance-swiper-btn.prev').onclick = function() {
-    idx = (idx - 1 + cards.length) % cards.length;
-    updateMobileEntranceSwiper(idx);
-  };
-  document.querySelector('.entrance-swiper-btn.next').onclick = function() {
-    idx = (idx + 1) % cards.length;
-    updateMobileEntranceSwiper(idx);
-  };
-
-  // 畫面切回桌機/手機時，立即正確顯示
-  window.addEventListener('resize', function() {
-    if(window.innerWidth > 700){
-      cards.forEach(el => el.classList.add('active'));
-    } else {
-      updateMobileEntranceSwiper(idx);
-    }
-  });
-});
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.card-img-carousel').forEach(carousel => {
     const imgs = carousel.querySelectorAll('img');
