@@ -130,7 +130,7 @@
 @media (max-width: 420px) {
   /* 只作用於品牌總覽的手機區塊，避免影響別的 .brand-card */
   .brands-section.brands-mobile .brand-card {
-    width: 98% !important;        /* 單欄顯示，不擠壓，最大寬 */
+    width: 100% !important;        /* 單欄顯示，不擠壓，最大寬 */
     min-width: 0 !important;      /* 防止被原本 min-width 限制 */
     max-width: 400px !important;  /* 最高不要爆版 */
     margin: 10px auto !important; /* 上下留距離，左右自動置中 */
