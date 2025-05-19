@@ -141,10 +141,10 @@
 
   /* 品牌圖片（品牌 LOGO）大小設定，可改成你要的 */
   .brands-section.brands-mobile .brand-card img {
-    width: 100px !important;     /* LOGO寬度（建議48~72px都可） */
-    height: 100px !important;    /* LOGO高度 */
-    max-width: 100px !important; /* 限制最大 */
-    max-height: 100px !important;
+    width: 120px !important;     /* LOGO寬度（建議48~72px都可） */
+    height: 120px !important;    /* LOGO高度 */
+    max-width: 120px !important; /* 限制最大 */
+    max-height: 120px !important;
     margin-bottom: 4px !important; /* 與文字間距 */
   }
 

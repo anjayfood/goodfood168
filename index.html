@@ -144,14 +144,13 @@
   </div>
 </section>
 
-<!-- ===== 商品精選入口（五分類，每張卡片五圖自動輪播） ===== -->
+<!-- ===== 商品精選入口（桌機/手機自動切換，手機可滑動+分頁點點） ===== -->
 <section class="product-entrance-section">
   <h2 class="product-entrance-title">商品精選入口<br><span>Featured Picks</span></h2>
   <div class="product-entrance-bg"></div>
-  <button class="entrance-swiper-btn prev" type="button"></button>
-  <button class="entrance-swiper-btn next" type="button"></button>
+  
+  <!-- 桌機／平板：五張卡片橫向排列 -->
   <div class="product-entrance-list">
-
     <!-- 堅果果乾 -->
     <div class="product-entrance-card">
       <div class="entrance-card-bg" style="background-image:url('images/bg-nuts-card.png');"></div>
@@ -167,7 +166,6 @@
         <a href="nuts.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-
     <!-- 義大利麵 -->
     <div class="product-entrance-card">
       <div class="entrance-card-bg" style="background-image:url('images/bg-pasta-card.png');"></div>
@@ -183,7 +181,6 @@
         <a href="pasta.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-
     <!-- 罐頭食品 -->
     <div class="product-entrance-card">
       <div class="entrance-card-bg" style="background-image:url('images/bg-canned-card.png');"></div>
@@ -199,7 +196,6 @@
         <a href="canned.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-
     <!-- 調味料糖漿醬汁 -->
     <div class="product-entrance-card">
       <div class="entrance-card-bg" style="background-image:url('images/bg-seasoning-card.png');"></div>
@@ -215,12 +211,11 @@
         <a href="seasoning.html" class="entrance-btn">看全部</a>
       </div>
     </div>
-
     <!-- 烘焙餐飲原料 -->
     <div class="product-entrance-card">
       <div class="entrance-card-bg" style="background-image:url('images/bg-baking-card.png');"></div>
       <div class="card-img-carousel">
-        <img src="images/baking1.png" alt="烘焙餐飲原料1" class="entrance-img" style="display:none;">
+        <img src="images/baking1.png" alt="烘焙餐飲原料1" class="entrance-img">
         <img src="images/baking2.png" alt="烘焙餐飲原料2" class="entrance-img" style="display:none;">
         <img src="images/baking3.png" alt="烘焙餐飲原料3" class="entrance-img" style="display:none;">
         <img src="images/baking4.png" alt="烘焙餐飲原料4" class="entrance-img" style="display:none;">
@@ -232,68 +227,120 @@
       </div>
     </div>
   </div>
+
+  <!-- 手機：橫向滑動＋分頁點點 -->
+  <div class="product-entrance-scroll" id="entranceScroll">
+    <div class="entrance-gap"></div>
+    <!-- 以下五張卡片內容同上，也可直接複製，圖片等內容完全一樣 -->
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-nuts-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/nuts1.png" alt="堅果果乾1" class="entrance-img">
+        <img src="images/nuts2.png" alt="堅果果乾2" class="entrance-img" style="display:none;">
+        <img src="images/nuts3.png" alt="堅果果乾3" class="entrance-img" style="display:none;">
+        <img src="images/nuts4.png" alt="堅果果乾4" class="entrance-img" style="display:none;">
+        <img src="images/nuts5.png" alt="堅果果乾5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">堅果・果乾原料</div>
+        <a href="nuts.html" class="entrance-btn">看全部</a>
+      </div>
+    </div>
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-pasta-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/pasta1.png" alt="義大利麵1" class="entrance-img">
+        <img src="images/pasta2.png" alt="義大利麵2" class="entrance-img" style="display:none;">
+        <img src="images/pasta3.png" alt="義大利麵3" class="entrance-img" style="display:none;">
+        <img src="images/pasta4.png" alt="義大利麵4" class="entrance-img" style="display:none;">
+        <img src="images/pasta5.png" alt="義大利麵5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">義大利麵</div>
+        <a href="pasta.html" class="entrance-btn">看全部</a>
+      </div>
+    </div>
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-canned-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/canned1.png" alt="罐頭食品1" class="entrance-img">
+        <img src="images/canned2.png" alt="罐頭食品2" class="entrance-img" style="display:none;">
+        <img src="images/canned3.png" alt="罐頭食品3" class="entrance-img" style="display:none;">
+        <img src="images/canned4.png" alt="罐頭食品4" class="entrance-img" style="display:none;">
+        <img src="images/canned5.png" alt="罐頭食品5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">罐頭食品</div>
+        <a href="canned.html" class="entrance-btn">看全部</a>
+      </div>
+    </div>
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-seasoning-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/seasoning1.png" alt="調味料糖漿醬汁1" class="entrance-img">
+        <img src="images/seasoning2.png" alt="調味料糖漿醬汁2" class="entrance-img" style="display:none;">
+        <img src="images/seasoning3.png" alt="調味料糖漿醬汁3" class="entrance-img" style="display:none;">
+        <img src="images/seasoning4.png" alt="調味料糖漿醬汁4" class="entrance-img" style="display:none;">
+        <img src="images/seasoning5.png" alt="調味料糖漿醬汁5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">調味料・糖漿・醬汁</div>
+        <a href="seasoning.html" class="entrance-btn">看全部</a>
+      </div>
+    </div>
+    <div class="product-entrance-card">
+      <div class="entrance-card-bg" style="background-image:url('images/bg-baking-card.png');"></div>
+      <div class="card-img-carousel">
+        <img src="images/baking1.png" alt="烘焙餐飲原料1" class="entrance-img">
+        <img src="images/baking2.png" alt="烘焙餐飲原料2" class="entrance-img" style="display:none;">
+        <img src="images/baking3.png" alt="烘焙餐飲原料3" class="entrance-img" style="display:none;">
+        <img src="images/baking4.png" alt="烘焙餐飲原料4" class="entrance-img" style="display:none;">
+        <img src="images/baking5.png" alt="烘焙餐飲原料5" class="entrance-img" style="display:none;">
+      </div>
+      <div class="entrance-info">
+        <div class="entrance-name">烘焙・餐飲相關原料</div>
+        <a href="baking.html" class="entrance-btn">看全部</a>
+      </div>
+    </div>
+    <div class="entrance-gap"></div>
+  </div>
+  <!-- 分頁點點 -->
+  <div class="entrance-pagination" id="entrancePagination"></div>
 </section>
 
 <main>
 <!-- 商品精選入口輪播（本區專用，不會動到其他） -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const cards = document.querySelectorAll('.product-entrance-card');
-  const dotsWrap = document.querySelector('.entrance-pagination');
-  const btnPrev = document.querySelector('.entrance-swiper-btn.prev');
-  const btnNext = document.querySelector('.entrance-swiper-btn.next');
-  let idx = 0;
-  let imgTimer = null;
+  const scrollBox = document.getElementById('entranceScroll');
+  const indicator = document.getElementById('entrancePagination');
+  // 只抓真正的卡片數（不包含 gap）
+  const cards = Array.from(scrollBox.querySelectorAll('.product-entrance-card'));
+  const gapWidth = scrollBox.querySelector('.entrance-gap') ? scrollBox.querySelector('.entrance-gap').offsetWidth : 0;
 
-  function startImageCarousel(card) {
-    clearImageTimer();
-    const imgs = card.querySelectorAll('.card-img-carousel img');
-    if (imgs.length <= 1) return;
-    let i = 0;
-    imgs.forEach((img, k) => img.style.display = k === 0 ? '' : 'none');
-    imgTimer = setInterval(() => {
-      imgs.forEach((img, k) => img.style.display = k === i ? '' : 'none');
-      i = (i + 1) % imgs.length;
-    }, 3000);
-  }
-  function clearImageTimer() {
-    if (imgTimer) clearInterval(imgTimer);
-    imgTimer = null;
-  }
+  // 產生點點
+  indicator.innerHTML = '';
+  cards.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'entrance-pagination-dot';
+    if (i === 0) dot.classList.add('active');
+    indicator.appendChild(dot);
+  });
+  const dots = indicator.querySelectorAll('.entrance-pagination-dot');
 
-  function updateEntranceSwiper() {
-    const isMobile = window.innerWidth <= 700;
-    cards.forEach((el, i) => {
-      if (isMobile) {
-        el.classList.toggle('active', i === idx);
-      } else {
-        el.classList.add('active');
-      }
-      // 圖片初始化
-      const imgs = el.querySelectorAll('.card-img-carousel img');
-      imgs.forEach((img, k) => img.style.display = k === 0 ? '' : 'none');
-    });
-
-    clearImageTimer();
-    if (isMobile) startImageCarousel(cards[idx]);
-  }
-
-  updateEntranceSwiper();
-
-  if (btnPrev) btnPrev.onclick = function() {
-    idx = (idx - 1 + cards.length) % cards.length;
-    updateEntranceSwiper();
-  };
-  if (btnNext) btnNext.onclick = function() {
-    idx = (idx + 1) % cards.length;
-    updateEntranceSwiper();
-  };
-
-  window.addEventListener('resize', updateEntranceSwiper);
-  window.addEventListener('beforeunload', clearImageTimer);
+  // scroll 判斷現在在第幾張卡片
+  scrollBox.addEventListener('scroll', () => {
+    const cardWidth = cards[0].offsetWidth;
+    // scrollLeft 扣掉 gapWidth，才是第一張卡片的起點
+    const scroll = scrollBox.scrollLeft - gapWidth;
+    // 最接近的卡片 index
+    let page = Math.round(scroll / cardWidth);
+    page = Math.max(0, Math.min(page, cards.length - 1));
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === page));
+  });
 });
-
 </script>
+
 <!-- ===== 品牌總攬手機板 ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
