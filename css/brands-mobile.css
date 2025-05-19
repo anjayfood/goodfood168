@@ -95,37 +95,7 @@
     letter-spacing: 1.1px;
     font-family: 'Noto Sans TC', 'Segoe UI', Arial, sans-serif;
   }
-  .brands-section.brands-mobile .carousel-arrow {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: #de9945 !important;
-    font-size: 2.8rem !important;
-    line-height: 1 !important;
-    padding: 0 !important;
-    width: 38px !important;
-    height: 80px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, "Segoe UI Symbol", sans-serif !important;
-    user-select: none;
-    margin-top: -6px;
-  }
-  .brands-section.brands-mobile .carousel-arrow.left::after {
-    content: "\2039";
-    font-size: 2.8rem;
-    font-weight: 900;
-  }
-  .brands-section.brands-mobile .carousel-arrow.right::after {
-    content: "\203A";
-    font-size: 2.8rem;
-    font-weight: 900;
-  }
-  .brands-section.brands-mobile .carousel-arrow.left,
-  .brands-section.brands-mobile .carousel-arrow.right {
-    font-size: 0;
-  }
+
 }
 @media (max-width: 420px) {
   /* 只作用於品牌總覽的手機區塊，避免影響別的 .brand-card */
