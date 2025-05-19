@@ -80,8 +80,8 @@
     transition: box-shadow 0.18s, border 0.15s;
   }
   .brands-section.brands-mobile .brand-card img {
-    width: 90px !important;
-    height: 90px !important;
+    width: 100px !important;
+    height: 100px !important;
     margin-bottom: 5px;
     object-fit: contain !important;
     background: none !important;
