@@ -6,33 +6,46 @@
   <title>巨人 迷你鳳梨片 - 日銓貿易股份有限公司</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/product-detail.css" />
-  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<script src="../search.js"></script>
 </head>
 <body>
   <header>
     <a href="/" class="logo">日銓貿易股份有限公司</a>
   
     <!-- 電腦版選單 -->
-    <nav class="desktop-nav">
-      <a href="../about.html">關於日銓</a>
-      <a href="../brands.html">品牌總覽</a>
-      <a href="../products.html">商品總覽</a>
-      <a href="../contact.html">聯絡我們</a>
-    </nav>
-  
-    <!-- 手機版漢堡 -->
-    <button class="menu-toggle" id="menuToggle">☰</button>
-  
-    <!-- 手機版選單 -->
-    <nav class="mobile-nav" id="mobileMenu">
-      <button class="close-menu" id="closeMenu">✕</button>
-      <div class="mobile-header">選單 Menu</div>
-      <a href="../index.html">首頁</a>
-      <a href="../about.html">關於日銓</a>
-      <a href="../brands.html">品牌總覽</a>
-      <a href="../products.html">商品總覽</a>
-      <a href="../contact.html">聯絡我們</a>
-    </nav>
+    <!-- 電腦版選單 -->
+<nav class="desktop-nav">
+  <a href="../about.html">關於日銓</a>
+  <a href="../brands.html">品牌總覽</a>
+  <a href="../products.html">商品總覽</a>
+  <a href="../contact.html">聯絡我們</a>
+  <div class="nav-search-wrap">
+    <input type="text" id="site-search-input" placeholder="搜尋..." autocomplete="off" />
+    <button class="nav-search-btn"><span>🔍</span></button>
+    <div id="search-results"></div>
+  </div>
+</nav>
+
+<!-- 手機版漢堡 -->
+<button class="menu-toggle" id="menuToggle">☰</button>
+
+<!-- 手機版選單 -->
+<nav class="mobile-nav" id="mobileMenu">
+  <button class="close-menu" id="closeMenu">✕</button>
+  <div class="mobile-header">選單 Menu</div>
+  <a href="../index.html">首頁</a>
+  <a href="../about.html">關於日銓</a>
+  <a href="../brands.html">品牌總覽</a>
+  <a href="../products.html">商品總覽</a>
+  <a href="../contact.html">聯絡我們</a>
+  <div class="mobile-search-wrap">
+    <input type="text" id="mobile-search-input" placeholder="搜尋..." autocomplete="off" />
+    <button class="nav-search-btn"><span>🔍</span></button>
+    <div id="mobile-search-results"></div>
+  </div>
+</nav>
+
   </header>
   <div class="breadcrumb">
     <a href="../index.html">首頁</a> &gt;
