@@ -64,7 +64,7 @@ const siteData = [
   { name: "安佳磅裝奶油塊 (有鹽)", url: "/products/安佳磅裝奶油塊-有鹽.html", tags: ["安佳", "奶油", "奶油塊", "乳製品", "有鹽"] },
   { name: "安佳磅裝奶油塊 (無鹽)", url: "/products/安佳磅裝奶油塊-無鹽.html", tags: ["安佳", "奶油", "奶油塊", "乳製品", "無鹽"] },
   { name: "安佳84片起司", url: "/products/安佳84片起司.html", tags: ["安佳", "起司", "乳製品"] },
-  { name: "鳥牌吉士粉", url: "/products/鳥牌吉士粉.html", tags: ["三鳥牌", "吉士粉", "烘焙原料", "烘焙"] },
+  { name: "鳥牌吉士粉", url: "/products/鳥牌吉士粉.html", tags: ["三鳥牌", "吉士粉", "烘焙原料", "烘焙","卡士達粉"] },
   { name: "燕子牌 低糖酵母(紅)", url: "/products/燕子牌低糖酵母紅.html", tags: ["燕子牌", "酵母", "低糖", "烘焙原料", "烘焙"] },
   { name: "燕子牌 高糖酵母(金)", url: "/products/燕子牌高糖酵母金.html", tags: ["燕子牌", "酵母", "高糖", "烘焙原料", "烘焙"] },
   { name: "BBA改良酵母粉", url: "/products/BBA改良酵母粉.html", tags: ["BBA", "改良酵母粉", "酵母", "烘焙原料", "烘焙"] },
