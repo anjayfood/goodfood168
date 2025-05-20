@@ -21,7 +21,7 @@ const siteData = [
   { name: "西瓜子仁", url: "/products/西瓜子仁.html", tags: ["西瓜子", "種子", "堅果"] },
   { name: "南瓜子仁", url: "/products/南瓜子仁.html", tags: ["南瓜子", "種子", "堅果"] },
   { name: "翠綠開心果仁", url: "/products/翠綠開心果仁.html", tags: ["開心果", "堅果"] },
-  { name: "葵花子", url: "/products/葵花子.html", tags: ["葵花子", "種子", "堅果", "瓜子仁"] },
+  { name: "葵花子", url: "/products/葵瓜子.html", tags: ["葵花子", "種子", "堅果", "瓜子仁"] },
   { name: "去皮榛果粒", url: "/products/去皮榛果粒.html", tags: ["榛果", "堅果", "去皮"] },
   { name: "去皮榛果粉", url: "/products/去皮臻果粉.html", tags: ["榛果", "堅果", "粉", "去皮"] },
   { name: "帶皮榛果粒", url: "/products/帶皮臻果粒.html", tags: ["榛果", "堅果", "帶皮"] },
