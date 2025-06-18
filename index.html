@@ -348,6 +348,9 @@ document.addEventListener('DOMContentLoaded', function () {
     dots.forEach((d, idx) => d.classList.toggle('active', idx === page));
   });
 });
+if (location.protocol !== 'https:') {
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+  }
 </script>
 
 <!-- ===== 品牌總攬手機板 ===== -->
